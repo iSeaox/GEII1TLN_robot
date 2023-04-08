@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/production\Prog_SAE1_Robot_pour_etus.X.production.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>131072</length>
+      <used>10347</used>
+      <free>120725</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>3720</length>
+      <used>475</used>
+      <free>3245</free>
+    </memory>
+  </executable>
+</project>
