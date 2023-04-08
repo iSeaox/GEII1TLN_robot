@@ -43,19 +43,13 @@ void main(void)//__at 0x00200
         uint16_t aValRight = ADCC_GetSingleConversion(Capteur_Analog_CNY_Droite);
         uint16_t aValLeft = ADCC_GetSingleConversion(Capteur_Analog_CNY_Gauche);
         if(!(-50 < aValLeft - aValRight && aValLeft - aValRight < 50 && aValCenter < 800)) {
-            error = aValLeft - aValRight;
+            if(aValLeft - aValRight < 0) {
+                error = aValLeft - 2 * aValRight + aValCenter;
+            }
+            else {
+                error = aValLeft * 2 - aValLeft - aValCenter;
+            }
         }
-//        if(aValLeft < 800) {
-//            error += aValCenter;
-//        }
-//        else {
-//            error -= aValCenter;
-//        }
-//        error += 10000;
-//        gotoLCD(0, 8);
-//        LCDvalue16fp(error, 0);
-//        gotoLCD(1, 0);
-//        LCDvalue_Boolean((error -= 10000) < 0);
         
         Speed_Motors((coefP * error + coefD * (error - lastError) + coefI * integralError) + 20, (coefP * error + coefD * (error - lastError) + + coefI * integralError) - 10 );
         
