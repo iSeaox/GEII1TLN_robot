@@ -1,0 +1,4393 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"219 drivers/../mcc_generated_files/../drivers/vl53l0x.h
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 219: typedef struct {
+[s S1490 `a 1 `a 1 `a 1 `a 1 `a 1 ]
+[n S1490 . tcc msrc dss pre_range final_range ]
+"223
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 223: typedef struct {
+[s S1491 `us 1 `us 1 `us 1 `us 1 `us 1 `ul 1 `ul 1 `ul 1 ]
+[n S1491 . pre_range_vcsel_period_pclks final_range_vcsel_period_pclks msrc_dss_tcc_mclks pre_range_mclks final_range_mclks msrc_dss_tcc_us pre_range_us final_range_us ]
+"233
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 233: typedef struct {
+[s S1492 `uc 1 `uc 1 `a 1 `us 1 `a 1 `us 1 `ul 1 `S1490 1 `S1491 1 ]
+[n S1492 . address stopVariable ioHighLevel io_timeout did_timeout timeout_start_ms measurement_timing_budget_us enables timeouts ]
+[v F10517 `(v ~T0 @X0 0 tf ]
+[v F10519 `(v ~T0 @X0 0 tf ]
+"290
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 290: void VL53L0X_ClearStruct(VL53L0XDEV *p53);
+[v _VL53L0X_ClearStruct `(v ~T0 @X0 0 ef1`*S1492 ]
+"273
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 273: void VL53L0X_DataInit(VL53L0XDEV *p53);
+[v _VL53L0X_DataInit `(v ~T0 @X0 0 ef1`*S1492 ]
+"274
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 274: _Bool VL53L0X_StaticInit(VL53L0XDEV *p53);
+[v _VL53L0X_StaticInit `(a ~T0 @X0 0 ef1`*S1492 ]
+"287
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 287: _Bool VL53L0X_PerformRefCalibration(VL53L0XDEV *p53);
+[v _VL53L0X_PerformRefCalibration `(a ~T0 @X0 0 ef1`*S1492 ]
+"50 drivers/vl53l0x.c
+[; ;drivers/vl53l0x.c: 50:     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+[c E10088 0 1 2 3 4 5 6 .. ]
+[n E10088 . I2C1_MESSAGE_COMPLETE I2C1_MESSAGE_FAIL I2C1_MESSAGE_PENDING I2C1_STUCK_START I2C1_MESSAGE_ADDRESS_NO_ACK I2C1_DATA_NO_ACK I2C1_LOST_STATE  ]
+"112 drivers/../mcc_generated_files/i2c1.h
+[; ;drivers/../mcc_generated_files/i2c1.h: 112: {
+[s S1489 `us 1 `uc 1 `*uc 1 ]
+[n S1489 . address length pbuffer ]
+"608
+[; ;drivers/../mcc_generated_files/i2c1.h: 608: void I2C1_MasterWriteTRBBuild(
+[v _I2C1_MasterWriteTRBBuild `(v ~T0 @X0 0 ef4`*S1489`*uc`uc`us ]
+"519
+[; ;drivers/../mcc_generated_files/i2c1.h: 519: void I2C1_MasterTRBInsert(
+[v _I2C1_MasterTRBInsert `(v ~T0 @X0 0 ef3`uc`*S1489`*E10088 ]
+"563
+[; ;drivers/../mcc_generated_files/i2c1.h: 563: void I2C1_MasterReadTRBBuild(
+[v _I2C1_MasterReadTRBBuild `(v ~T0 @X0 0 ef4`*S1489`*uc`uc`us ]
+"305 drivers/../mcc_generated_files/../drivers/vl53l0x.h
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 305: _Bool VL53L0X_SetSignalRateLimit(uint8_t addr, float limit_Mcps);
+[v _VL53L0X_SetSignalRateLimit `(a ~T0 @X0 0 ef2`uc`f ]
+"275
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 275: _Bool VL53L0X_GetSpadInfo(VL53L0XDEV *p53, uint8_t *count, _Bool *typeIsAperture);
+[v _VL53L0X_GetSpadInfo `(a ~T0 @X0 0 ef3`*S1492`*uc`*a ]
+"276
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 276: void VL53L0X_SetReferenceSpads(uint8_t addr, uint8_t *count, _Bool *typeIsAperture, uint8_t *spadMap);
+[v _VL53L0X_SetReferenceSpads `(v ~T0 @X0 0 ef4`uc`*uc`*a`*uc ]
+"277
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 277: void VL53L0X_Tuning(uint8_t addr);
+[v _VL53L0X_Tuning `(v ~T0 @X0 0 ef1`uc ]
+"278
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 278: void VL53L0X_SetGpioConfig(uint8_t addr);
+[v _VL53L0X_SetGpioConfig `(v ~T0 @X0 0 ef1`uc ]
+"279
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 279: uint32_t VL53L0X_getMeasurementTimingBudget(VL53L0XDEV *p53);
+[v _VL53L0X_getMeasurementTimingBudget `(ul ~T0 @X0 0 ef1`*S1492 ]
+"306
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 306: _Bool VL53L0X_setMeasurementTimingBudget(VL53L0XDEV *p53);
+[v _VL53L0X_setMeasurementTimingBudget `(a ~T0 @X0 0 ef1`*S1492 ]
+"288
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 288: _Bool VL53L0X_performSingleRefCalibration(VL53L0XDEV *p53, uint8_t vhv_init_byte);
+[v _VL53L0X_performSingleRefCalibration `(a ~T0 @X0 0 ef2`*S1492`uc ]
+"256
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 256: typedef struct {
+[s S1493 `us 1 `us 1 ]
+[n S1493 . msecStart timeout ]
+"324
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 324: void start_msTimeout(msecdata *data, uint16_t val);
+[v _start_msTimeout `(v ~T0 @X0 0 ef2`*S1493`us ]
+"325
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 325: _Bool checkTimeoutExpired(msecdata *data);
+[v _checkTimeoutExpired `(a ~T0 @X0 0 ef1`*S1493 ]
+[v F192 `(v ~T0 @X0 1 tf1`ul ]
+"12 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\builtins.h
+[v __delay `JF192 ~T0 @X0 0 e ]
+[p i __delay ]
+"280 drivers/../mcc_generated_files/../drivers/vl53l0x.h
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 280: void VL53L0X_getSequenceStepEnables(VL53L0XDEV *p53);
+[v _VL53L0X_getSequenceStepEnables `(v ~T0 @X0 0 ef1`*S1492 ]
+"281
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 281: void VL53L0X_getSequenceStepTimeouts(VL53L0XDEV *p53);
+[v _VL53L0X_getSequenceStepTimeouts `(v ~T0 @X0 0 ef1`*S1492 ]
+"636 drivers/vl53l0x.c
+[; ;drivers/vl53l0x.c: 636:     p53->timeouts.pre_range_vcsel_period_pclks = VL53L0X_getVcselPulsePeriod(addr, VcselPeriodPreRange);
+[c E10286 0 1 .. ]
+[n E10286 . VcselPeriodPreRange VcselPeriodFinalRange  ]
+"282 drivers/../mcc_generated_files/../drivers/vl53l0x.h
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 282: uint8_t VL53L0X_getVcselPulsePeriod(uint8_t addr, vcselPeriodType type);
+[v _VL53L0X_getVcselPulsePeriod `(uc ~T0 @X0 0 ef2`uc`E10286 ]
+"283
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 283: uint32_t VL53L0X_timeoutMclksToMicroseconds(uint16_t timeout_period_mclks, uint8_t vcsel_period_pclks);
+[v _VL53L0X_timeoutMclksToMicroseconds `(ul ~T0 @X0 0 ef2`us`uc ]
+"285
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 285: uint16_t VL53L0X_decodeTimeout(uint16_t reg_val);
+[v _VL53L0X_decodeTimeout `(us ~T0 @X0 0 ef1`us ]
+"292
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 292: _Bool VL53L0X_ReadingHeader(VL53L0XDEV *p53);
+[v _VL53L0X_ReadingHeader `(a ~T0 @X0 0 ef1`*S1492 ]
+"302
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 302: uint16_t VL53L0X_ReadRange(VL53L0XDEV *p53);
+[v _VL53L0X_ReadRange `(us ~T0 @X0 0 ef1`*S1492 ]
+"291
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 291: void VL53L0X_SetInterMeasurementPeriodMilliSeconds(VL53L0XDEV *p53, uint32_t period_ms);
+[v _VL53L0X_SetInterMeasurementPeriodMilliSeconds `(v ~T0 @X0 0 ef2`*S1492`ul ]
+"16505 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16505:     struct {
+[s S827 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S827 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"16515
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16515:     struct {
+[s S828 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S828 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"16504
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16504: typedef union {
+[u S826 `S827 1 `S828 1 ]
+[n S826 . . . ]
+"16526
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16526: extern volatile LATBbits_t LATBbits __attribute__((address(0xF84)));
+[v _LATBbits `VS826 ~T0 @X0 0 e@3972 ]
+"16617
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16617:     struct {
+[s S830 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S830 . LATC0 LATC1 LATC2 LATC3 LATC4 LATC5 LATC6 LATC7 ]
+"16627
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16627:     struct {
+[s S831 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S831 . LC0 LC1 LC2 LC3 LC4 LC5 LC6 LC7 ]
+"16616
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16616: typedef union {
+[u S829 `S830 1 `S831 1 ]
+[n S829 . . . ]
+"16638
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16638: extern volatile LATCbits_t LATCbits __attribute__((address(0xF85)));
+[v _LATCbits `VS829 ~T0 @X0 0 e@3973 ]
+"54 C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 54: __asm("RX2PPS equ 0E8Dh");
+[; <" RX2PPS equ 0E8Dh ;# ">
+"88
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 88: __asm("CK2PPS equ 0E8Eh");
+[; <" CK2PPS equ 0E8Eh ;# ">
+"93
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 93: __asm("TX2PPS equ 0E8Eh");
+[; <" TX2PPS equ 0E8Eh ;# ">
+"154
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 154: __asm("SSP2CLKPPS equ 0E8Fh");
+[; <" SSP2CLKPPS equ 0E8Fh ;# ">
+"188
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 188: __asm("SSP2DATPPS equ 0E90h");
+[; <" SSP2DATPPS equ 0E90h ;# ">
+"222
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 222: __asm("SSP2SSPPS equ 0E91h");
+[; <" SSP2SSPPS equ 0E91h ;# ">
+"256
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 256: __asm("SSP2BUF equ 0E92h");
+[; <" SSP2BUF equ 0E92h ;# ">
+"276
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 276: __asm("SSP2ADD equ 0E93h");
+[; <" SSP2ADD equ 0E93h ;# ">
+"396
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 396: __asm("SSP2MSK equ 0E94h");
+[; <" SSP2MSK equ 0E94h ;# ">
+"466
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 466: __asm("SSP2STAT equ 0E95h");
+[; <" SSP2STAT equ 0E95h ;# ">
+"920
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 920: __asm("SSP2CON1 equ 0E96h");
+[; <" SSP2CON1 equ 0E96h ;# ">
+"1040
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1040: __asm("SSP2CON2 equ 0E97h");
+[; <" SSP2CON2 equ 0E97h ;# ">
+"1227
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1227: __asm("SSP2CON3 equ 0E98h");
+[; <" SSP2CON3 equ 0E98h ;# ">
+"1289
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1289: __asm("RC2REG equ 0E99h");
+[; <" RC2REG equ 0E99h ;# ">
+"1294
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1294: __asm("RCREG2 equ 0E99h");
+[; <" RCREG2 equ 0E99h ;# ">
+"1327
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1327: __asm("TX2REG equ 0E9Ah");
+[; <" TX2REG equ 0E9Ah ;# ">
+"1332
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1332: __asm("TXREG2 equ 0E9Ah");
+[; <" TXREG2 equ 0E9Ah ;# ">
+"1365
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1365: __asm("SP2BRG equ 0E9Bh");
+[; <" SP2BRG equ 0E9Bh ;# ">
+"1372
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1372: __asm("SP2BRGL equ 0E9Bh");
+[; <" SP2BRGL equ 0E9Bh ;# ">
+"1377
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1377: __asm("SPBRG2 equ 0E9Bh");
+[; <" SPBRG2 equ 0E9Bh ;# ">
+"1410
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1410: __asm("SP2BRGH equ 0E9Ch");
+[; <" SP2BRGH equ 0E9Ch ;# ">
+"1415
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1415: __asm("SPBRGH2 equ 0E9Ch");
+[; <" SPBRGH2 equ 0E9Ch ;# ">
+"1448
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1448: __asm("RC2STA equ 0E9Dh");
+[; <" RC2STA equ 0E9Dh ;# ">
+"1453
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1453: __asm("RCSTA2 equ 0E9Dh");
+[; <" RCSTA2 equ 0E9Dh ;# ">
+"1622
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1622: __asm("TX2STA equ 0E9Eh");
+[; <" TX2STA equ 0E9Eh ;# ">
+"1627
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1627: __asm("TXSTA2 equ 0E9Eh");
+[; <" TXSTA2 equ 0E9Eh ;# ">
+"1778
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1778: __asm("BAUD2CON equ 0E9Fh");
+[; <" BAUD2CON equ 0E9Fh ;# ">
+"1783
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1783: __asm("BAUDCON2 equ 0E9Fh");
+[; <" BAUDCON2 equ 0E9Fh ;# ">
+"1787
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 1787: __asm("BAUDCTL2 equ 0E9Fh");
+[; <" BAUDCTL2 equ 0E9Fh ;# ">
+"2141
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2141: __asm("PPSLOCK equ 0EA0h");
+[; <" PPSLOCK equ 0EA0h ;# ">
+"2161
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2161: __asm("INT0PPS equ 0EA1h");
+[; <" INT0PPS equ 0EA1h ;# ">
+"2221
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2221: __asm("INT1PPS equ 0EA2h");
+[; <" INT1PPS equ 0EA2h ;# ">
+"2281
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2281: __asm("INT2PPS equ 0EA3h");
+[; <" INT2PPS equ 0EA3h ;# ">
+"2341
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2341: __asm("T0CKIPPS equ 0EA4h");
+[; <" T0CKIPPS equ 0EA4h ;# ">
+"2401
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2401: __asm("T1CKIPPS equ 0EA5h");
+[; <" T1CKIPPS equ 0EA5h ;# ">
+"2467
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2467: __asm("T1GPPS equ 0EA6h");
+[; <" T1GPPS equ 0EA6h ;# ">
+"2533
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2533: __asm("T3CKIPPS equ 0EA7h");
+[; <" T3CKIPPS equ 0EA7h ;# ">
+"2599
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2599: __asm("T3GPPS equ 0EA8h");
+[; <" T3GPPS equ 0EA8h ;# ">
+"2665
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2665: __asm("T5CKIPPS equ 0EA9h");
+[; <" T5CKIPPS equ 0EA9h ;# ">
+"2731
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2731: __asm("T5GPPS equ 0EAAh");
+[; <" T5GPPS equ 0EAAh ;# ">
+"2797
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2797: __asm("T2INPPS equ 0EABh");
+[; <" T2INPPS equ 0EABh ;# ">
+"2863
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2863: __asm("T4INPPS equ 0EACh");
+[; <" T4INPPS equ 0EACh ;# ">
+"2929
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2929: __asm("T6INPPS equ 0EADh");
+[; <" T6INPPS equ 0EADh ;# ">
+"2995
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 2995: __asm("ADACTPPS equ 0EAEh");
+[; <" ADACTPPS equ 0EAEh ;# ">
+"3061
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3061: __asm("CCP1PPS equ 0EAFh");
+[; <" CCP1PPS equ 0EAFh ;# ">
+"3127
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3127: __asm("CCP2PPS equ 0EB0h");
+[; <" CCP2PPS equ 0EB0h ;# ">
+"3193
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3193: __asm("CWG1PPS equ 0EB1h");
+[; <" CWG1PPS equ 0EB1h ;# ">
+"3198
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3198: __asm("CWGINPPS equ 0EB1h");
+[; <" CWGINPPS equ 0EB1h ;# ">
+"3403
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3403: __asm("MDCARLPPS equ 0EB2h");
+[; <" MDCARLPPS equ 0EB2h ;# ">
+"3469
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3469: __asm("MDCARHPPS equ 0EB3h");
+[; <" MDCARHPPS equ 0EB3h ;# ">
+"3535
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3535: __asm("MDSRCPPS equ 0EB4h");
+[; <" MDSRCPPS equ 0EB4h ;# ">
+"3601
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3601: __asm("RX1PPS equ 0EB5h");
+[; <" RX1PPS equ 0EB5h ;# ">
+"3606
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3606: __asm("RXPPS equ 0EB5h");
+[; <" RXPPS equ 0EB5h ;# ">
+"3667
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3667: __asm("CK1PPS equ 0EB6h");
+[; <" CK1PPS equ 0EB6h ;# ">
+"3672
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3672: __asm("TX1PPS equ 0EB6h");
+[; <" TX1PPS equ 0EB6h ;# ">
+"3676
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3676: __asm("CKPPS equ 0EB6h");
+[; <" CKPPS equ 0EB6h ;# ">
+"3680
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3680: __asm("TXPPS equ 0EB6h");
+[; <" TXPPS equ 0EB6h ;# ">
+"3793
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3793: __asm("SSP1CLKPPS equ 0EB7h");
+[; <" SSP1CLKPPS equ 0EB7h ;# ">
+"3798
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3798: __asm("SSPCLKPPS equ 0EB7h");
+[; <" SSPCLKPPS equ 0EB7h ;# ">
+"3859
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3859: __asm("SSP1DATPPS equ 0EB8h");
+[; <" SSP1DATPPS equ 0EB8h ;# ">
+"3864
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3864: __asm("SSPDATPPS equ 0EB8h");
+[; <" SSPDATPPS equ 0EB8h ;# ">
+"3925
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3925: __asm("SSP1SSPPS equ 0EB9h");
+[; <" SSP1SSPPS equ 0EB9h ;# ">
+"3930
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3930: __asm("SSPSSPPS equ 0EB9h");
+[; <" SSPSSPPS equ 0EB9h ;# ">
+"3991
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 3991: __asm("IPR0 equ 0EBAh");
+[; <" IPR0 equ 0EBAh ;# ">
+"4036
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4036: __asm("IPR1 equ 0EBBh");
+[; <" IPR1 equ 0EBBh ;# ">
+"4084
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4084: __asm("IPR2 equ 0EBCh");
+[; <" IPR2 equ 0EBCh ;# ">
+"4132
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4132: __asm("IPR3 equ 0EBDh");
+[; <" IPR3 equ 0EBDh ;# ">
+"4210
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4210: __asm("IPR4 equ 0EBEh");
+[; <" IPR4 equ 0EBEh ;# ">
+"4268
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4268: __asm("IPR5 equ 0EBFh");
+[; <" IPR5 equ 0EBFh ;# ">
+"4314
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4314: __asm("IPR6 equ 0EC0h");
+[; <" IPR6 equ 0EC0h ;# ">
+"4340
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4340: __asm("IPR7 equ 0EC1h");
+[; <" IPR7 equ 0EC1h ;# ">
+"4387
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4387: __asm("PIE0 equ 0EC2h");
+[; <" PIE0 equ 0EC2h ;# ">
+"4432
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4432: __asm("PIE1 equ 0EC3h");
+[; <" PIE1 equ 0EC3h ;# ">
+"4480
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4480: __asm("PIE2 equ 0EC4h");
+[; <" PIE2 equ 0EC4h ;# ">
+"4528
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4528: __asm("PIE3 equ 0EC5h");
+[; <" PIE3 equ 0EC5h ;# ">
+"4638
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4638: __asm("PIE4 equ 0EC6h");
+[; <" PIE4 equ 0EC6h ;# ">
+"4688
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4688: __asm("PIE5 equ 0EC7h");
+[; <" PIE5 equ 0EC7h ;# ">
+"4720
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4720: __asm("PIE6 equ 0EC8h");
+[; <" PIE6 equ 0EC8h ;# ">
+"4746
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4746: __asm("PIE7 equ 0EC9h");
+[; <" PIE7 equ 0EC9h ;# ">
+"4793
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4793: __asm("PIR0 equ 0ECAh");
+[; <" PIR0 equ 0ECAh ;# ">
+"4838
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4838: __asm("PIR1 equ 0ECBh");
+[; <" PIR1 equ 0ECBh ;# ">
+"4886
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4886: __asm("PIR2 equ 0ECCh");
+[; <" PIR2 equ 0ECCh ;# ">
+"4934
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 4934: __asm("PIR3 equ 0ECDh");
+[; <" PIR3 equ 0ECDh ;# ">
+"5012
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5012: __asm("PIR4 equ 0ECEh");
+[; <" PIR4 equ 0ECEh ;# ">
+"5062
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5062: __asm("PIR5 equ 0ECFh");
+[; <" PIR5 equ 0ECFh ;# ">
+"5094
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5094: __asm("PIR6 equ 0ED0h");
+[; <" PIR6 equ 0ED0h ;# ">
+"5120
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5120: __asm("PIR7 equ 0ED1h");
+[; <" PIR7 equ 0ED1h ;# ">
+"5167
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5167: __asm("WDTCON0 equ 0ED2h");
+[; <" WDTCON0 equ 0ED2h ;# ">
+"5242
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5242: __asm("WDTCON1 equ 0ED3h");
+[; <" WDTCON1 equ 0ED3h ;# ">
+"5336
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5336: __asm("WDTPSL equ 0ED4h");
+[; <" WDTPSL equ 0ED4h ;# ">
+"5464
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5464: __asm("WDTPSH equ 0ED5h");
+[; <" WDTPSH equ 0ED5h ;# ">
+"5592
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5592: __asm("WDTTMR equ 0ED6h");
+[; <" WDTTMR equ 0ED6h ;# ">
+"5680
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5680: __asm("CPUDOZE equ 0ED7h");
+[; <" CPUDOZE equ 0ED7h ;# ">
+"5745
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5745: __asm("OSCCON1 equ 0ED8h");
+[; <" OSCCON1 equ 0ED8h ;# ">
+"5815
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5815: __asm("OSCCON2 equ 0ED9h");
+[; <" OSCCON2 equ 0ED9h ;# ">
+"5885
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5885: __asm("OSCCON3 equ 0EDAh");
+[; <" OSCCON3 equ 0EDAh ;# ">
+"5925
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5925: __asm("OSCSTAT equ 0EDBh");
+[; <" OSCSTAT equ 0EDBh ;# ">
+"5930
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 5930: __asm("OSCSTAT1 equ 0EDBh");
+[; <" OSCSTAT1 equ 0EDBh ;# ">
+"6037
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6037: __asm("OSCEN equ 0EDCh");
+[; <" OSCEN equ 0EDCh ;# ">
+"6088
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6088: __asm("OSCTUNE equ 0EDDh");
+[; <" OSCTUNE equ 0EDDh ;# ">
+"6146
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6146: __asm("OSCFRQ equ 0EDEh");
+[; <" OSCFRQ equ 0EDEh ;# ">
+"6192
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6192: __asm("VREGCON equ 0EDFh");
+[; <" VREGCON equ 0EDFh ;# ">
+"6226
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6226: __asm("BORCON equ 0EE0h");
+[; <" BORCON equ 0EE0h ;# ">
+"6253
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6253: __asm("PMD0 equ 0EE1h");
+[; <" PMD0 equ 0EE1h ;# ">
+"6330
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6330: __asm("PMD1 equ 0EE2h");
+[; <" PMD1 equ 0EE2h ;# ">
+"6394
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6394: __asm("PMD2 equ 0EE3h");
+[; <" PMD2 equ 0EE3h ;# ">
+"6439
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6439: __asm("PMD3 equ 0EE4h");
+[; <" PMD3 equ 0EE4h ;# ">
+"6477
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6477: __asm("PMD4 equ 0EE5h");
+[; <" PMD4 equ 0EE5h ;# ">
+"6530
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6530: __asm("PMD5 equ 0EE6h");
+[; <" PMD5 equ 0EE6h ;# ">
+"6550
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6550: __asm("RA0PPS equ 0EE7h");
+[; <" RA0PPS equ 0EE7h ;# ">
+"6594
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6594: __asm("RA1PPS equ 0EE8h");
+[; <" RA1PPS equ 0EE8h ;# ">
+"6638
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6638: __asm("RA2PPS equ 0EE9h");
+[; <" RA2PPS equ 0EE9h ;# ">
+"6682
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6682: __asm("RA3PPS equ 0EEAh");
+[; <" RA3PPS equ 0EEAh ;# ">
+"6726
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6726: __asm("RA4PPS equ 0EEBh");
+[; <" RA4PPS equ 0EEBh ;# ">
+"6770
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6770: __asm("RA5PPS equ 0EECh");
+[; <" RA5PPS equ 0EECh ;# ">
+"6814
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6814: __asm("RA6PPS equ 0EEDh");
+[; <" RA6PPS equ 0EEDh ;# ">
+"6858
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6858: __asm("RA7PPS equ 0EEEh");
+[; <" RA7PPS equ 0EEEh ;# ">
+"6902
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6902: __asm("RB0PPS equ 0EEFh");
+[; <" RB0PPS equ 0EEFh ;# ">
+"6946
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6946: __asm("RB1PPS equ 0EF0h");
+[; <" RB1PPS equ 0EF0h ;# ">
+"6990
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 6990: __asm("RB2PPS equ 0EF1h");
+[; <" RB2PPS equ 0EF1h ;# ">
+"7034
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7034: __asm("RB3PPS equ 0EF2h");
+[; <" RB3PPS equ 0EF2h ;# ">
+"7078
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7078: __asm("RB4PPS equ 0EF3h");
+[; <" RB4PPS equ 0EF3h ;# ">
+"7122
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7122: __asm("RB5PPS equ 0EF4h");
+[; <" RB5PPS equ 0EF4h ;# ">
+"7166
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7166: __asm("RB6PPS equ 0EF5h");
+[; <" RB6PPS equ 0EF5h ;# ">
+"7210
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7210: __asm("RB7PPS equ 0EF6h");
+[; <" RB7PPS equ 0EF6h ;# ">
+"7254
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7254: __asm("RC0PPS equ 0EF7h");
+[; <" RC0PPS equ 0EF7h ;# ">
+"7298
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7298: __asm("RC1PPS equ 0EF8h");
+[; <" RC1PPS equ 0EF8h ;# ">
+"7342
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7342: __asm("RC2PPS equ 0EF9h");
+[; <" RC2PPS equ 0EF9h ;# ">
+"7386
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7386: __asm("RC3PPS equ 0EFAh");
+[; <" RC3PPS equ 0EFAh ;# ">
+"7430
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7430: __asm("RC4PPS equ 0EFBh");
+[; <" RC4PPS equ 0EFBh ;# ">
+"7474
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7474: __asm("RC5PPS equ 0EFCh");
+[; <" RC5PPS equ 0EFCh ;# ">
+"7518
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7518: __asm("RC6PPS equ 0EFDh");
+[; <" RC6PPS equ 0EFDh ;# ">
+"7562
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7562: __asm("RC7PPS equ 0EFEh");
+[; <" RC7PPS equ 0EFEh ;# ">
+"7606
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7606: __asm("RD0PPS equ 0EFFh");
+[; <" RD0PPS equ 0EFFh ;# ">
+"7650
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7650: __asm("RD1PPS equ 0F00h");
+[; <" RD1PPS equ 0F00h ;# ">
+"7694
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7694: __asm("RD2PPS equ 0F01h");
+[; <" RD2PPS equ 0F01h ;# ">
+"7738
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7738: __asm("RD3PPS equ 0F02h");
+[; <" RD3PPS equ 0F02h ;# ">
+"7782
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7782: __asm("RD4PPS equ 0F03h");
+[; <" RD4PPS equ 0F03h ;# ">
+"7826
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7826: __asm("RD5PPS equ 0F04h");
+[; <" RD5PPS equ 0F04h ;# ">
+"7870
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7870: __asm("RD6PPS equ 0F05h");
+[; <" RD6PPS equ 0F05h ;# ">
+"7914
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7914: __asm("RD7PPS equ 0F06h");
+[; <" RD7PPS equ 0F06h ;# ">
+"7958
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 7958: __asm("RE0PPS equ 0F07h");
+[; <" RE0PPS equ 0F07h ;# ">
+"8002
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8002: __asm("RE1PPS equ 0F08h");
+[; <" RE1PPS equ 0F08h ;# ">
+"8046
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8046: __asm("RE2PPS equ 0F09h");
+[; <" RE2PPS equ 0F09h ;# ">
+"8090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8090: __asm("IOCAF equ 0F0Ah");
+[; <" IOCAF equ 0F0Ah ;# ">
+"8152
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8152: __asm("IOCAN equ 0F0Bh");
+[; <" IOCAN equ 0F0Bh ;# ">
+"8214
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8214: __asm("IOCAP equ 0F0Ch");
+[; <" IOCAP equ 0F0Ch ;# ">
+"8276
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8276: __asm("INLVLA equ 0F0Dh");
+[; <" INLVLA equ 0F0Dh ;# ">
+"8338
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8338: __asm("SLRCONA equ 0F0Eh");
+[; <" SLRCONA equ 0F0Eh ;# ">
+"8400
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8400: __asm("ODCONA equ 0F0Fh");
+[; <" ODCONA equ 0F0Fh ;# ">
+"8462
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8462: __asm("WPUA equ 0F10h");
+[; <" WPUA equ 0F10h ;# ">
+"8524
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8524: __asm("ANSELA equ 0F11h");
+[; <" ANSELA equ 0F11h ;# ">
+"8586
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8586: __asm("IOCBF equ 0F12h");
+[; <" IOCBF equ 0F12h ;# ">
+"8648
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8648: __asm("IOCBN equ 0F13h");
+[; <" IOCBN equ 0F13h ;# ">
+"8710
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8710: __asm("IOCBP equ 0F14h");
+[; <" IOCBP equ 0F14h ;# ">
+"8772
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8772: __asm("INLVLB equ 0F15h");
+[; <" INLVLB equ 0F15h ;# ">
+"8834
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8834: __asm("SLRCONB equ 0F16h");
+[; <" SLRCONB equ 0F16h ;# ">
+"8896
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8896: __asm("ODCONB equ 0F17h");
+[; <" ODCONB equ 0F17h ;# ">
+"8958
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 8958: __asm("WPUB equ 0F18h");
+[; <" WPUB equ 0F18h ;# ">
+"9020
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9020: __asm("ANSELB equ 0F19h");
+[; <" ANSELB equ 0F19h ;# ">
+"9082
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9082: __asm("IOCCF equ 0F1Ah");
+[; <" IOCCF equ 0F1Ah ;# ">
+"9144
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9144: __asm("IOCCN equ 0F1Bh");
+[; <" IOCCN equ 0F1Bh ;# ">
+"9206
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9206: __asm("IOCCP equ 0F1Ch");
+[; <" IOCCP equ 0F1Ch ;# ">
+"9268
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9268: __asm("INLVLC equ 0F1Dh");
+[; <" INLVLC equ 0F1Dh ;# ">
+"9330
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9330: __asm("SLRCONC equ 0F1Eh");
+[; <" SLRCONC equ 0F1Eh ;# ">
+"9392
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9392: __asm("ODCONC equ 0F1Fh");
+[; <" ODCONC equ 0F1Fh ;# ">
+"9454
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9454: __asm("WPUC equ 0F20h");
+[; <" WPUC equ 0F20h ;# ">
+"9516
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9516: __asm("ANSELC equ 0F21h");
+[; <" ANSELC equ 0F21h ;# ">
+"9578
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9578: __asm("INLVLD equ 0F22h");
+[; <" INLVLD equ 0F22h ;# ">
+"9640
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9640: __asm("SLRCOND equ 0F23h");
+[; <" SLRCOND equ 0F23h ;# ">
+"9702
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9702: __asm("ODCOND equ 0F24h");
+[; <" ODCOND equ 0F24h ;# ">
+"9764
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9764: __asm("WPUD equ 0F25h");
+[; <" WPUD equ 0F25h ;# ">
+"9826
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9826: __asm("ANSELD equ 0F26h");
+[; <" ANSELD equ 0F26h ;# ">
+"9888
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9888: __asm("IOCEF equ 0F27h");
+[; <" IOCEF equ 0F27h ;# ">
+"9909
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9909: __asm("IOCEN equ 0F28h");
+[; <" IOCEN equ 0F28h ;# ">
+"9930
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9930: __asm("IOCEP equ 0F29h");
+[; <" IOCEP equ 0F29h ;# ">
+"9951
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9951: __asm("INLVLE equ 0F2Ah");
+[; <" INLVLE equ 0F2Ah ;# ">
+"9989
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 9989: __asm("SLRCONE equ 0F2Bh");
+[; <" SLRCONE equ 0F2Bh ;# ">
+"10021
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10021: __asm("ODCONE equ 0F2Ch");
+[; <" ODCONE equ 0F2Ch ;# ">
+"10053
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10053: __asm("WPUE equ 0F2Dh");
+[; <" WPUE equ 0F2Dh ;# ">
+"10091
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10091: __asm("ANSELE equ 0F2Eh");
+[; <" ANSELE equ 0F2Eh ;# ">
+"10123
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10123: __asm("HLVDCON0 equ 0F2Fh");
+[; <" HLVDCON0 equ 0F2Fh ;# ">
+"10203
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10203: __asm("HLVDCON1 equ 0F30h");
+[; <" HLVDCON1 equ 0F30h ;# ">
+"10275
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10275: __asm("FVRCON equ 0F31h");
+[; <" FVRCON equ 0F31h ;# ">
+"10364
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10364: __asm("ZCDCON equ 0F32h");
+[; <" ZCDCON equ 0F32h ;# ">
+"10444
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10444: __asm("DAC1CON0 equ 0F33h");
+[; <" DAC1CON0 equ 0F33h ;# ">
+"10545
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10545: __asm("DAC1CON1 equ 0F34h");
+[; <" DAC1CON1 equ 0F34h ;# ">
+"10597
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10597: __asm("CM2CON0 equ 0F35h");
+[; <" CM2CON0 equ 0F35h ;# ">
+"10677
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10677: __asm("CM2CON1 equ 0F36h");
+[; <" CM2CON1 equ 0F36h ;# ">
+"10717
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10717: __asm("CM2NCH equ 0F37h");
+[; <" CM2NCH equ 0F37h ;# ">
+"10777
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10777: __asm("CM2PCH equ 0F38h");
+[; <" CM2PCH equ 0F38h ;# ">
+"10837
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10837: __asm("CM1CON0 equ 0F39h");
+[; <" CM1CON0 equ 0F39h ;# ">
+"10917
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10917: __asm("CM1CON1 equ 0F3Ah");
+[; <" CM1CON1 equ 0F3Ah ;# ">
+"10957
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 10957: __asm("CM1NCH equ 0F3Bh");
+[; <" CM1NCH equ 0F3Bh ;# ">
+"11017
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11017: __asm("CM1PCH equ 0F3Ch");
+[; <" CM1PCH equ 0F3Ch ;# ">
+"11077
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11077: __asm("CMOUT equ 0F3Dh");
+[; <" CMOUT equ 0F3Dh ;# ">
+"11103
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11103: __asm("CLKRCON equ 0F3Eh");
+[; <" CLKRCON equ 0F3Eh ;# ">
+"11207
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11207: __asm("CLKRCLK equ 0F3Fh");
+[; <" CLKRCLK equ 0F3Fh ;# ">
+"11267
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11267: __asm("CWG1CLK equ 0F40h");
+[; <" CWG1CLK equ 0F40h ;# ">
+"11272
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11272: __asm("CWG1CLKCON equ 0F40h");
+[; <" CWG1CLKCON equ 0F40h ;# ">
+"11321
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11321: __asm("CWG1ISM equ 0F41h");
+[; <" CWG1ISM equ 0F41h ;# ">
+"11367
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11367: __asm("CWG1DBR equ 0F42h");
+[; <" CWG1DBR equ 0F42h ;# ">
+"11471
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11471: __asm("CWG1DBF equ 0F43h");
+[; <" CWG1DBF equ 0F43h ;# ">
+"11575
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11575: __asm("CWG1CON0 equ 0F44h");
+[; <" CWG1CON0 equ 0F44h ;# ">
+"11676
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11676: __asm("CWG1CON1 equ 0F45h");
+[; <" CWG1CON1 equ 0F45h ;# ">
+"11754
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11754: __asm("CWG1AS0 equ 0F46h");
+[; <" CWG1AS0 equ 0F46h ;# ">
+"11874
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11874: __asm("CWG1AS1 equ 0F47h");
+[; <" CWG1AS1 equ 0F47h ;# ">
+"11924
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 11924: __asm("CWG1STR equ 0F48h");
+[; <" CWG1STR equ 0F48h ;# ">
+"12038
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12038: __asm("SCANLADR equ 0F49h");
+[; <" SCANLADR equ 0F49h ;# ">
+"12045
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12045: __asm("SCANLADRL equ 0F49h");
+[; <" SCANLADRL equ 0F49h ;# ">
+"12173
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12173: __asm("SCANLADRH equ 0F4Ah");
+[; <" SCANLADRH equ 0F4Ah ;# ">
+"12301
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12301: __asm("SCANLADRU equ 0F4Bh");
+[; <" SCANLADRU equ 0F4Bh ;# ">
+"12407
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12407: __asm("SCANHADR equ 0F4Ch");
+[; <" SCANHADR equ 0F4Ch ;# ">
+"12414
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12414: __asm("SCANHADRL equ 0F4Ch");
+[; <" SCANHADRL equ 0F4Ch ;# ">
+"12542
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12542: __asm("SCANHADRH equ 0F4Dh");
+[; <" SCANHADRH equ 0F4Dh ;# ">
+"12670
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12670: __asm("SCANHADRU equ 0F4Eh");
+[; <" SCANHADRU equ 0F4Eh ;# ">
+"12774
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12774: __asm("SCANCON0 equ 0F4Fh");
+[; <" SCANCON0 equ 0F4Fh ;# ">
+"12901
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12901: __asm("SCANTRIG equ 0F50h");
+[; <" SCANTRIG equ 0F50h ;# ">
+"12981
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 12981: __asm("MDCON0 equ 0F51h");
+[; <" MDCON0 equ 0F51h ;# ">
+"13049
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13049: __asm("MDCON1 equ 0F52h");
+[; <" MDCON1 equ 0F52h ;# ">
+"13115
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13115: __asm("MDSRC equ 0F53h");
+[; <" MDSRC equ 0F53h ;# ">
+"13195
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13195: __asm("MDCARL equ 0F54h");
+[; <" MDCARL equ 0F54h ;# ">
+"13263
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13263: __asm("MDCARH equ 0F55h");
+[; <" MDCARH equ 0F55h ;# ">
+"13331
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13331: __asm("ADACT equ 0F56h");
+[; <" ADACT equ 0F56h ;# ">
+"13383
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13383: __asm("ADCLK equ 0F57h");
+[; <" ADCLK equ 0F57h ;# ">
+"13441
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13441: __asm("ADREF equ 0F58h");
+[; <" ADREF equ 0F58h ;# ">
+"13482
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13482: __asm("ADCON1 equ 0F59h");
+[; <" ADCON1 equ 0F59h ;# ">
+"13521
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13521: __asm("ADCON2 equ 0F5Ah");
+[; <" ADCON2 equ 0F5Ah ;# ">
+"13598
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13598: __asm("ADCON3 equ 0F5Bh");
+[; <" ADCON3 equ 0F5Bh ;# ">
+"13669
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13669: __asm("ADACQ equ 0F5Ch");
+[; <" ADACQ equ 0F5Ch ;# ">
+"13739
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13739: __asm("ADCAP equ 0F5Dh");
+[; <" ADCAP equ 0F5Dh ;# ">
+"13791
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13791: __asm("ADPRE equ 0F5Eh");
+[; <" ADPRE equ 0F5Eh ;# ">
+"13861
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13861: __asm("ADPCH equ 0F5Fh");
+[; <" ADPCH equ 0F5Fh ;# ">
+"13919
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 13919: __asm("ADCON0 equ 0F60h");
+[; <" ADCON0 equ 0F60h ;# ">
+"14014
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14014: __asm("ADPREV equ 0F61h");
+[; <" ADPREV equ 0F61h ;# ">
+"14021
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14021: __asm("ADPREVL equ 0F61h");
+[; <" ADPREVL equ 0F61h ;# ">
+"14091
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14091: __asm("ADPREVH equ 0F62h");
+[; <" ADPREVH equ 0F62h ;# ">
+"14161
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14161: __asm("ADRES equ 0F63h");
+[; <" ADRES equ 0F63h ;# ">
+"14168
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14168: __asm("ADRESL equ 0F63h");
+[; <" ADRESL equ 0F63h ;# ">
+"14238
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14238: __asm("ADRESH equ 0F64h");
+[; <" ADRESH equ 0F64h ;# ">
+"14300
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14300: __asm("ADSTAT equ 0F65h");
+[; <" ADSTAT equ 0F65h ;# ">
+"14365
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14365: __asm("ADRPT equ 0F66h");
+[; <" ADRPT equ 0F66h ;# ">
+"14435
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14435: __asm("ADCNT equ 0F67h");
+[; <" ADCNT equ 0F67h ;# ">
+"14505
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14505: __asm("ADSTPT equ 0F68h");
+[; <" ADSTPT equ 0F68h ;# ">
+"14512
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14512: __asm("ADSTPTL equ 0F68h");
+[; <" ADSTPTL equ 0F68h ;# ">
+"14582
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14582: __asm("ADSTPTH equ 0F69h");
+[; <" ADSTPTH equ 0F69h ;# ">
+"14652
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14652: __asm("ADLTH equ 0F6Ah");
+[; <" ADLTH equ 0F6Ah ;# ">
+"14659
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14659: __asm("ADLTHL equ 0F6Ah");
+[; <" ADLTHL equ 0F6Ah ;# ">
+"14729
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14729: __asm("ADLTHH equ 0F6Bh");
+[; <" ADLTHH equ 0F6Bh ;# ">
+"14799
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14799: __asm("ADUTH equ 0F6Ch");
+[; <" ADUTH equ 0F6Ch ;# ">
+"14806
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14806: __asm("ADUTHL equ 0F6Ch");
+[; <" ADUTHL equ 0F6Ch ;# ">
+"14876
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14876: __asm("ADUTHH equ 0F6Dh");
+[; <" ADUTHH equ 0F6Dh ;# ">
+"14946
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14946: __asm("ADERR equ 0F6Eh");
+[; <" ADERR equ 0F6Eh ;# ">
+"14953
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 14953: __asm("ADERRL equ 0F6Eh");
+[; <" ADERRL equ 0F6Eh ;# ">
+"15023
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15023: __asm("ADERRH equ 0F6Fh");
+[; <" ADERRH equ 0F6Fh ;# ">
+"15093
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15093: __asm("ADACC equ 0F70h");
+[; <" ADACC equ 0F70h ;# ">
+"15100
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15100: __asm("ADACCL equ 0F70h");
+[; <" ADACCL equ 0F70h ;# ">
+"15170
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15170: __asm("ADACCH equ 0F71h");
+[; <" ADACCH equ 0F71h ;# ">
+"15240
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15240: __asm("ADFLTR equ 0F72h");
+[; <" ADFLTR equ 0F72h ;# ">
+"15247
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15247: __asm("ADFLTRL equ 0F72h");
+[; <" ADFLTRL equ 0F72h ;# ">
+"15317
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15317: __asm("ADFLTRH equ 0F73h");
+[; <" ADFLTRH equ 0F73h ;# ">
+"15387
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15387: __asm("CRCDATA equ 0F74h");
+[; <" CRCDATA equ 0F74h ;# ">
+"15394
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15394: __asm("CRCDATL equ 0F74h");
+[; <" CRCDATL equ 0F74h ;# ">
+"15456
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15456: __asm("CRCDATH equ 0F75h");
+[; <" CRCDATH equ 0F75h ;# ">
+"15518
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15518: __asm("CRCACC equ 0F76h");
+[; <" CRCACC equ 0F76h ;# ">
+"15525
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15525: __asm("CRCACCL equ 0F76h");
+[; <" CRCACCL equ 0F76h ;# ">
+"15587
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15587: __asm("CRCACCH equ 0F77h");
+[; <" CRCACCH equ 0F77h ;# ">
+"15649
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15649: __asm("CRCSHFT equ 0F78h");
+[; <" CRCSHFT equ 0F78h ;# ">
+"15656
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15656: __asm("CRCSHIFTL equ 0F78h");
+[; <" CRCSHIFTL equ 0F78h ;# ">
+"15718
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15718: __asm("CRCSHIFTH equ 0F79h");
+[; <" CRCSHIFTH equ 0F79h ;# ">
+"15780
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15780: __asm("CRCXOR equ 0F7Ah");
+[; <" CRCXOR equ 0F7Ah ;# ">
+"15787
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15787: __asm("CRCXORL equ 0F7Ah");
+[; <" CRCXORL equ 0F7Ah ;# ">
+"15844
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15844: __asm("CRCXORH equ 0F7Bh");
+[; <" CRCXORH equ 0F7Bh ;# ">
+"15906
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15906: __asm("CRCCON0 equ 0F7Ch");
+[; <" CRCCON0 equ 0F7Ch ;# ">
+"15966
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 15966: __asm("CRCCON1 equ 0F7Dh");
+[; <" CRCCON1 equ 0F7Dh ;# ">
+"16042
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16042: __asm("NVMADR equ 0F7Eh");
+[; <" NVMADR equ 0F7Eh ;# ">
+"16049
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16049: __asm("NVMADRL equ 0F7Eh");
+[; <" NVMADRL equ 0F7Eh ;# ">
+"16177
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16177: __asm("NVMADRH equ 0F7Fh");
+[; <" NVMADRH equ 0F7Fh ;# ">
+"16233
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16233: __asm("NVMDAT equ 0F80h");
+[; <" NVMDAT equ 0F80h ;# ">
+"16303
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16303: __asm("NVMCON1 equ 0F81h");
+[; <" NVMCON1 equ 0F81h ;# ">
+"16369
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16369: __asm("NVMCON2 equ 0F82h");
+[; <" NVMCON2 equ 0F82h ;# ">
+"16389
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16389: __asm("LATA equ 0F83h");
+[; <" LATA equ 0F83h ;# ">
+"16501
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16501: __asm("LATB equ 0F84h");
+[; <" LATB equ 0F84h ;# ">
+"16613
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16613: __asm("LATC equ 0F85h");
+[; <" LATC equ 0F85h ;# ">
+"16725
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16725: __asm("LATD equ 0F86h");
+[; <" LATD equ 0F86h ;# ">
+"16837
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16837: __asm("LATE equ 0F87h");
+[; <" LATE equ 0F87h ;# ">
+"16934
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16934: __asm("TRISA equ 0F88h");
+[; <" TRISA equ 0F88h ;# ">
+"16939
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 16939: __asm("DDRA equ 0F88h");
+[; <" DDRA equ 0F88h ;# ">
+"17056
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17056: __asm("TRISB equ 0F89h");
+[; <" TRISB equ 0F89h ;# ">
+"17061
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17061: __asm("DDRB equ 0F89h");
+[; <" DDRB equ 0F89h ;# ">
+"17178
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17178: __asm("TRISC equ 0F8Ah");
+[; <" TRISC equ 0F8Ah ;# ">
+"17183
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17183: __asm("DDRC equ 0F8Ah");
+[; <" DDRC equ 0F8Ah ;# ">
+"17300
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17300: __asm("TRISD equ 0F8Bh");
+[; <" TRISD equ 0F8Bh ;# ">
+"17305
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17305: __asm("DDRD equ 0F8Bh");
+[; <" DDRD equ 0F8Bh ;# ">
+"17422
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17422: __asm("TRISE equ 0F8Ch");
+[; <" TRISE equ 0F8Ch ;# ">
+"17427
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17427: __asm("DDRE equ 0F8Ch");
+[; <" DDRE equ 0F8Ch ;# ">
+"17484
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17484: __asm("PORTA equ 0F8Dh");
+[; <" PORTA equ 0F8Dh ;# ">
+"17568
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17568: __asm("PORTB equ 0F8Eh");
+[; <" PORTB equ 0F8Eh ;# ">
+"17639
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17639: __asm("PORTC equ 0F8Fh");
+[; <" PORTC equ 0F8Fh ;# ">
+"17725
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17725: __asm("PORTD equ 0F90h");
+[; <" PORTD equ 0F90h ;# ">
+"17796
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 17796: __asm("PORTE equ 0F91h");
+[; <" PORTE equ 0F91h ;# ">
+"18003
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18003: __asm("SSP1BUF equ 0F92h");
+[; <" SSP1BUF equ 0F92h ;# ">
+"18023
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18023: __asm("SSP1ADD equ 0F93h");
+[; <" SSP1ADD equ 0F93h ;# ">
+"18143
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18143: __asm("SSP1MSK equ 0F94h");
+[; <" SSP1MSK equ 0F94h ;# ">
+"18213
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18213: __asm("SSP1STAT equ 0F95h");
+[; <" SSP1STAT equ 0F95h ;# ">
+"18667
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18667: __asm("SSP1CON1 equ 0F96h");
+[; <" SSP1CON1 equ 0F96h ;# ">
+"18787
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18787: __asm("SSP1CON2 equ 0F97h");
+[; <" SSP1CON2 equ 0F97h ;# ">
+"18974
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 18974: __asm("SSP1CON3 equ 0F98h");
+[; <" SSP1CON3 equ 0F98h ;# ">
+"19036
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19036: __asm("RC1REG equ 0F99h");
+[; <" RC1REG equ 0F99h ;# ">
+"19041
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19041: __asm("RCREG equ 0F99h");
+[; <" RCREG equ 0F99h ;# ">
+"19045
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19045: __asm("RCREG1 equ 0F99h");
+[; <" RCREG1 equ 0F99h ;# ">
+"19090
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19090: __asm("TX1REG equ 0F9Ah");
+[; <" TX1REG equ 0F9Ah ;# ">
+"19095
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19095: __asm("TXREG1 equ 0F9Ah");
+[; <" TXREG1 equ 0F9Ah ;# ">
+"19099
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19099: __asm("TXREG equ 0F9Ah");
+[; <" TXREG equ 0F9Ah ;# ">
+"19144
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19144: __asm("SP1BRG equ 0F9Bh");
+[; <" SP1BRG equ 0F9Bh ;# ">
+"19151
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19151: __asm("SP1BRGL equ 0F9Bh");
+[; <" SP1BRGL equ 0F9Bh ;# ">
+"19156
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19156: __asm("SPBRG equ 0F9Bh");
+[; <" SPBRG equ 0F9Bh ;# ">
+"19160
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19160: __asm("SPBRG1 equ 0F9Bh");
+[; <" SPBRG1 equ 0F9Bh ;# ">
+"19164
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19164: __asm("SPBRGL equ 0F9Bh");
+[; <" SPBRGL equ 0F9Bh ;# ">
+"19221
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19221: __asm("SP1BRGH equ 0F9Ch");
+[; <" SP1BRGH equ 0F9Ch ;# ">
+"19226
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19226: __asm("SPBRGH equ 0F9Ch");
+[; <" SPBRGH equ 0F9Ch ;# ">
+"19230
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19230: __asm("SPBRGH1 equ 0F9Ch");
+[; <" SPBRGH1 equ 0F9Ch ;# ">
+"19275
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19275: __asm("RC1STA equ 0F9Dh");
+[; <" RC1STA equ 0F9Dh ;# ">
+"19280
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19280: __asm("RCSTA1 equ 0F9Dh");
+[; <" RCSTA1 equ 0F9Dh ;# ">
+"19284
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19284: __asm("RCSTA equ 0F9Dh");
+[; <" RCSTA equ 0F9Dh ;# ">
+"19560
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19560: __asm("TX1STA equ 0F9Eh");
+[; <" TX1STA equ 0F9Eh ;# ">
+"19565
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19565: __asm("TXSTA1 equ 0F9Eh");
+[; <" TXSTA1 equ 0F9Eh ;# ">
+"19569
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 19569: __asm("TXSTA equ 0F9Eh");
+[; <" TXSTA equ 0F9Eh ;# ">
+"20004
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20004: __asm("BAUD1CON equ 0F9Fh");
+[; <" BAUD1CON equ 0F9Fh ;# ">
+"20009
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20009: __asm("BAUDCON1 equ 0F9Fh");
+[; <" BAUDCON1 equ 0F9Fh ;# ">
+"20013
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20013: __asm("BAUDCTL1 equ 0F9Fh");
+[; <" BAUDCTL1 equ 0F9Fh ;# ">
+"20017
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20017: __asm("BAUDCON equ 0F9Fh");
+[; <" BAUDCON equ 0F9Fh ;# ">
+"20021
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20021: __asm("BAUDCTL equ 0F9Fh");
+[; <" BAUDCTL equ 0F9Fh ;# ">
+"20785
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20785: __asm("PWM4DC equ 0FA0h");
+[; <" PWM4DC equ 0FA0h ;# ">
+"20792
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20792: __asm("PWM4DCL equ 0FA0h");
+[; <" PWM4DCL equ 0FA0h ;# ">
+"20858
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 20858: __asm("PWM4DCH equ 0FA1h");
+[; <" PWM4DCH equ 0FA1h ;# ">
+"21028
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21028: __asm("PWM4CON equ 0FA2h");
+[; <" PWM4CON equ 0FA2h ;# ">
+"21084
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21084: __asm("PWM3DC equ 0FA3h");
+[; <" PWM3DC equ 0FA3h ;# ">
+"21091
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21091: __asm("PWM3DCL equ 0FA3h");
+[; <" PWM3DCL equ 0FA3h ;# ">
+"21157
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21157: __asm("PWM3DCH equ 0FA4h");
+[; <" PWM3DCH equ 0FA4h ;# ">
+"21327
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21327: __asm("PWM3CON equ 0FA5h");
+[; <" PWM3CON equ 0FA5h ;# ">
+"21383
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21383: __asm("CCPR2 equ 0FA6h");
+[; <" CCPR2 equ 0FA6h ;# ">
+"21390
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21390: __asm("CCPR2L equ 0FA6h");
+[; <" CCPR2L equ 0FA6h ;# ">
+"21410
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21410: __asm("CCPR2H equ 0FA7h");
+[; <" CCPR2H equ 0FA7h ;# ">
+"21430
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21430: __asm("CCP2CON equ 0FA8h");
+[; <" CCP2CON equ 0FA8h ;# ">
+"21548
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21548: __asm("CCP2CAP equ 0FA9h");
+[; <" CCP2CAP equ 0FA9h ;# ">
+"21604
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21604: __asm("CCPR1 equ 0FAAh");
+[; <" CCPR1 equ 0FAAh ;# ">
+"21611
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21611: __asm("CCPR1L equ 0FAAh");
+[; <" CCPR1L equ 0FAAh ;# ">
+"21631
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21631: __asm("CCPR1H equ 0FABh");
+[; <" CCPR1H equ 0FABh ;# ">
+"21651
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21651: __asm("CCP1CON equ 0FACh");
+[; <" CCP1CON equ 0FACh ;# ">
+"21778
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21778: __asm("CCP1CAP equ 0FADh");
+[; <" CCP1CAP equ 0FADh ;# ">
+"21834
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21834: __asm("CCPTMRS equ 0FAEh");
+[; <" CCPTMRS equ 0FAEh ;# ">
+"21922
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21922: __asm("T6TMR equ 0FAFh");
+[; <" T6TMR equ 0FAFh ;# ">
+"21927
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21927: __asm("TMR6 equ 0FAFh");
+[; <" TMR6 equ 0FAFh ;# ">
+"21960
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21960: __asm("T6PR equ 0FB0h");
+[; <" T6PR equ 0FB0h ;# ">
+"21965
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21965: __asm("PR6 equ 0FB0h");
+[; <" PR6 equ 0FB0h ;# ">
+"21998
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 21998: __asm("T6CON equ 0FB1h");
+[; <" T6CON equ 0FB1h ;# ">
+"22144
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22144: __asm("T6HLT equ 0FB2h");
+[; <" T6HLT equ 0FB2h ;# ">
+"22272
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22272: __asm("T6CLKCON equ 0FB3h");
+[; <" T6CLKCON equ 0FB3h ;# ">
+"22277
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22277: __asm("T6CLK equ 0FB3h");
+[; <" T6CLK equ 0FB3h ;# ">
+"22430
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22430: __asm("T6RST equ 0FB4h");
+[; <" T6RST equ 0FB4h ;# ">
+"22510
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22510: __asm("T4TMR equ 0FB5h");
+[; <" T4TMR equ 0FB5h ;# ">
+"22515
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22515: __asm("TMR4 equ 0FB5h");
+[; <" TMR4 equ 0FB5h ;# ">
+"22548
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22548: __asm("T4PR equ 0FB6h");
+[; <" T4PR equ 0FB6h ;# ">
+"22553
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22553: __asm("PR4 equ 0FB6h");
+[; <" PR4 equ 0FB6h ;# ">
+"22586
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22586: __asm("T4CON equ 0FB7h");
+[; <" T4CON equ 0FB7h ;# ">
+"22732
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22732: __asm("T4HLT equ 0FB8h");
+[; <" T4HLT equ 0FB8h ;# ">
+"22860
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22860: __asm("T4CLKCON equ 0FB9h");
+[; <" T4CLKCON equ 0FB9h ;# ">
+"22865
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 22865: __asm("T4CLK equ 0FB9h");
+[; <" T4CLK equ 0FB9h ;# ">
+"23018
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23018: __asm("T4RST equ 0FBAh");
+[; <" T4RST equ 0FBAh ;# ">
+"23098
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23098: __asm("T2TMR equ 0FBBh");
+[; <" T2TMR equ 0FBBh ;# ">
+"23103
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23103: __asm("TMR2 equ 0FBBh");
+[; <" TMR2 equ 0FBBh ;# ">
+"23136
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23136: __asm("T2PR equ 0FBCh");
+[; <" T2PR equ 0FBCh ;# ">
+"23141
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23141: __asm("PR2 equ 0FBCh");
+[; <" PR2 equ 0FBCh ;# ">
+"23174
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23174: __asm("T2CON equ 0FBDh");
+[; <" T2CON equ 0FBDh ;# ">
+"23320
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23320: __asm("T2HLT equ 0FBEh");
+[; <" T2HLT equ 0FBEh ;# ">
+"23448
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23448: __asm("T2CLKCON equ 0FBFh");
+[; <" T2CLKCON equ 0FBFh ;# ">
+"23453
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23453: __asm("T2CLK equ 0FBFh");
+[; <" T2CLK equ 0FBFh ;# ">
+"23606
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23606: __asm("T2RST equ 0FC0h");
+[; <" T2RST equ 0FC0h ;# ">
+"23686
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23686: __asm("TMR5 equ 0FC1h");
+[; <" TMR5 equ 0FC1h ;# ">
+"23693
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23693: __asm("TMR5L equ 0FC1h");
+[; <" TMR5L equ 0FC1h ;# ">
+"23863
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23863: __asm("TMR5H equ 0FC2h");
+[; <" TMR5H equ 0FC2h ;# ">
+"23983
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 23983: __asm("T5CON equ 0FC3h");
+[; <" T5CON equ 0FC3h ;# ">
+"24097
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24097: __asm("T5GCON equ 0FC4h");
+[; <" T5GCON equ 0FC4h ;# ">
+"24102
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24102: __asm("PR5 equ 0FC4h");
+[; <" PR5 equ 0FC4h ;# ">
+"24329
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24329: __asm("T5GATE equ 0FC5h");
+[; <" T5GATE equ 0FC5h ;# ">
+"24334
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24334: __asm("TMR5GATE equ 0FC5h");
+[; <" TMR5GATE equ 0FC5h ;# ">
+"24471
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24471: __asm("T5CLK equ 0FC6h");
+[; <" T5CLK equ 0FC6h ;# ">
+"24476
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24476: __asm("TMR5CLK equ 0FC6h");
+[; <" TMR5CLK equ 0FC6h ;# ">
+"24613
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24613: __asm("TMR3 equ 0FC7h");
+[; <" TMR3 equ 0FC7h ;# ">
+"24620
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24620: __asm("TMR3L equ 0FC7h");
+[; <" TMR3L equ 0FC7h ;# ">
+"24790
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24790: __asm("TMR3H equ 0FC8h");
+[; <" TMR3H equ 0FC8h ;# ">
+"24910
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 24910: __asm("T3CON equ 0FC9h");
+[; <" T3CON equ 0FC9h ;# ">
+"25024
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25024: __asm("T3GCON equ 0FCAh");
+[; <" T3GCON equ 0FCAh ;# ">
+"25029
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25029: __asm("PR3 equ 0FCAh");
+[; <" PR3 equ 0FCAh ;# ">
+"25256
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25256: __asm("T3GATE equ 0FCBh");
+[; <" T3GATE equ 0FCBh ;# ">
+"25261
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25261: __asm("TMR3GATE equ 0FCBh");
+[; <" TMR3GATE equ 0FCBh ;# ">
+"25398
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25398: __asm("T3CLK equ 0FCCh");
+[; <" T3CLK equ 0FCCh ;# ">
+"25403
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25403: __asm("TMR3CLK equ 0FCCh");
+[; <" TMR3CLK equ 0FCCh ;# ">
+"25540
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25540: __asm("TMR1 equ 0FCDh");
+[; <" TMR1 equ 0FCDh ;# ">
+"25547
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25547: __asm("TMR1L equ 0FCDh");
+[; <" TMR1L equ 0FCDh ;# ">
+"25717
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25717: __asm("TMR1H equ 0FCEh");
+[; <" TMR1H equ 0FCEh ;# ">
+"25837
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25837: __asm("T1CON equ 0FCFh");
+[; <" T1CON equ 0FCFh ;# ">
+"25951
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25951: __asm("T1GCON equ 0FD0h");
+[; <" T1GCON equ 0FD0h ;# ">
+"25956
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 25956: __asm("PR1 equ 0FD0h");
+[; <" PR1 equ 0FD0h ;# ">
+"26183
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26183: __asm("T1GATE equ 0FD1h");
+[; <" T1GATE equ 0FD1h ;# ">
+"26188
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26188: __asm("TMR1GATE equ 0FD1h");
+[; <" TMR1GATE equ 0FD1h ;# ">
+"26325
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26325: __asm("T1CLK equ 0FD2h");
+[; <" T1CLK equ 0FD2h ;# ">
+"26330
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26330: __asm("TMR1CLK equ 0FD2h");
+[; <" TMR1CLK equ 0FD2h ;# ">
+"26467
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26467: __asm("TMR0L equ 0FD3h");
+[; <" TMR0L equ 0FD3h ;# ">
+"26472
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26472: __asm("TMR0 equ 0FD3h");
+[; <" TMR0 equ 0FD3h ;# ">
+"26605
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26605: __asm("TMR0H equ 0FD4h");
+[; <" TMR0H equ 0FD4h ;# ">
+"26610
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26610: __asm("PR0 equ 0FD4h");
+[; <" PR0 equ 0FD4h ;# ">
+"26859
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26859: __asm("T0CON0 equ 0FD5h");
+[; <" T0CON0 equ 0FD5h ;# ">
+"26924
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 26924: __asm("T0CON1 equ 0FD6h");
+[; <" T0CON1 equ 0FD6h ;# ">
+"27035
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27035: __asm("PCON0 equ 0FD7h");
+[; <" PCON0 equ 0FD7h ;# ">
+"27188
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27188: __asm("STATUS equ 0FD8h");
+[; <" STATUS equ 0FD8h ;# ">
+"27304
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27304: __asm("FSR2 equ 0FD9h");
+[; <" FSR2 equ 0FD9h ;# ">
+"27311
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27311: __asm("FSR2L equ 0FD9h");
+[; <" FSR2L equ 0FD9h ;# ">
+"27331
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27331: __asm("FSR2H equ 0FDAh");
+[; <" FSR2H equ 0FDAh ;# ">
+"27338
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27338: __asm("PLUSW2 equ 0FDBh");
+[; <" PLUSW2 equ 0FDBh ;# ">
+"27358
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27358: __asm("PREINC2 equ 0FDCh");
+[; <" PREINC2 equ 0FDCh ;# ">
+"27378
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27378: __asm("POSTDEC2 equ 0FDDh");
+[; <" POSTDEC2 equ 0FDDh ;# ">
+"27398
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27398: __asm("POSTINC2 equ 0FDEh");
+[; <" POSTINC2 equ 0FDEh ;# ">
+"27418
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27418: __asm("INDF2 equ 0FDFh");
+[; <" INDF2 equ 0FDFh ;# ">
+"27438
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27438: __asm("BSR equ 0FE0h");
+[; <" BSR equ 0FE0h ;# ">
+"27445
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27445: __asm("FSR1 equ 0FE1h");
+[; <" FSR1 equ 0FE1h ;# ">
+"27452
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27452: __asm("FSR1L equ 0FE1h");
+[; <" FSR1L equ 0FE1h ;# ">
+"27472
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27472: __asm("FSR1H equ 0FE2h");
+[; <" FSR1H equ 0FE2h ;# ">
+"27479
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27479: __asm("PLUSW1 equ 0FE3h");
+[; <" PLUSW1 equ 0FE3h ;# ">
+"27499
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27499: __asm("PREINC1 equ 0FE4h");
+[; <" PREINC1 equ 0FE4h ;# ">
+"27519
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27519: __asm("POSTDEC1 equ 0FE5h");
+[; <" POSTDEC1 equ 0FE5h ;# ">
+"27539
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27539: __asm("POSTINC1 equ 0FE6h");
+[; <" POSTINC1 equ 0FE6h ;# ">
+"27559
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27559: __asm("INDF1 equ 0FE7h");
+[; <" INDF1 equ 0FE7h ;# ">
+"27579
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27579: __asm("WREG equ 0FE8h");
+[; <" WREG equ 0FE8h ;# ">
+"27617
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27617: __asm("FSR0 equ 0FE9h");
+[; <" FSR0 equ 0FE9h ;# ">
+"27624
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27624: __asm("FSR0L equ 0FE9h");
+[; <" FSR0L equ 0FE9h ;# ">
+"27644
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27644: __asm("FSR0H equ 0FEAh");
+[; <" FSR0H equ 0FEAh ;# ">
+"27651
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27651: __asm("PLUSW0 equ 0FEBh");
+[; <" PLUSW0 equ 0FEBh ;# ">
+"27671
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27671: __asm("PREINC0 equ 0FECh");
+[; <" PREINC0 equ 0FECh ;# ">
+"27691
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27691: __asm("POSTDEC0 equ 0FEDh");
+[; <" POSTDEC0 equ 0FEDh ;# ">
+"27711
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27711: __asm("POSTINC0 equ 0FEEh");
+[; <" POSTINC0 equ 0FEEh ;# ">
+"27731
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27731: __asm("INDF0 equ 0FEFh");
+[; <" INDF0 equ 0FEFh ;# ">
+"27751
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27751: __asm("INTCON equ 0FF2h");
+[; <" INTCON equ 0FF2h ;# ">
+"27832
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27832: __asm("PROD equ 0FF3h");
+[; <" PROD equ 0FF3h ;# ">
+"27839
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27839: __asm("PRODL equ 0FF3h");
+[; <" PRODL equ 0FF3h ;# ">
+"27859
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27859: __asm("PRODH equ 0FF4h");
+[; <" PRODH equ 0FF4h ;# ">
+"27879
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27879: __asm("TABLAT equ 0FF5h");
+[; <" TABLAT equ 0FF5h ;# ">
+"27901
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27901: __asm("TBLPTR equ 0FF6h");
+[; <" TBLPTR equ 0FF6h ;# ">
+"27908
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27908: __asm("TBLPTRL equ 0FF6h");
+[; <" TBLPTRL equ 0FF6h ;# ">
+"27928
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27928: __asm("TBLPTRH equ 0FF7h");
+[; <" TBLPTRH equ 0FF7h ;# ">
+"27948
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27948: __asm("TBLPTRU equ 0FF8h");
+[; <" TBLPTRU equ 0FF8h ;# ">
+"27979
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27979: __asm("PCLAT equ 0FF9h");
+[; <" PCLAT equ 0FF9h ;# ">
+"27986
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27986: __asm("PC equ 0FF9h");
+[; <" PC equ 0FF9h ;# ">
+"27993
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 27993: __asm("PCL equ 0FF9h");
+[; <" PCL equ 0FF9h ;# ">
+"28013
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28013: __asm("PCLATH equ 0FFAh");
+[; <" PCLATH equ 0FFAh ;# ">
+"28033
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28033: __asm("PCLATU equ 0FFBh");
+[; <" PCLATU equ 0FFBh ;# ">
+"28053
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28053: __asm("STKPTR equ 0FFCh");
+[; <" STKPTR equ 0FFCh ;# ">
+"28151
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28151: __asm("TOS equ 0FFDh");
+[; <" TOS equ 0FFDh ;# ">
+"28158
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28158: __asm("TOSL equ 0FFDh");
+[; <" TOSL equ 0FFDh ;# ">
+"28178
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28178: __asm("TOSH equ 0FFEh");
+[; <" TOSH equ 0FFEh ;# ">
+"28198
+[; ;C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC18F-K_DFP/1.7.134/xc8\pic\include\proc\pic18f47k40.h: 28198: __asm("TOSU equ 0FFFh");
+[; <" TOSU equ 0FFFh ;# ">
+"249 drivers/../mcc_generated_files/../drivers/vl53l0x.h
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 249: VL53L0XDEV vl53l0xDev[3];
+[v _vl53l0xDev `S1492 ~T0 @X0 -> 3 `i e ]
+"250
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 250: uint8_t laserAddresses[3] = {0x29, 0x2A, 0x2B};
+[v _laserAddresses `uc ~T0 @X0 -> 3 `i e ]
+[i _laserAddresses
+:U ..
+-> -> 41 `i `uc
+-> -> 42 `i `uc
+-> -> 43 `i `uc
+..
+]
+"323
+[; ;drivers/../mcc_generated_files/../drivers/vl53l0x.h: 323: uint16_t millisec = 0;
+[v _millisec `us ~T0 @X0 1 e ]
+[i _millisec
+-> -> 0 `i `us
+]
+"95 drivers/../mcc_generated_files/eusart1.h
+[; ;drivers/../mcc_generated_files/eusart1.h: 95: void (*EUSART1_TxDefaultInterruptHandler)(void);
+[v _EUSART1_TxDefaultInterruptHandler `*F10517 ~T0 @X0 1 e ]
+"96
+[; ;drivers/../mcc_generated_files/eusart1.h: 96: void (*EUSART1_RxDefaultInterruptHandler)(void);
+[v _EUSART1_RxDefaultInterruptHandler `*F10519 ~T0 @X0 1 e ]
+"37 drivers/vl53l0x.c
+[; ;drivers/vl53l0x.c: 37: _Bool VL53L0X_Init(VL53L0XDEV *p53) {
+[v _VL53L0X_Init `(a ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_Init ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"38
+[; ;drivers/vl53l0x.c: 38:     VL53L0X_ClearStruct(p53);
+[e ( _VL53L0X_ClearStruct (1 _p53 ]
+"39
+[; ;drivers/vl53l0x.c: 39:     VL53L0X_DataInit(p53);
+[e ( _VL53L0X_DataInit (1 _p53 ]
+"40
+[; ;drivers/vl53l0x.c: 40:     VL53L0X_StaticInit(p53);
+[e ( _VL53L0X_StaticInit (1 _p53 ]
+"41
+[; ;drivers/vl53l0x.c: 41:     VL53L0X_PerformRefCalibration(p53);
+[e ( _VL53L0X_PerformRefCalibration (1 _p53 ]
+"42
+[; ;drivers/vl53l0x.c: 42:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1496  ]
+"43
+[; ;drivers/vl53l0x.c: 43: }
+[e :UE 1496 ]
+}
+"49
+[; ;drivers/vl53l0x.c: 49: void WriteRegister(uint8_t addr, uint8_t reg, uint8_t val) {
+[v _WriteRegister `(v ~T0 @X0 1 ef3`uc`uc`uc ]
+{
+[e :U _WriteRegister ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[v _val `uc ~T0 @X0 1 r3 ]
+[f ]
+"50
+[; ;drivers/vl53l0x.c: 50:     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+[v _status `E10088 ~T0 @X0 1 a ]
+[e = _status . `E10088 2 ]
+"51
+[; ;drivers/vl53l0x.c: 51:     I2C1_TRANSACTION_REQUEST_BLOCK writeTRB[1];
+[v _writeTRB `S1489 ~T0 @X0 -> -> 1 `i `ux a ]
+"52
+[; ;drivers/vl53l0x.c: 52:     uint8_t writeBuffer[2];
+[v _writeBuffer `uc ~T0 @X0 -> 2 `i a ]
+"54
+[; ;drivers/vl53l0x.c: 54:     writeBuffer[0] = reg;
+[e = *U + &U _writeBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux _reg ]
+"55
+[; ;drivers/vl53l0x.c: 55:     writeBuffer[1] = val;
+[e = *U + &U _writeBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux _val ]
+"57
+[; ;drivers/vl53l0x.c: 57:     I2C1_MasterWriteTRBBuild(&writeTRB[0], writeBuffer, 2, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _writeTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeTRB `ui `ux &U _writeBuffer -> -> 2 `i `uc -> _addr `us ]
+"58
+[; ;drivers/vl53l0x.c: 58:     while(status != I2C1_MESSAGE_FAIL) {
+[e $U 1498  ]
+[e :U 1499 ]
+{
+"59
+[; ;drivers/vl53l0x.c: 59:         I2C1_MasterTRBInsert(1, writeTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 1 `i `uc &U _writeTRB &U _status ]
+"60
+[; ;drivers/vl53l0x.c: 60:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1501  ]
+[e :U 1502 ]
+[e :U 1501 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1502  ]
+[e :U 1503 ]
+"61
+[; ;drivers/vl53l0x.c: 61:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1504  ]
+"62
+[; ;drivers/vl53l0x.c: 62:             break;
+[e $U 1500  ]
+[e :U 1504 ]
+"63
+[; ;drivers/vl53l0x.c: 63:     }
+}
+[e :U 1498 ]
+"58
+[; ;drivers/vl53l0x.c: 58:     while(status != I2C1_MESSAGE_FAIL) {
+[e $ != -> _status `ui -> . `E10088 1 `ui 1499  ]
+[e :U 1500 ]
+"64
+[; ;drivers/vl53l0x.c: 64: }
+[e :UE 1497 ]
+}
+"70
+[; ;drivers/vl53l0x.c: 70: void WriteRegister16(uint8_t addr, uint8_t reg, uint16_t val) {
+[v _WriteRegister16 `(v ~T0 @X0 1 ef3`uc`uc`us ]
+{
+[e :U _WriteRegister16 ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[v _val `us ~T0 @X0 1 r3 ]
+[f ]
+"71
+[; ;drivers/vl53l0x.c: 71:     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+[v _status `E10088 ~T0 @X0 1 a ]
+[e = _status . `E10088 2 ]
+"72
+[; ;drivers/vl53l0x.c: 72:     I2C1_TRANSACTION_REQUEST_BLOCK writeTRB[1];
+[v _writeTRB `S1489 ~T0 @X0 -> -> 1 `i `ux a ]
+"73
+[; ;drivers/vl53l0x.c: 73:     uint8_t writeBuffer[3];
+[v _writeBuffer `uc ~T0 @X0 -> 3 `i a ]
+"75
+[; ;drivers/vl53l0x.c: 75:     writeBuffer[0] = reg;
+[e = *U + &U _writeBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux _reg ]
+"76
+[; ;drivers/vl53l0x.c: 76:     writeBuffer[1] = (val >> 8);
+[e = *U + &U _writeBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux -> >> -> _val `ui -> 8 `i `uc ]
+"77
+[; ;drivers/vl53l0x.c: 77:     writeBuffer[2] = (uint8_t)(val);
+[e = *U + &U _writeBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux -> _val `uc ]
+"79
+[; ;drivers/vl53l0x.c: 79:     I2C1_MasterWriteTRBBuild(&writeTRB[0], writeBuffer, 3, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _writeTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeTRB `ui `ux &U _writeBuffer -> -> 3 `i `uc -> _addr `us ]
+"80
+[; ;drivers/vl53l0x.c: 80:     while(status != I2C1_MESSAGE_FAIL) {
+[e $U 1506  ]
+[e :U 1507 ]
+{
+"81
+[; ;drivers/vl53l0x.c: 81:         I2C1_MasterTRBInsert(1, writeTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 1 `i `uc &U _writeTRB &U _status ]
+"82
+[; ;drivers/vl53l0x.c: 82:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1509  ]
+[e :U 1510 ]
+[e :U 1509 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1510  ]
+[e :U 1511 ]
+"83
+[; ;drivers/vl53l0x.c: 83:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1512  ]
+"84
+[; ;drivers/vl53l0x.c: 84:             break;
+[e $U 1508  ]
+[e :U 1512 ]
+"85
+[; ;drivers/vl53l0x.c: 85:     }
+}
+[e :U 1506 ]
+"80
+[; ;drivers/vl53l0x.c: 80:     while(status != I2C1_MESSAGE_FAIL) {
+[e $ != -> _status `ui -> . `E10088 1 `ui 1507  ]
+[e :U 1508 ]
+"87
+[; ;drivers/vl53l0x.c: 87: }
+[e :UE 1505 ]
+}
+"93
+[; ;drivers/vl53l0x.c: 93: void WriteRegister32(uint8_t addr, uint8_t reg, uint32_t val) {
+[v _WriteRegister32 `(v ~T0 @X0 1 ef3`uc`uc`ul ]
+{
+[e :U _WriteRegister32 ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[v _val `ul ~T0 @X0 1 r3 ]
+[f ]
+"94
+[; ;drivers/vl53l0x.c: 94:     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+[v _status `E10088 ~T0 @X0 1 a ]
+[e = _status . `E10088 2 ]
+"95
+[; ;drivers/vl53l0x.c: 95:     I2C1_TRANSACTION_REQUEST_BLOCK writeTRB[1];
+[v _writeTRB `S1489 ~T0 @X0 -> -> 1 `i `ux a ]
+"96
+[; ;drivers/vl53l0x.c: 96:     uint8_t writeBuffer[5];
+[v _writeBuffer `uc ~T0 @X0 -> 5 `i a ]
+"98
+[; ;drivers/vl53l0x.c: 98:     writeBuffer[0] = reg;
+[e = *U + &U _writeBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux _reg ]
+"99
+[; ;drivers/vl53l0x.c: 99:     writeBuffer[1] = (val >> 24);
+[e = *U + &U _writeBuffer * -> -> -> 1 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux -> >> _val -> 24 `i `uc ]
+"100
+[; ;drivers/vl53l0x.c: 100:     writeBuffer[2] = (val >> 16);
+[e = *U + &U _writeBuffer * -> -> -> 2 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux -> >> _val -> 16 `i `uc ]
+"101
+[; ;drivers/vl53l0x.c: 101:     writeBuffer[3] = (val >> 8);
+[e = *U + &U _writeBuffer * -> -> -> 3 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux -> >> _val -> 8 `i `uc ]
+"102
+[; ;drivers/vl53l0x.c: 102:     writeBuffer[4] = (uint8_t)(val);
+[e = *U + &U _writeBuffer * -> -> -> 4 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux -> _val `uc ]
+"104
+[; ;drivers/vl53l0x.c: 104:     I2C1_MasterWriteTRBBuild(&writeTRB[0], writeBuffer, 5, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _writeTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeTRB `ui `ux &U _writeBuffer -> -> 5 `i `uc -> _addr `us ]
+"105
+[; ;drivers/vl53l0x.c: 105:     while(status != I2C1_MESSAGE_FAIL) {
+[e $U 1514  ]
+[e :U 1515 ]
+{
+"106
+[; ;drivers/vl53l0x.c: 106:         I2C1_MasterTRBInsert(1, writeTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 1 `i `uc &U _writeTRB &U _status ]
+"107
+[; ;drivers/vl53l0x.c: 107:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1517  ]
+[e :U 1518 ]
+[e :U 1517 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1518  ]
+[e :U 1519 ]
+"108
+[; ;drivers/vl53l0x.c: 108:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1520  ]
+"109
+[; ;drivers/vl53l0x.c: 109:             break;
+[e $U 1516  ]
+[e :U 1520 ]
+"110
+[; ;drivers/vl53l0x.c: 110:     }
+}
+[e :U 1514 ]
+"105
+[; ;drivers/vl53l0x.c: 105:     while(status != I2C1_MESSAGE_FAIL) {
+[e $ != -> _status `ui -> . `E10088 1 `ui 1515  ]
+[e :U 1516 ]
+"112
+[; ;drivers/vl53l0x.c: 112: }
+[e :UE 1513 ]
+}
+"118
+[; ;drivers/vl53l0x.c: 118: void WriteRegisters(uint8_t addr, uint8_t dataAddress, uint8_t *pData, uint8_t nCount) {
+[v _WriteRegisters `(v ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
+{
+[e :U _WriteRegisters ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _dataAddress `uc ~T0 @X0 1 r2 ]
+[v _pData `*uc ~T0 @X0 1 r3 ]
+[v _nCount `uc ~T0 @X0 1 r4 ]
+[f ]
+"119
+[; ;drivers/vl53l0x.c: 119:     I2C1_MESSAGE_STATUS status;
+[v _status `E10088 ~T0 @X0 1 a ]
+"120
+[; ;drivers/vl53l0x.c: 120:     I2C1_TRANSACTION_REQUEST_BLOCK writeTRB[2];
+[v _writeTRB `S1489 ~T0 @X0 -> 2 `i a ]
+"121
+[; ;drivers/vl53l0x.c: 121:     uint8_t writeBuffer[2];
+[v _writeBuffer `uc ~T0 @X0 -> 2 `i a ]
+"122
+[; ;drivers/vl53l0x.c: 122:     uint16_t timeOut;
+[v _timeOut `us ~T0 @X0 1 a ]
+"124
+[; ;drivers/vl53l0x.c: 124:     status = I2C1_MESSAGE_PENDING;
+[e = _status . `E10088 2 ]
+"128
+[; ;drivers/vl53l0x.c: 128:     writeBuffer[0] = dataAddress;
+[e = *U + &U _writeBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux _dataAddress ]
+"131
+[; ;drivers/vl53l0x.c: 131:     I2C1_MasterWriteTRBBuild(&writeTRB[0], writeBuffer, 2, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _writeTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeTRB `ui `ux &U _writeBuffer -> -> 2 `i `uc -> _addr `us ]
+"132
+[; ;drivers/vl53l0x.c: 132:     I2C1_MasterWriteTRBBuild(&writeTRB[1], pData, nCount, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _writeTRB * -> -> -> 1 `i `ui `ux -> -> # *U &U _writeTRB `ui `ux _pData _nCount -> _addr `us ]
+"134
+[; ;drivers/vl53l0x.c: 134:     timeOut = 0;
+[e = _timeOut -> -> 0 `i `us ]
+"136
+[; ;drivers/vl53l0x.c: 136:     while(status != I2C1_MESSAGE_FAIL)
+[e $U 1522  ]
+[e :U 1523 ]
+"137
+[; ;drivers/vl53l0x.c: 137:     {
+{
+"138
+[; ;drivers/vl53l0x.c: 138:         I2C1_MasterTRBInsert(2, writeTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 2 `i `uc &U _writeTRB &U _status ]
+"139
+[; ;drivers/vl53l0x.c: 139:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1525  ]
+[e :U 1526 ]
+[e :U 1525 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1526  ]
+[e :U 1527 ]
+"140
+[; ;drivers/vl53l0x.c: 140:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1528  ]
+"141
+[; ;drivers/vl53l0x.c: 141:             break;
+[e $U 1524  ]
+[e :U 1528 ]
+"144
+[; ;drivers/vl53l0x.c: 144:         if (timeOut == 100)
+[e $ ! == -> _timeOut `ui -> -> 100 `i `ui 1529  ]
+"145
+[; ;drivers/vl53l0x.c: 145:             break;
+[e $U 1524  ]
+[e $U 1530  ]
+"146
+[; ;drivers/vl53l0x.c: 146:         else
+[e :U 1529 ]
+"147
+[; ;drivers/vl53l0x.c: 147:             timeOut++;
+[e ++ _timeOut -> -> 1 `i `us ]
+[e :U 1530 ]
+"148
+[; ;drivers/vl53l0x.c: 148:     }
+}
+[e :U 1522 ]
+"136
+[; ;drivers/vl53l0x.c: 136:     while(status != I2C1_MESSAGE_FAIL)
+[e $ != -> _status `ui -> . `E10088 1 `ui 1523  ]
+[e :U 1524 ]
+"149
+[; ;drivers/vl53l0x.c: 149: }
+[e :UE 1521 ]
+}
+"155
+[; ;drivers/vl53l0x.c: 155: uint8_t ReadRegister(uint8_t addr, uint8_t reg) {
+[v _ReadRegister `(uc ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ReadRegister ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[f ]
+"156
+[; ;drivers/vl53l0x.c: 156:     uint8_t regValue;
+[v _regValue `uc ~T0 @X0 1 a ]
+"157
+[; ;drivers/vl53l0x.c: 157:     I2C1_TRANSACTION_REQUEST_BLOCK readTRB[2];
+[v _readTRB `S1489 ~T0 @X0 -> 2 `i a ]
+"158
+[; ;drivers/vl53l0x.c: 158:     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+[v _status `E10088 ~T0 @X0 1 a ]
+[e = _status . `E10088 2 ]
+"160
+[; ;drivers/vl53l0x.c: 160:     I2C1_MasterWriteTRBBuild(&readTRB[0], &reg, 1, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _readTRB `ui `ux &U _reg -> -> 1 `i `uc -> _addr `us ]
+"161
+[; ;drivers/vl53l0x.c: 161:     I2C1_MasterReadTRBBuild(&readTRB[1], &regValue, 1, addr);
+[e ( _I2C1_MasterReadTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 1 `i `ui `ux -> -> # *U &U _readTRB `ui `ux &U _regValue -> -> 1 `i `uc -> _addr `us ]
+"163
+[; ;drivers/vl53l0x.c: 163:     while(status != I2C1_MESSAGE_FAIL) {
+[e $U 1532  ]
+[e :U 1533 ]
+{
+"164
+[; ;drivers/vl53l0x.c: 164:         I2C1_MasterTRBInsert(2, readTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 2 `i `uc &U _readTRB &U _status ]
+"165
+[; ;drivers/vl53l0x.c: 165:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1535  ]
+[e :U 1536 ]
+[e :U 1535 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1536  ]
+[e :U 1537 ]
+"166
+[; ;drivers/vl53l0x.c: 166:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1538  ]
+"167
+[; ;drivers/vl53l0x.c: 167:             break;
+[e $U 1534  ]
+[e :U 1538 ]
+"168
+[; ;drivers/vl53l0x.c: 168:     }
+}
+[e :U 1532 ]
+"163
+[; ;drivers/vl53l0x.c: 163:     while(status != I2C1_MESSAGE_FAIL) {
+[e $ != -> _status `ui -> . `E10088 1 `ui 1533  ]
+[e :U 1534 ]
+"170
+[; ;drivers/vl53l0x.c: 170:     return regValue;
+[e ) _regValue ]
+[e $UE 1531  ]
+"171
+[; ;drivers/vl53l0x.c: 171: }
+[e :UE 1531 ]
+}
+"177
+[; ;drivers/vl53l0x.c: 177: uint16_t ReadRegister16(uint8_t addr, uint8_t reg) {
+[v _ReadRegister16 `(us ~T0 @X0 1 ef2`uc`uc ]
+{
+[e :U _ReadRegister16 ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _reg `uc ~T0 @X0 1 r2 ]
+[f ]
+"178
+[; ;drivers/vl53l0x.c: 178:     uint8_t regValueL, regValueH;
+[v _regValueL `uc ~T0 @X0 1 a ]
+[v _regValueH `uc ~T0 @X0 1 a ]
+"179
+[; ;drivers/vl53l0x.c: 179:     uint16_t regValue;
+[v _regValue `us ~T0 @X0 1 a ]
+"180
+[; ;drivers/vl53l0x.c: 180:     I2C1_TRANSACTION_REQUEST_BLOCK readTRB[3];
+[v _readTRB `S1489 ~T0 @X0 -> 3 `i a ]
+"181
+[; ;drivers/vl53l0x.c: 181:     I2C1_MESSAGE_STATUS status = I2C1_MESSAGE_PENDING;
+[v _status `E10088 ~T0 @X0 1 a ]
+[e = _status . `E10088 2 ]
+"183
+[; ;drivers/vl53l0x.c: 183:     I2C1_MasterWriteTRBBuild(&readTRB[0], &reg, 1, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _readTRB `ui `ux &U _reg -> -> 1 `i `uc -> _addr `us ]
+"184
+[; ;drivers/vl53l0x.c: 184:     I2C1_MasterReadTRBBuild(&readTRB[1], &regValueH, 1, addr);
+[e ( _I2C1_MasterReadTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 1 `i `ui `ux -> -> # *U &U _readTRB `ui `ux &U _regValueH -> -> 1 `i `uc -> _addr `us ]
+"185
+[; ;drivers/vl53l0x.c: 185:     I2C1_MasterReadTRBBuild(&readTRB[2], &regValueL, 1, addr);
+[e ( _I2C1_MasterReadTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 2 `i `ui `ux -> -> # *U &U _readTRB `ui `ux &U _regValueL -> -> 1 `i `uc -> _addr `us ]
+"187
+[; ;drivers/vl53l0x.c: 187:     while(status != I2C1_MESSAGE_FAIL) {
+[e $U 1540  ]
+[e :U 1541 ]
+{
+"188
+[; ;drivers/vl53l0x.c: 188:         I2C1_MasterTRBInsert(3, readTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 3 `i `uc &U _readTRB &U _status ]
+"189
+[; ;drivers/vl53l0x.c: 189:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1543  ]
+[e :U 1544 ]
+[e :U 1543 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1544  ]
+[e :U 1545 ]
+"190
+[; ;drivers/vl53l0x.c: 190:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1546  ]
+"191
+[; ;drivers/vl53l0x.c: 191:             break;
+[e $U 1542  ]
+[e :U 1546 ]
+"192
+[; ;drivers/vl53l0x.c: 192:     }
+}
+[e :U 1540 ]
+"187
+[; ;drivers/vl53l0x.c: 187:     while(status != I2C1_MESSAGE_FAIL) {
+[e $ != -> _status `ui -> . `E10088 1 `ui 1541  ]
+[e :U 1542 ]
+"194
+[; ;drivers/vl53l0x.c: 194:     regValue = (uint16_t)regValueH << 8;
+[e = _regValue -> << -> -> _regValueH `us `ui -> 8 `i `us ]
+"195
+[; ;drivers/vl53l0x.c: 195:     regValue |= regValueL;
+[e =| _regValue -> _regValueL `us ]
+"197
+[; ;drivers/vl53l0x.c: 197:     return regValue;
+[e ) _regValue ]
+[e $UE 1539  ]
+"198
+[; ;drivers/vl53l0x.c: 198: }
+[e :UE 1539 ]
+}
+"204
+[; ;drivers/vl53l0x.c: 204: void ReadRegisters(uint8_t addr, uint8_t dataAddress, uint8_t *pData, uint8_t nCount) {
+[v _ReadRegisters `(v ~T0 @X0 1 ef4`uc`uc`*uc`uc ]
+{
+[e :U _ReadRegisters ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _dataAddress `uc ~T0 @X0 1 r2 ]
+[v _pData `*uc ~T0 @X0 1 r3 ]
+[v _nCount `uc ~T0 @X0 1 r4 ]
+[f ]
+"205
+[; ;drivers/vl53l0x.c: 205:     I2C1_MESSAGE_STATUS status;
+[v _status `E10088 ~T0 @X0 1 a ]
+"206
+[; ;drivers/vl53l0x.c: 206:     I2C1_TRANSACTION_REQUEST_BLOCK readTRB[2];
+[v _readTRB `S1489 ~T0 @X0 -> 2 `i a ]
+"207
+[; ;drivers/vl53l0x.c: 207:     uint8_t writeBuffer[2];
+[v _writeBuffer `uc ~T0 @X0 -> 2 `i a ]
+"208
+[; ;drivers/vl53l0x.c: 208:     uint16_t timeOut;
+[v _timeOut `us ~T0 @X0 1 a ]
+"210
+[; ;drivers/vl53l0x.c: 210:     status = I2C1_MESSAGE_PENDING;
+[e = _status . `E10088 2 ]
+"214
+[; ;drivers/vl53l0x.c: 214:     writeBuffer[0] = dataAddress;
+[e = *U + &U _writeBuffer * -> -> -> 0 `i `ui `ux -> -> # *U &U _writeBuffer `ui `ux _dataAddress ]
+"217
+[; ;drivers/vl53l0x.c: 217:     I2C1_MasterWriteTRBBuild(&readTRB[0], writeBuffer, 2, addr);
+[e ( _I2C1_MasterWriteTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 0 `i `ui `ux -> -> # *U &U _readTRB `ui `ux &U _writeBuffer -> -> 2 `i `uc -> _addr `us ]
+"220
+[; ;drivers/vl53l0x.c: 220:     I2C1_MasterReadTRBBuild(&readTRB[1], pData, nCount, addr);
+[e ( _I2C1_MasterReadTRBBuild (4 , , , &U *U + &U _readTRB * -> -> -> 1 `i `ui `ux -> -> # *U &U _readTRB `ui `ux _pData _nCount -> _addr `us ]
+"222
+[; ;drivers/vl53l0x.c: 222:     timeOut = 0;
+[e = _timeOut -> -> 0 `i `us ]
+"224
+[; ;drivers/vl53l0x.c: 224:     while(status != I2C1_MESSAGE_FAIL)
+[e $U 1548  ]
+[e :U 1549 ]
+"225
+[; ;drivers/vl53l0x.c: 225:     {
+{
+"226
+[; ;drivers/vl53l0x.c: 226:         I2C1_MasterTRBInsert(2, readTRB, &status);
+[e ( _I2C1_MasterTRBInsert (3 , , -> -> 2 `i `uc &U _readTRB &U _status ]
+"227
+[; ;drivers/vl53l0x.c: 227:         while(status == I2C1_MESSAGE_PENDING);
+[e $U 1551  ]
+[e :U 1552 ]
+[e :U 1551 ]
+[e $ == -> _status `ui -> . `E10088 2 `ui 1552  ]
+[e :U 1553 ]
+"228
+[; ;drivers/vl53l0x.c: 228:         if (status == I2C1_MESSAGE_COMPLETE)
+[e $ ! == -> _status `ui -> . `E10088 0 `ui 1554  ]
+"229
+[; ;drivers/vl53l0x.c: 229:             break;
+[e $U 1550  ]
+[e :U 1554 ]
+"232
+[; ;drivers/vl53l0x.c: 232:         if (timeOut == 100)
+[e $ ! == -> _timeOut `ui -> -> 100 `i `ui 1555  ]
+"233
+[; ;drivers/vl53l0x.c: 233:             break;
+[e $U 1550  ]
+[e $U 1556  ]
+"234
+[; ;drivers/vl53l0x.c: 234:         else
+[e :U 1555 ]
+"235
+[; ;drivers/vl53l0x.c: 235:             timeOut++;
+[e ++ _timeOut -> -> 1 `i `us ]
+[e :U 1556 ]
+"236
+[; ;drivers/vl53l0x.c: 236:     }
+}
+[e :U 1548 ]
+"224
+[; ;drivers/vl53l0x.c: 224:     while(status != I2C1_MESSAGE_FAIL)
+[e $ != -> _status `ui -> . `E10088 1 `ui 1549  ]
+[e :U 1550 ]
+"237
+[; ;drivers/vl53l0x.c: 237: }
+[e :UE 1547 ]
+}
+"244
+[; ;drivers/vl53l0x.c: 244: void VL53L0X_SetAddress(uint8_t newAddr)
+[v _VL53L0X_SetAddress `(v ~T0 @X0 1 ef1`uc ]
+"245
+[; ;drivers/vl53l0x.c: 245: {
+{
+[e :U _VL53L0X_SetAddress ]
+"244
+[; ;drivers/vl53l0x.c: 244: void VL53L0X_SetAddress(uint8_t newAddr)
+[v _newAddr `uc ~T0 @X0 1 r1 ]
+"245
+[; ;drivers/vl53l0x.c: 245: {
+[f ]
+"246
+[; ;drivers/vl53l0x.c: 246:     WriteRegister(0x29,
+[e ( _WriteRegister (3 , , -> -> 41 `i `uc -> -> 138 `i `uc _newAddr ]
+"248
+[; ;drivers/vl53l0x.c: 248: }
+[e :UE 1557 ]
+}
+"254
+[; ;drivers/vl53l0x.c: 254: void VL53L0X_DataInit(VL53L0XDEV *p53) {
+[v _VL53L0X_DataInit `(v ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_DataInit ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"259
+[; ;drivers/vl53l0x.c: 259:     WriteRegister(p53->address, 0x89, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 137 `i `uc -> -> 1 `i `uc ]
+"262
+[; ;drivers/vl53l0x.c: 262:     WriteRegister(p53->address, 0x80, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 1 `i `uc ]
+"263
+[; ;drivers/vl53l0x.c: 263:     WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"264
+[; ;drivers/vl53l0x.c: 264:     WriteRegister(p53->address, 0x00, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 0 `i `uc ]
+"265
+[; ;drivers/vl53l0x.c: 265:     p53->stopVariable = ReadRegister(p53->address, 0x91);
+[e = . *U _p53 1 ( _ReadRegister (2 , . *U _p53 0 -> -> 145 `i `uc ]
+"266
+[; ;drivers/vl53l0x.c: 266:     WriteRegister(p53->address, 0x00, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 1 `i `uc ]
+"267
+[; ;drivers/vl53l0x.c: 267:     WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"268
+[; ;drivers/vl53l0x.c: 268:     WriteRegister(p53->address, 0x80, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 0 `i `uc ]
+"271
+[; ;drivers/vl53l0x.c: 271:     uint8_t oldVal = ReadRegister(p53->address, 0x60);
+[v _oldVal `uc ~T0 @X0 1 a ]
+[e = _oldVal ( _ReadRegister (2 , . *U _p53 0 -> -> 96 `i `uc ]
+"272
+[; ;drivers/vl53l0x.c: 272:     WriteRegister(p53->address, 0x60, oldVal | 0x12);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 96 `i `uc -> | -> _oldVal `i -> 18 `i `uc ]
+"275
+[; ;drivers/vl53l0x.c: 275:     VL53L0X_SetSignalRateLimit(p53->address, 0.25);
+[e ( _VL53L0X_SetSignalRateLimit (2 , . *U _p53 0 -> .0.25 `f ]
+"277
+[; ;drivers/vl53l0x.c: 277:     WriteRegister(p53->address, 0x01, 0xFF);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc -> -> 255 `i `uc ]
+"278
+[; ;drivers/vl53l0x.c: 278: }
+[e :UE 1558 ]
+}
+"284
+[; ;drivers/vl53l0x.c: 284: _Bool VL53L0X_StaticInit(VL53L0XDEV *p53) {
+[v _VL53L0X_StaticInit `(a ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_StaticInit ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"285
+[; ;drivers/vl53l0x.c: 285:     uint8_t spadCount;
+[v _spadCount `uc ~T0 @X0 1 a ]
+"286
+[; ;drivers/vl53l0x.c: 286:     _Bool spadTypeIsAperture;
+[v _spadTypeIsAperture `a ~T0 @X0 1 a ]
+"287
+[; ;drivers/vl53l0x.c: 287:     uint8_t refSpadMap[6];
+[v _refSpadMap `uc ~T0 @X0 -> 6 `i a ]
+"289
+[; ;drivers/vl53l0x.c: 289:     if (!VL53L0X_GetSpadInfo(p53, &spadCount, &spadTypeIsAperture)) {
+[e $ ! ! != -> ( _VL53L0X_GetSpadInfo (3 , , _p53 &U _spadCount &U _spadTypeIsAperture `i -> 0 `i 1560  ]
+{
+"290
+[; ;drivers/vl53l0x.c: 290:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1559  ]
+"291
+[; ;drivers/vl53l0x.c: 291:     }
+}
+[e :U 1560 ]
+"297
+[; ;drivers/vl53l0x.c: 297:     ReadRegisters(p53->address, 0xB0, refSpadMap, 6);
+[e ( _ReadRegisters (4 , , , . *U _p53 0 -> -> 176 `i `uc &U _refSpadMap -> -> 6 `i `uc ]
+"299
+[; ;drivers/vl53l0x.c: 299:     VL53L0X_SetReferenceSpads(p53->address, &spadCount, &spadTypeIsAperture, refSpadMap);
+[e ( _VL53L0X_SetReferenceSpads (4 , , , . *U _p53 0 &U _spadCount &U _spadTypeIsAperture &U _refSpadMap ]
+"300
+[; ;drivers/vl53l0x.c: 300:     VL53L0X_Tuning(p53->address);
+[e ( _VL53L0X_Tuning (1 . *U _p53 0 ]
+"301
+[; ;drivers/vl53l0x.c: 301:     VL53L0X_SetGpioConfig(p53->address);
+[e ( _VL53L0X_SetGpioConfig (1 . *U _p53 0 ]
+"302
+[; ;drivers/vl53l0x.c: 302:     p53->measurement_timing_budget_us = VL53L0X_getMeasurementTimingBudget(p53);
+[e = . *U _p53 6 ( _VL53L0X_getMeasurementTimingBudget (1 _p53 ]
+"303
+[; ;drivers/vl53l0x.c: 303:     WriteRegister(p53->address, 0x01, 0xE8);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc -> -> 232 `i `uc ]
+"304
+[; ;drivers/vl53l0x.c: 304:     VL53L0X_setMeasurementTimingBudget(p53);
+[e ( _VL53L0X_setMeasurementTimingBudget (1 _p53 ]
+"306
+[; ;drivers/vl53l0x.c: 306:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1559  ]
+"307
+[; ;drivers/vl53l0x.c: 307: }
+[e :UE 1559 ]
+}
+"313
+[; ;drivers/vl53l0x.c: 313: _Bool VL53L0X_PerformRefCalibration(VL53L0XDEV *p53) {
+[v _VL53L0X_PerformRefCalibration `(a ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_PerformRefCalibration ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"315
+[; ;drivers/vl53l0x.c: 315:     WriteRegister(p53->address, 0x01, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc -> -> 1 `i `uc ]
+"316
+[; ;drivers/vl53l0x.c: 316:     if (!VL53L0X_performSingleRefCalibration(p53, 0x40)) {
+[e $ ! ! != -> ( _VL53L0X_performSingleRefCalibration (2 , _p53 -> -> 64 `i `uc `i -> 0 `i 1562  ]
+{
+"317
+[; ;drivers/vl53l0x.c: 317:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1561  ]
+"318
+[; ;drivers/vl53l0x.c: 318:     }
+}
+[e :U 1562 ]
+"320
+[; ;drivers/vl53l0x.c: 320:     WriteRegister(p53->address, 0x01, 0x02);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc -> -> 2 `i `uc ]
+"321
+[; ;drivers/vl53l0x.c: 321:     if (!VL53L0X_performSingleRefCalibration(p53, 0x00)) {
+[e $ ! ! != -> ( _VL53L0X_performSingleRefCalibration (2 , _p53 -> -> 0 `i `uc `i -> 0 `i 1563  ]
+{
+"322
+[; ;drivers/vl53l0x.c: 322:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1561  ]
+"323
+[; ;drivers/vl53l0x.c: 323:     }
+}
+[e :U 1563 ]
+"325
+[; ;drivers/vl53l0x.c: 325:     WriteRegister(p53->address, 0x01, 0xE8);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc -> -> 232 `i `uc ]
+"327
+[; ;drivers/vl53l0x.c: 327:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1561  ]
+"328
+[; ;drivers/vl53l0x.c: 328: }
+[e :UE 1561 ]
+}
+"342
+[; ;drivers/vl53l0x.c: 342: _Bool VL53L0X_SetSignalRateLimit(uint8_t addr, float limit_Mcps) {
+[v _VL53L0X_SetSignalRateLimit `(a ~T0 @X0 1 ef2`uc`f ]
+{
+[e :U _VL53L0X_SetSignalRateLimit ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _limit_Mcps `f ~T0 @X0 1 r2 ]
+[f ]
+"344
+[; ;drivers/vl53l0x.c: 344:     if (limit_Mcps < 0 || limit_Mcps > 511.99) {
+[e $ ! || < _limit_Mcps -> -> 0 `i `f > -> _limit_Mcps `d .511.99 1565  ]
+{
+"345
+[; ;drivers/vl53l0x.c: 345:       return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1564  ]
+"346
+[; ;drivers/vl53l0x.c: 346:   }
+}
+[e :U 1565 ]
+"348
+[; ;drivers/vl53l0x.c: 348:   WriteRegister16(addr,
+[e ( _WriteRegister16 (3 , , _addr -> -> 68 `i `uc -> * _limit_Mcps -> << -> 1 `i -> 7 `i `f `us ]
+"352
+[; ;drivers/vl53l0x.c: 352:   return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1564  ]
+"353
+[; ;drivers/vl53l0x.c: 353: }
+[e :UE 1564 ]
+}
+"362
+[; ;drivers/vl53l0x.c: 362: _Bool VL53L0X_GetSpadInfo(VL53L0XDEV *p53, uint8_t *count, _Bool *typeIsAperture) {
+[v _VL53L0X_GetSpadInfo `(a ~T0 @X0 1 ef3`*S1492`*uc`*a ]
+{
+[e :U _VL53L0X_GetSpadInfo ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[v _count `*uc ~T0 @X0 1 r2 ]
+[v _typeIsAperture `*a ~T0 @X0 1 r3 ]
+[f ]
+"363
+[; ;drivers/vl53l0x.c: 363:   uint8_t oldVal;
+[v _oldVal `uc ~T0 @X0 1 a ]
+"365
+[; ;drivers/vl53l0x.c: 365:   WriteRegister(p53->address, 0x80, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 1 `i `uc ]
+"366
+[; ;drivers/vl53l0x.c: 366:   WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"367
+[; ;drivers/vl53l0x.c: 367:   WriteRegister(p53->address, 0x00, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 0 `i `uc ]
+"369
+[; ;drivers/vl53l0x.c: 369:   WriteRegister(p53->address, 0xFF, 0x06);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 6 `i `uc ]
+"370
+[; ;drivers/vl53l0x.c: 370:   oldVal = ReadRegister(p53->address, 0x83);
+[e = _oldVal ( _ReadRegister (2 , . *U _p53 0 -> -> 131 `i `uc ]
+"371
+[; ;drivers/vl53l0x.c: 371:   WriteRegister(p53->address, 0x83, oldVal | 0x04);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 131 `i `uc -> | -> _oldVal `i -> 4 `i `uc ]
+"372
+[; ;drivers/vl53l0x.c: 372:   WriteRegister(p53->address, 0xFF, 0x07);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 7 `i `uc ]
+"373
+[; ;drivers/vl53l0x.c: 373:   WriteRegister(p53->address, 0x81, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 129 `i `uc -> -> 1 `i `uc ]
+"375
+[; ;drivers/vl53l0x.c: 375:   WriteRegister(p53->address, 0x80, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 1 `i `uc ]
+"377
+[; ;drivers/vl53l0x.c: 377:   WriteRegister(p53->address, 0x94, 0x6b);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 148 `i `uc -> -> 107 `i `uc ]
+"378
+[; ;drivers/vl53l0x.c: 378:   WriteRegister(p53->address, 0x83, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 131 `i `uc -> -> 0 `i `uc ]
+"380
+[; ;drivers/vl53l0x.c: 380:   msecdata timeoutData;
+[v _timeoutData `S1493 ~T0 @X0 1 a ]
+"381
+[; ;drivers/vl53l0x.c: 381:   start_msTimeout(&timeoutData, p53->io_timeout);
+[e ( _start_msTimeout (2 , &U _timeoutData . *U _p53 3 ]
+"382
+[; ;drivers/vl53l0x.c: 382:   while (ReadRegister(p53->address, 0x83) == 0x00) {
+[e $U 1567  ]
+[e :U 1568 ]
+{
+"383
+[; ;drivers/vl53l0x.c: 383:       if (checkTimeoutExpired(&timeoutData)) { return 0; }
+[e $ ! != -> ( _checkTimeoutExpired (1 &U _timeoutData `i -> 0 `i 1570  ]
+{
+[e ) -> -> 0 `i `a ]
+[e $UE 1566  ]
+}
+[e :U 1570 ]
+"384
+[; ;drivers/vl53l0x.c: 384:   }
+}
+[e :U 1567 ]
+"382
+[; ;drivers/vl53l0x.c: 382:   while (ReadRegister(p53->address, 0x83) == 0x00) {
+[e $ == -> ( _ReadRegister (2 , . *U _p53 0 -> -> 131 `i `uc `i -> 0 `i 1568  ]
+[e :U 1569 ]
+"386
+[; ;drivers/vl53l0x.c: 386:   WriteRegister(p53->address, 0x83, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 131 `i `uc -> -> 1 `i `uc ]
+"387
+[; ;drivers/vl53l0x.c: 387:   uint8_t tmp = ReadRegister(p53->address, 0x92);
+[v _tmp `uc ~T0 @X0 1 a ]
+[e = _tmp ( _ReadRegister (2 , . *U _p53 0 -> -> 146 `i `uc ]
+"389
+[; ;drivers/vl53l0x.c: 389:   *count = tmp & 0x7f;
+[e = *U _count -> & -> _tmp `i -> 127 `i `uc ]
+"390
+[; ;drivers/vl53l0x.c: 390:   *typeIsAperture = (tmp >> 7) & 0x01;
+[e = *U _typeIsAperture -> & >> -> _tmp `i -> 7 `i -> 1 `i `a ]
+"392
+[; ;drivers/vl53l0x.c: 392:   WriteRegister(p53->address, 0x81, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 129 `i `uc -> -> 0 `i `uc ]
+"393
+[; ;drivers/vl53l0x.c: 393:   WriteRegister(p53->address, 0xFF, 0x06);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 6 `i `uc ]
+"394
+[; ;drivers/vl53l0x.c: 394:   oldVal = ReadRegister(p53->address, 0x83);
+[e = _oldVal ( _ReadRegister (2 , . *U _p53 0 -> -> 131 `i `uc ]
+"395
+[; ;drivers/vl53l0x.c: 395:   WriteRegister(p53->address, 0x83, oldVal & ~0x04);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 131 `i `uc -> & -> _oldVal `i ~ -> 4 `i `uc ]
+"396
+[; ;drivers/vl53l0x.c: 396:   WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"397
+[; ;drivers/vl53l0x.c: 397:   WriteRegister(p53->address, 0x00, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 1 `i `uc ]
+"399
+[; ;drivers/vl53l0x.c: 399:   WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"400
+[; ;drivers/vl53l0x.c: 400:   WriteRegister(p53->address, 0x80, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 0 `i `uc ]
+"402
+[; ;drivers/vl53l0x.c: 402:   return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1566  ]
+"403
+[; ;drivers/vl53l0x.c: 403: }
+[e :UE 1566 ]
+}
+"410
+[; ;drivers/vl53l0x.c: 410: void VL53L0X_SetReferenceSpads(uint8_t addr, uint8_t *count, _Bool *typeIsAperture, uint8_t *spadMap) {
+[v _VL53L0X_SetReferenceSpads `(v ~T0 @X0 1 ef4`uc`*uc`*a`*uc ]
+{
+[e :U _VL53L0X_SetReferenceSpads ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _count `*uc ~T0 @X0 1 r2 ]
+[v _typeIsAperture `*a ~T0 @X0 1 r3 ]
+[v _spadMap `*uc ~T0 @X0 1 r4 ]
+[f ]
+"412
+[; ;drivers/vl53l0x.c: 412:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"413
+[; ;drivers/vl53l0x.c: 413:   WriteRegister(addr, 0x4F, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 79 `i `uc -> -> 0 `i `uc ]
+"414
+[; ;drivers/vl53l0x.c: 414:   WriteRegister(addr, 0x4E, 0x2C);
+[e ( _WriteRegister (3 , , _addr -> -> 78 `i `uc -> -> 44 `i `uc ]
+"415
+[; ;drivers/vl53l0x.c: 415:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"416
+[; ;drivers/vl53l0x.c: 416:   WriteRegister(addr, 0xB6, 0xB4);
+[e ( _WriteRegister (3 , , _addr -> -> 182 `i `uc -> -> 180 `i `uc ]
+"418
+[; ;drivers/vl53l0x.c: 418:   uint8_t firstSpadToEnable = *typeIsAperture ? 12 : 0;
+[v _firstSpadToEnable `uc ~T0 @X0 1 a ]
+[e = _firstSpadToEnable -> ? != -> *U _typeIsAperture `i -> 0 `i : -> 12 `i -> 0 `i `uc ]
+"419
+[; ;drivers/vl53l0x.c: 419:   uint8_t spadsEnabled = 0;
+[v _spadsEnabled `uc ~T0 @X0 1 a ]
+[e = _spadsEnabled -> -> 0 `i `uc ]
+"421
+[; ;drivers/vl53l0x.c: 421:   for (uint8_t i = 0; i < 48; i++)
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 48 `i 1572  ]
+[e $U 1573  ]
+[e :U 1572 ]
+"422
+[; ;drivers/vl53l0x.c: 422:   {
+{
+"423
+[; ;drivers/vl53l0x.c: 423:     if (i < firstSpadToEnable || spadsEnabled == *count)
+[e $ ! || < -> _i `i -> _firstSpadToEnable `i == -> _spadsEnabled `i -> *U _count `i 1575  ]
+"424
+[; ;drivers/vl53l0x.c: 424:     {
+{
+"427
+[; ;drivers/vl53l0x.c: 427:       spadMap[i / 8] &= ~(1 << (i % 8));
+[e =& *U + _spadMap * -> / -> _i `i -> 8 `i `x -> -> # *U _spadMap `i `x -> ~ << -> 1 `i % -> _i `i -> 8 `i `uc ]
+"428
+[; ;drivers/vl53l0x.c: 428:     }
+}
+[e $U 1576  ]
+"429
+[; ;drivers/vl53l0x.c: 429:     else if ((spadMap[i / 8] >> (i % 8)) & 0x1)
+[e :U 1575 ]
+[e $ ! != & >> -> *U + _spadMap * -> / -> _i `i -> 8 `i `x -> -> # *U _spadMap `i `x `i % -> _i `i -> 8 `i -> 1 `i -> 0 `i 1577  ]
+"430
+[; ;drivers/vl53l0x.c: 430:     {
+{
+"431
+[; ;drivers/vl53l0x.c: 431:       spadsEnabled++;
+[e ++ _spadsEnabled -> -> 1 `i `uc ]
+"432
+[; ;drivers/vl53l0x.c: 432:     }
+}
+[e :U 1577 ]
+[e :U 1576 ]
+"433
+[; ;drivers/vl53l0x.c: 433:   }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 48 `i 1572  ]
+[e :U 1573 ]
+}
+"435
+[; ;drivers/vl53l0x.c: 435:   WriteRegisters(addr, 0xB0, spadMap, 6);
+[e ( _WriteRegisters (4 , , , _addr -> -> 176 `i `uc _spadMap -> -> 6 `i `uc ]
+"437
+[; ;drivers/vl53l0x.c: 437: }
+[e :UE 1571 ]
+}
+"445
+[; ;drivers/vl53l0x.c: 445: void VL53L0X_Tuning(uint8_t addr) {
+[v _VL53L0X_Tuning `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _VL53L0X_Tuning ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[f ]
+"447
+[; ;drivers/vl53l0x.c: 447:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"448
+[; ;drivers/vl53l0x.c: 448:   WriteRegister(addr, 0x00, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 0 `i `uc -> -> 0 `i `uc ]
+"450
+[; ;drivers/vl53l0x.c: 450:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"451
+[; ;drivers/vl53l0x.c: 451:   WriteRegister(addr, 0x09, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 9 `i `uc -> -> 0 `i `uc ]
+"452
+[; ;drivers/vl53l0x.c: 452:   WriteRegister(addr, 0x10, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 16 `i `uc -> -> 0 `i `uc ]
+"453
+[; ;drivers/vl53l0x.c: 453:   WriteRegister(addr, 0x11, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 17 `i `uc -> -> 0 `i `uc ]
+"455
+[; ;drivers/vl53l0x.c: 455:   WriteRegister(addr, 0x24, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 36 `i `uc -> -> 1 `i `uc ]
+"456
+[; ;drivers/vl53l0x.c: 456:   WriteRegister(addr, 0x25, 0xFF);
+[e ( _WriteRegister (3 , , _addr -> -> 37 `i `uc -> -> 255 `i `uc ]
+"457
+[; ;drivers/vl53l0x.c: 457:   WriteRegister(addr, 0x75, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 117 `i `uc -> -> 0 `i `uc ]
+"459
+[; ;drivers/vl53l0x.c: 459:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"460
+[; ;drivers/vl53l0x.c: 460:   WriteRegister(addr, 0x4E, 0x2C);
+[e ( _WriteRegister (3 , , _addr -> -> 78 `i `uc -> -> 44 `i `uc ]
+"461
+[; ;drivers/vl53l0x.c: 461:   WriteRegister(addr, 0x48, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 72 `i `uc -> -> 0 `i `uc ]
+"462
+[; ;drivers/vl53l0x.c: 462:   WriteRegister(addr, 0x30, 0x20);
+[e ( _WriteRegister (3 , , _addr -> -> 48 `i `uc -> -> 32 `i `uc ]
+"464
+[; ;drivers/vl53l0x.c: 464:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"465
+[; ;drivers/vl53l0x.c: 465:   WriteRegister(addr, 0x30, 0x09);
+[e ( _WriteRegister (3 , , _addr -> -> 48 `i `uc -> -> 9 `i `uc ]
+"466
+[; ;drivers/vl53l0x.c: 466:   WriteRegister(addr, 0x54, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 84 `i `uc -> -> 0 `i `uc ]
+"467
+[; ;drivers/vl53l0x.c: 467:   WriteRegister(addr, 0x31, 0x04);
+[e ( _WriteRegister (3 , , _addr -> -> 49 `i `uc -> -> 4 `i `uc ]
+"468
+[; ;drivers/vl53l0x.c: 468:   WriteRegister(addr, 0x32, 0x03);
+[e ( _WriteRegister (3 , , _addr -> -> 50 `i `uc -> -> 3 `i `uc ]
+"469
+[; ;drivers/vl53l0x.c: 469:   WriteRegister(addr, 0x40, 0x83);
+[e ( _WriteRegister (3 , , _addr -> -> 64 `i `uc -> -> 131 `i `uc ]
+"470
+[; ;drivers/vl53l0x.c: 470:   WriteRegister(addr, 0x46, 0x25);
+[e ( _WriteRegister (3 , , _addr -> -> 70 `i `uc -> -> 37 `i `uc ]
+"471
+[; ;drivers/vl53l0x.c: 471:   WriteRegister(addr, 0x60, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 96 `i `uc -> -> 0 `i `uc ]
+"472
+[; ;drivers/vl53l0x.c: 472:   WriteRegister(addr, 0x27, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 39 `i `uc -> -> 0 `i `uc ]
+"473
+[; ;drivers/vl53l0x.c: 473:   WriteRegister(addr, 0x50, 0x06);
+[e ( _WriteRegister (3 , , _addr -> -> 80 `i `uc -> -> 6 `i `uc ]
+"474
+[; ;drivers/vl53l0x.c: 474:   WriteRegister(addr, 0x51, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 81 `i `uc -> -> 0 `i `uc ]
+"475
+[; ;drivers/vl53l0x.c: 475:   WriteRegister(addr, 0x52, 0x96);
+[e ( _WriteRegister (3 , , _addr -> -> 82 `i `uc -> -> 150 `i `uc ]
+"476
+[; ;drivers/vl53l0x.c: 476:   WriteRegister(addr, 0x56, 0x08);
+[e ( _WriteRegister (3 , , _addr -> -> 86 `i `uc -> -> 8 `i `uc ]
+"477
+[; ;drivers/vl53l0x.c: 477:   WriteRegister(addr, 0x57, 0x30);
+[e ( _WriteRegister (3 , , _addr -> -> 87 `i `uc -> -> 48 `i `uc ]
+"478
+[; ;drivers/vl53l0x.c: 478:   WriteRegister(addr, 0x61, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 97 `i `uc -> -> 0 `i `uc ]
+"479
+[; ;drivers/vl53l0x.c: 479:   WriteRegister(addr, 0x62, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 98 `i `uc -> -> 0 `i `uc ]
+"480
+[; ;drivers/vl53l0x.c: 480:   WriteRegister(addr, 0x64, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 100 `i `uc -> -> 0 `i `uc ]
+"481
+[; ;drivers/vl53l0x.c: 481:   WriteRegister(addr, 0x65, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 101 `i `uc -> -> 0 `i `uc ]
+"482
+[; ;drivers/vl53l0x.c: 482:   WriteRegister(addr, 0x66, 0xA0);
+[e ( _WriteRegister (3 , , _addr -> -> 102 `i `uc -> -> 160 `i `uc ]
+"484
+[; ;drivers/vl53l0x.c: 484:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"485
+[; ;drivers/vl53l0x.c: 485:   WriteRegister(addr, 0x22, 0x32);
+[e ( _WriteRegister (3 , , _addr -> -> 34 `i `uc -> -> 50 `i `uc ]
+"486
+[; ;drivers/vl53l0x.c: 486:   WriteRegister(addr, 0x47, 0x14);
+[e ( _WriteRegister (3 , , _addr -> -> 71 `i `uc -> -> 20 `i `uc ]
+"487
+[; ;drivers/vl53l0x.c: 487:   WriteRegister(addr, 0x49, 0xFF);
+[e ( _WriteRegister (3 , , _addr -> -> 73 `i `uc -> -> 255 `i `uc ]
+"488
+[; ;drivers/vl53l0x.c: 488:   WriteRegister(addr, 0x4A, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 74 `i `uc -> -> 0 `i `uc ]
+"490
+[; ;drivers/vl53l0x.c: 490:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"491
+[; ;drivers/vl53l0x.c: 491:   WriteRegister(addr, 0x7A, 0x0A);
+[e ( _WriteRegister (3 , , _addr -> -> 122 `i `uc -> -> 10 `i `uc ]
+"492
+[; ;drivers/vl53l0x.c: 492:   WriteRegister(addr, 0x7B, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 123 `i `uc -> -> 0 `i `uc ]
+"493
+[; ;drivers/vl53l0x.c: 493:   WriteRegister(addr, 0x78, 0x21);
+[e ( _WriteRegister (3 , , _addr -> -> 120 `i `uc -> -> 33 `i `uc ]
+"495
+[; ;drivers/vl53l0x.c: 495:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"496
+[; ;drivers/vl53l0x.c: 496:   WriteRegister(addr, 0x23, 0x34);
+[e ( _WriteRegister (3 , , _addr -> -> 35 `i `uc -> -> 52 `i `uc ]
+"497
+[; ;drivers/vl53l0x.c: 497:   WriteRegister(addr, 0x42, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 66 `i `uc -> -> 0 `i `uc ]
+"498
+[; ;drivers/vl53l0x.c: 498:   WriteRegister(addr, 0x44, 0xFF);
+[e ( _WriteRegister (3 , , _addr -> -> 68 `i `uc -> -> 255 `i `uc ]
+"499
+[; ;drivers/vl53l0x.c: 499:   WriteRegister(addr, 0x45, 0x26);
+[e ( _WriteRegister (3 , , _addr -> -> 69 `i `uc -> -> 38 `i `uc ]
+"500
+[; ;drivers/vl53l0x.c: 500:   WriteRegister(addr, 0x46, 0x05);
+[e ( _WriteRegister (3 , , _addr -> -> 70 `i `uc -> -> 5 `i `uc ]
+"501
+[; ;drivers/vl53l0x.c: 501:   WriteRegister(addr, 0x40, 0x40);
+[e ( _WriteRegister (3 , , _addr -> -> 64 `i `uc -> -> 64 `i `uc ]
+"502
+[; ;drivers/vl53l0x.c: 502:   WriteRegister(addr, 0x0E, 0x06);
+[e ( _WriteRegister (3 , , _addr -> -> 14 `i `uc -> -> 6 `i `uc ]
+"503
+[; ;drivers/vl53l0x.c: 503:   WriteRegister(addr, 0x20, 0x1A);
+[e ( _WriteRegister (3 , , _addr -> -> 32 `i `uc -> -> 26 `i `uc ]
+"504
+[; ;drivers/vl53l0x.c: 504:   WriteRegister(addr, 0x43, 0x40);
+[e ( _WriteRegister (3 , , _addr -> -> 67 `i `uc -> -> 64 `i `uc ]
+"506
+[; ;drivers/vl53l0x.c: 506:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"507
+[; ;drivers/vl53l0x.c: 507:   WriteRegister(addr, 0x34, 0x03);
+[e ( _WriteRegister (3 , , _addr -> -> 52 `i `uc -> -> 3 `i `uc ]
+"508
+[; ;drivers/vl53l0x.c: 508:   WriteRegister(addr, 0x35, 0x44);
+[e ( _WriteRegister (3 , , _addr -> -> 53 `i `uc -> -> 68 `i `uc ]
+"510
+[; ;drivers/vl53l0x.c: 510:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"511
+[; ;drivers/vl53l0x.c: 511:   WriteRegister(addr, 0x31, 0x04);
+[e ( _WriteRegister (3 , , _addr -> -> 49 `i `uc -> -> 4 `i `uc ]
+"512
+[; ;drivers/vl53l0x.c: 512:   WriteRegister(addr, 0x4B, 0x09);
+[e ( _WriteRegister (3 , , _addr -> -> 75 `i `uc -> -> 9 `i `uc ]
+"513
+[; ;drivers/vl53l0x.c: 513:   WriteRegister(addr, 0x4C, 0x05);
+[e ( _WriteRegister (3 , , _addr -> -> 76 `i `uc -> -> 5 `i `uc ]
+"514
+[; ;drivers/vl53l0x.c: 514:   WriteRegister(addr, 0x4D, 0x04);
+[e ( _WriteRegister (3 , , _addr -> -> 77 `i `uc -> -> 4 `i `uc ]
+"516
+[; ;drivers/vl53l0x.c: 516:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"517
+[; ;drivers/vl53l0x.c: 517:   WriteRegister(addr, 0x44, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 68 `i `uc -> -> 0 `i `uc ]
+"518
+[; ;drivers/vl53l0x.c: 518:   WriteRegister(addr, 0x45, 0x20);
+[e ( _WriteRegister (3 , , _addr -> -> 69 `i `uc -> -> 32 `i `uc ]
+"519
+[; ;drivers/vl53l0x.c: 519:   WriteRegister(addr, 0x47, 0x08);
+[e ( _WriteRegister (3 , , _addr -> -> 71 `i `uc -> -> 8 `i `uc ]
+"520
+[; ;drivers/vl53l0x.c: 520:   WriteRegister(addr, 0x48, 0x28);
+[e ( _WriteRegister (3 , , _addr -> -> 72 `i `uc -> -> 40 `i `uc ]
+"521
+[; ;drivers/vl53l0x.c: 521:   WriteRegister(addr, 0x67, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 103 `i `uc -> -> 0 `i `uc ]
+"522
+[; ;drivers/vl53l0x.c: 522:   WriteRegister(addr, 0x70, 0x04);
+[e ( _WriteRegister (3 , , _addr -> -> 112 `i `uc -> -> 4 `i `uc ]
+"523
+[; ;drivers/vl53l0x.c: 523:   WriteRegister(addr, 0x71, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 113 `i `uc -> -> 1 `i `uc ]
+"524
+[; ;drivers/vl53l0x.c: 524:   WriteRegister(addr, 0x72, 0xFE);
+[e ( _WriteRegister (3 , , _addr -> -> 114 `i `uc -> -> 254 `i `uc ]
+"525
+[; ;drivers/vl53l0x.c: 525:   WriteRegister(addr, 0x76, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 118 `i `uc -> -> 0 `i `uc ]
+"526
+[; ;drivers/vl53l0x.c: 526:   WriteRegister(addr, 0x77, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 119 `i `uc -> -> 0 `i `uc ]
+"528
+[; ;drivers/vl53l0x.c: 528:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"529
+[; ;drivers/vl53l0x.c: 529:   WriteRegister(addr, 0x0D, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 13 `i `uc -> -> 1 `i `uc ]
+"531
+[; ;drivers/vl53l0x.c: 531:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"532
+[; ;drivers/vl53l0x.c: 532:   WriteRegister(addr, 0x80, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 128 `i `uc -> -> 1 `i `uc ]
+"533
+[; ;drivers/vl53l0x.c: 533:   WriteRegister(addr, 0x01, 0xF8);
+[e ( _WriteRegister (3 , , _addr -> -> 1 `i `uc -> -> 248 `i `uc ]
+"535
+[; ;drivers/vl53l0x.c: 535:   WriteRegister(addr, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 1 `i `uc ]
+"536
+[; ;drivers/vl53l0x.c: 536:   WriteRegister(addr, 0x8E, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 142 `i `uc -> -> 1 `i `uc ]
+"537
+[; ;drivers/vl53l0x.c: 537:   WriteRegister(addr, 0x00, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 0 `i `uc -> -> 1 `i `uc ]
+"538
+[; ;drivers/vl53l0x.c: 538:   WriteRegister(addr, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 255 `i `uc -> -> 0 `i `uc ]
+"539
+[; ;drivers/vl53l0x.c: 539:   WriteRegister(addr, 0x80, 0x00);
+[e ( _WriteRegister (3 , , _addr -> -> 128 `i `uc -> -> 0 `i `uc ]
+"543
+[; ;drivers/vl53l0x.c: 543:   _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"545
+[; ;drivers/vl53l0x.c: 545: }
+[e :UE 1578 ]
+}
+"551
+[; ;drivers/vl53l0x.c: 551: void VL53L0X_SetGpioConfig(uint8_t addr) {
+[v _VL53L0X_SetGpioConfig `(v ~T0 @X0 1 ef1`uc ]
+{
+[e :U _VL53L0X_SetGpioConfig ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[f ]
+"552
+[; ;drivers/vl53l0x.c: 552:   WriteRegister(addr, 0x0A, 0x04);
+[e ( _WriteRegister (3 , , _addr -> -> 10 `i `uc -> -> 4 `i `uc ]
+"553
+[; ;drivers/vl53l0x.c: 553:   uint8_t oldVal = ReadRegister(addr, 0x84);
+[v _oldVal `uc ~T0 @X0 1 a ]
+[e = _oldVal ( _ReadRegister (2 , _addr -> -> 132 `i `uc ]
+"554
+[; ;drivers/vl53l0x.c: 554:   WriteRegister(addr, 0x84, oldVal & ~0x10);
+[e ( _WriteRegister (3 , , _addr -> -> 132 `i `uc -> & -> _oldVal `i ~ -> 16 `i `uc ]
+"555
+[; ;drivers/vl53l0x.c: 555:   WriteRegister(addr, 0x0B, 0x01);
+[e ( _WriteRegister (3 , , _addr -> -> 11 `i `uc -> -> 1 `i `uc ]
+"556
+[; ;drivers/vl53l0x.c: 556: }
+[e :UE 1579 ]
+}
+"565
+[; ;drivers/vl53l0x.c: 565: uint32_t VL53L0X_getMeasurementTimingBudget(VL53L0XDEV *p53)
+[v _VL53L0X_getMeasurementTimingBudget `(ul ~T0 @X0 1 ef1`*S1492 ]
+"566
+[; ;drivers/vl53l0x.c: 566: {
+{
+[e :U _VL53L0X_getMeasurementTimingBudget ]
+"565
+[; ;drivers/vl53l0x.c: 565: uint32_t VL53L0X_getMeasurementTimingBudget(VL53L0XDEV *p53)
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+"566
+[; ;drivers/vl53l0x.c: 566: {
+[f ]
+"567
+[; ;drivers/vl53l0x.c: 567:     uint16_t const StartOverhead = 1910;
+[v _StartOverhead `Cus ~T0 @X0 1 a ]
+[e = _StartOverhead -> -> 1910 `i `us ]
+"568
+[; ;drivers/vl53l0x.c: 568:     uint16_t const EndOverhead = 960;
+[v _EndOverhead `Cus ~T0 @X0 1 a ]
+[e = _EndOverhead -> -> 960 `i `us ]
+"569
+[; ;drivers/vl53l0x.c: 569:     uint16_t const MsrcOverhead = 660;
+[v _MsrcOverhead `Cus ~T0 @X0 1 a ]
+[e = _MsrcOverhead -> -> 660 `i `us ]
+"570
+[; ;drivers/vl53l0x.c: 570:     uint16_t const TccOverhead = 590;
+[v _TccOverhead `Cus ~T0 @X0 1 a ]
+[e = _TccOverhead -> -> 590 `i `us ]
+"571
+[; ;drivers/vl53l0x.c: 571:     uint16_t const DssOverhead = 690;
+[v _DssOverhead `Cus ~T0 @X0 1 a ]
+[e = _DssOverhead -> -> 690 `i `us ]
+"572
+[; ;drivers/vl53l0x.c: 572:     uint16_t const PreRangeOverhead = 660;
+[v _PreRangeOverhead `Cus ~T0 @X0 1 a ]
+[e = _PreRangeOverhead -> -> 660 `i `us ]
+"573
+[; ;drivers/vl53l0x.c: 573:     uint16_t const FinalRangeOverhead = 550;
+[v _FinalRangeOverhead `Cus ~T0 @X0 1 a ]
+[e = _FinalRangeOverhead -> -> 550 `i `us ]
+"575
+[; ;drivers/vl53l0x.c: 575:     uint32_t budget_us = StartOverhead + EndOverhead;
+[v _budget_us `ul ~T0 @X0 1 a ]
+[e = _budget_us -> + -> _StartOverhead `ui -> _EndOverhead `ui `ul ]
+"577
+[; ;drivers/vl53l0x.c: 577:     VL53L0X_getSequenceStepEnables(p53);
+[e ( _VL53L0X_getSequenceStepEnables (1 _p53 ]
+"578
+[; ;drivers/vl53l0x.c: 578:     VL53L0X_getSequenceStepTimeouts(p53);
+[e ( _VL53L0X_getSequenceStepTimeouts (1 _p53 ]
+"580
+[; ;drivers/vl53l0x.c: 580:     if (p53->enables.tcc)
+[e $ ! != -> . . *U _p53 7 0 `i -> 0 `i 1581  ]
+"581
+[; ;drivers/vl53l0x.c: 581:     {
+{
+"582
+[; ;drivers/vl53l0x.c: 582:       budget_us += (p53->timeouts.msrc_dss_tcc_us + TccOverhead);
+[e =+ _budget_us + . . *U _p53 8 5 -> _TccOverhead `ul ]
+"583
+[; ;drivers/vl53l0x.c: 583:     }
+}
+[e :U 1581 ]
+"585
+[; ;drivers/vl53l0x.c: 585:     if (p53->enables.dss)
+[e $ ! != -> . . *U _p53 7 2 `i -> 0 `i 1582  ]
+"586
+[; ;drivers/vl53l0x.c: 586:     {
+{
+"587
+[; ;drivers/vl53l0x.c: 587:       budget_us += 2 * (p53->timeouts.msrc_dss_tcc_us + DssOverhead);
+[e =+ _budget_us * -> -> -> 2 `i `l `ul + . . *U _p53 8 5 -> _DssOverhead `ul ]
+"588
+[; ;drivers/vl53l0x.c: 588:     }
+}
+[e $U 1583  ]
+"589
+[; ;drivers/vl53l0x.c: 589:     else if (p53->enables.msrc)
+[e :U 1582 ]
+[e $ ! != -> . . *U _p53 7 1 `i -> 0 `i 1584  ]
+"590
+[; ;drivers/vl53l0x.c: 590:     {
+{
+"591
+[; ;drivers/vl53l0x.c: 591:       budget_us += (p53->timeouts.msrc_dss_tcc_us + MsrcOverhead);
+[e =+ _budget_us + . . *U _p53 8 5 -> _MsrcOverhead `ul ]
+"592
+[; ;drivers/vl53l0x.c: 592:     }
+}
+[e :U 1584 ]
+[e :U 1583 ]
+"594
+[; ;drivers/vl53l0x.c: 594:     if (p53->enables.pre_range)
+[e $ ! != -> . . *U _p53 7 3 `i -> 0 `i 1585  ]
+"595
+[; ;drivers/vl53l0x.c: 595:     {
+{
+"596
+[; ;drivers/vl53l0x.c: 596:       budget_us += (p53->timeouts.pre_range_us + PreRangeOverhead);
+[e =+ _budget_us + . . *U _p53 8 6 -> _PreRangeOverhead `ul ]
+"597
+[; ;drivers/vl53l0x.c: 597:     }
+}
+[e :U 1585 ]
+"599
+[; ;drivers/vl53l0x.c: 599:     if (p53->enables.final_range)
+[e $ ! != -> . . *U _p53 7 4 `i -> 0 `i 1586  ]
+"600
+[; ;drivers/vl53l0x.c: 600:     {
+{
+"601
+[; ;drivers/vl53l0x.c: 601:       budget_us += (p53->timeouts.final_range_us + FinalRangeOverhead);
+[e =+ _budget_us + . . *U _p53 8 7 -> _FinalRangeOverhead `ul ]
+"602
+[; ;drivers/vl53l0x.c: 602:     }
+}
+[e :U 1586 ]
+"604
+[; ;drivers/vl53l0x.c: 604:     return budget_us;
+[e ) _budget_us ]
+[e $UE 1580  ]
+"605
+[; ;drivers/vl53l0x.c: 605: }
+[e :UE 1580 ]
+}
+"613
+[; ;drivers/vl53l0x.c: 613: void VL53L0X_getSequenceStepEnables(VL53L0XDEV *p53)
+[v _VL53L0X_getSequenceStepEnables `(v ~T0 @X0 1 ef1`*S1492 ]
+"614
+[; ;drivers/vl53l0x.c: 614: {
+{
+[e :U _VL53L0X_getSequenceStepEnables ]
+"613
+[; ;drivers/vl53l0x.c: 613: void VL53L0X_getSequenceStepEnables(VL53L0XDEV *p53)
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+"614
+[; ;drivers/vl53l0x.c: 614: {
+[f ]
+"615
+[; ;drivers/vl53l0x.c: 615:   uint8_t sequence_config = ReadRegister(p53->address, 0x01);
+[v _sequence_config `uc ~T0 @X0 1 a ]
+[e = _sequence_config ( _ReadRegister (2 , . *U _p53 0 -> -> 1 `i `uc ]
+"617
+[; ;drivers/vl53l0x.c: 617:   p53->enables.tcc = (sequence_config >> 4) & 0x1;
+[e = . . *U _p53 7 0 -> & >> -> _sequence_config `i -> 4 `i -> 1 `i `a ]
+"618
+[; ;drivers/vl53l0x.c: 618:   p53->enables.dss = (sequence_config >> 3) & 0x1;
+[e = . . *U _p53 7 2 -> & >> -> _sequence_config `i -> 3 `i -> 1 `i `a ]
+"619
+[; ;drivers/vl53l0x.c: 619:   p53->enables.msrc = (sequence_config >> 2) & 0x1;
+[e = . . *U _p53 7 1 -> & >> -> _sequence_config `i -> 2 `i -> 1 `i `a ]
+"620
+[; ;drivers/vl53l0x.c: 620:   p53->enables.pre_range = (sequence_config >> 6) & 0x1;
+[e = . . *U _p53 7 3 -> & >> -> _sequence_config `i -> 6 `i -> 1 `i `a ]
+"621
+[; ;drivers/vl53l0x.c: 621:   p53->enables.final_range = (sequence_config >> 7) & 0x1;
+[e = . . *U _p53 7 4 -> & >> -> _sequence_config `i -> 7 `i -> 1 `i `a ]
+"622
+[; ;drivers/vl53l0x.c: 622: }
+[e :UE 1587 ]
+}
+"632
+[; ;drivers/vl53l0x.c: 632: void VL53L0X_getSequenceStepTimeouts(VL53L0XDEV *p53)
+[v _VL53L0X_getSequenceStepTimeouts `(v ~T0 @X0 1 ef1`*S1492 ]
+"633
+[; ;drivers/vl53l0x.c: 633: {
+{
+[e :U _VL53L0X_getSequenceStepTimeouts ]
+"632
+[; ;drivers/vl53l0x.c: 632: void VL53L0X_getSequenceStepTimeouts(VL53L0XDEV *p53)
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+"633
+[; ;drivers/vl53l0x.c: 633: {
+[f ]
+"634
+[; ;drivers/vl53l0x.c: 634:     uint8_t addr = p53->address;
+[v _addr `uc ~T0 @X0 1 a ]
+[e = _addr . *U _p53 0 ]
+"636
+[; ;drivers/vl53l0x.c: 636:     p53->timeouts.pre_range_vcsel_period_pclks = VL53L0X_getVcselPulsePeriod(addr, VcselPeriodPreRange);
+[e = . . *U _p53 8 0 -> ( _VL53L0X_getVcselPulsePeriod (2 , _addr . `E10286 0 `us ]
+"638
+[; ;drivers/vl53l0x.c: 638:     p53->timeouts.msrc_dss_tcc_mclks = ReadRegister(addr, 0x46) + 1;
+[e = . . *U _p53 8 2 -> + -> ( _ReadRegister (2 , _addr -> -> 70 `i `uc `i -> 1 `i `us ]
+"639
+[; ;drivers/vl53l0x.c: 639:     p53->timeouts.msrc_dss_tcc_us = VL53L0X_timeoutMclksToMicroseconds(p53->timeouts.msrc_dss_tcc_mclks,
+[e = . . *U _p53 8 5 ( _VL53L0X_timeoutMclksToMicroseconds (2 , . . *U _p53 8 2 -> . . *U _p53 8 0 `uc ]
+"642
+[; ;drivers/vl53l0x.c: 642:     p53->timeouts.pre_range_mclks = VL53L0X_decodeTimeout(ReadRegister16(addr, 0x51));
+[e = . . *U _p53 8 3 ( _VL53L0X_decodeTimeout (1 ( _ReadRegister16 (2 , _addr -> -> 81 `i `uc ]
+"643
+[; ;drivers/vl53l0x.c: 643:     p53->timeouts.pre_range_us = VL53L0X_timeoutMclksToMicroseconds(p53->timeouts.pre_range_mclks,
+[e = . . *U _p53 8 6 ( _VL53L0X_timeoutMclksToMicroseconds (2 , . . *U _p53 8 3 -> . . *U _p53 8 0 `uc ]
+"646
+[; ;drivers/vl53l0x.c: 646:     p53->timeouts.final_range_vcsel_period_pclks = VL53L0X_getVcselPulsePeriod(addr, VcselPeriodFinalRange);
+[e = . . *U _p53 8 1 -> ( _VL53L0X_getVcselPulsePeriod (2 , _addr . `E10286 1 `us ]
+"648
+[; ;drivers/vl53l0x.c: 648:     p53->timeouts.final_range_mclks =
+[e = . . *U _p53 8 4 ( _VL53L0X_decodeTimeout (1 ( _ReadRegister16 (2 , _addr -> -> 113 `i `uc ]
+"651
+[; ;drivers/vl53l0x.c: 651:     if (p53->enables.pre_range)
+[e $ ! != -> . . *U _p53 7 3 `i -> 0 `i 1589  ]
+"652
+[; ;drivers/vl53l0x.c: 652:     {
+{
+"653
+[; ;drivers/vl53l0x.c: 653:       p53->timeouts.final_range_mclks -= p53->timeouts.pre_range_mclks;
+[e =- . . *U _p53 8 4 -> . . *U _p53 8 3 `us ]
+"654
+[; ;drivers/vl53l0x.c: 654:     }
+}
+[e :U 1589 ]
+"656
+[; ;drivers/vl53l0x.c: 656:     p53->timeouts.final_range_us =
+[e = . . *U _p53 8 7 ( _VL53L0X_timeoutMclksToMicroseconds (2 , . . *U _p53 8 4 -> . . *U _p53 8 1 `uc ]
+"658
+[; ;drivers/vl53l0x.c: 658: }
+[e :UE 1588 ]
+}
+"666
+[; ;drivers/vl53l0x.c: 666: uint8_t VL53L0X_getVcselPulsePeriod(uint8_t addr, vcselPeriodType type) {
+[v _VL53L0X_getVcselPulsePeriod `(uc ~T0 @X0 1 ef2`uc`E10286 ]
+{
+[e :U _VL53L0X_getVcselPulsePeriod ]
+[v _addr `uc ~T0 @X0 1 r1 ]
+[v _type `E10286 ~T0 @X0 1 r2 ]
+[f ]
+"667
+[; ;drivers/vl53l0x.c: 667:   if (type == VcselPeriodPreRange) {
+[e $ ! == -> _type `ui -> . `E10286 0 `ui 1591  ]
+{
+"668
+[; ;drivers/vl53l0x.c: 668:     return (((ReadRegister(addr, 0x50)) + 1) << 1);
+[e ) -> << + -> ( _ReadRegister (2 , _addr -> -> 80 `i `uc `i -> 1 `i -> 1 `i `uc ]
+[e $UE 1590  ]
+"669
+[; ;drivers/vl53l0x.c: 669:   }
+}
+[e $U 1592  ]
+"670
+[; ;drivers/vl53l0x.c: 670:   else if (type == VcselPeriodFinalRange) {
+[e :U 1591 ]
+[e $ ! == -> _type `ui -> . `E10286 1 `ui 1593  ]
+{
+"671
+[; ;drivers/vl53l0x.c: 671:     return (((ReadRegister(addr, 0x70)) + 1) << 1);
+[e ) -> << + -> ( _ReadRegister (2 , _addr -> -> 112 `i `uc `i -> 1 `i -> 1 `i `uc ]
+[e $UE 1590  ]
+"672
+[; ;drivers/vl53l0x.c: 672:   }
+}
+[e $U 1594  ]
+"673
+[; ;drivers/vl53l0x.c: 673:   else { return 255; }
+[e :U 1593 ]
+{
+[e ) -> -> 255 `i `uc ]
+[e $UE 1590  ]
+}
+[e :U 1594 ]
+[e :U 1592 ]
+"674
+[; ;drivers/vl53l0x.c: 674: }
+[e :UE 1590 ]
+}
+"682
+[; ;drivers/vl53l0x.c: 682: uint32_t VL53L0X_timeoutMclksToMicroseconds(uint16_t timeout_period_mclks, uint8_t vcsel_period_pclks) {
+[v _VL53L0X_timeoutMclksToMicroseconds `(ul ~T0 @X0 1 ef2`us`uc ]
+{
+[e :U _VL53L0X_timeoutMclksToMicroseconds ]
+[v _timeout_period_mclks `us ~T0 @X0 1 r1 ]
+[v _vcsel_period_pclks `uc ~T0 @X0 1 r2 ]
+[f ]
+"683
+[; ;drivers/vl53l0x.c: 683:   uint32_t macro_period_ns = ((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000);
+[v _macro_period_ns `ul ~T0 @X0 1 a ]
+[e = _macro_period_ns / + * * -> -> 2304 `i `ul -> _vcsel_period_pclks `ul -> -> -> 1655 `i `l `ul -> -> -> 500 `i `l `ul -> -> -> 1000 `i `l `ul ]
+"684
+[; ;drivers/vl53l0x.c: 684:   return ((timeout_period_mclks * macro_period_ns) + (macro_period_ns / 2)) / 1000;
+[e ) / + * -> _timeout_period_mclks `ul _macro_period_ns / _macro_period_ns -> -> -> 2 `i `l `ul -> -> -> 1000 `i `l `ul ]
+[e $UE 1595  ]
+"685
+[; ;drivers/vl53l0x.c: 685: }
+[e :UE 1595 ]
+}
+"693
+[; ;drivers/vl53l0x.c: 693: uint32_t VL53L0X_timeoutMicrosecondsToMclks(uint32_t timeout_period_us, uint8_t vcsel_period_pclks) {
+[v _VL53L0X_timeoutMicrosecondsToMclks `(ul ~T0 @X0 1 ef2`ul`uc ]
+{
+[e :U _VL53L0X_timeoutMicrosecondsToMclks ]
+[v _timeout_period_us `ul ~T0 @X0 1 r1 ]
+[v _vcsel_period_pclks `uc ~T0 @X0 1 r2 ]
+[f ]
+"694
+[; ;drivers/vl53l0x.c: 694:   uint32_t macro_period_ns = ((((uint32_t)2304 * (vcsel_period_pclks) * 1655) + 500) / 1000);
+[v _macro_period_ns `ul ~T0 @X0 1 a ]
+[e = _macro_period_ns / + * * -> -> 2304 `i `ul -> _vcsel_period_pclks `ul -> -> -> 1655 `i `l `ul -> -> -> 500 `i `l `ul -> -> -> 1000 `i `l `ul ]
+"695
+[; ;drivers/vl53l0x.c: 695:   return (((timeout_period_us * 1000) + (macro_period_ns / 2)) / macro_period_ns);
+[e ) / + * _timeout_period_us -> -> -> 1000 `i `l `ul / _macro_period_ns -> -> -> 2 `i `l `ul _macro_period_ns ]
+[e $UE 1596  ]
+"696
+[; ;drivers/vl53l0x.c: 696: }
+[e :UE 1596 ]
+}
+"706
+[; ;drivers/vl53l0x.c: 706: uint16_t VL53L0X_decodeTimeout(uint16_t reg_val)
+[v _VL53L0X_decodeTimeout `(us ~T0 @X0 1 ef1`us ]
+"707
+[; ;drivers/vl53l0x.c: 707: {
+{
+[e :U _VL53L0X_decodeTimeout ]
+"706
+[; ;drivers/vl53l0x.c: 706: uint16_t VL53L0X_decodeTimeout(uint16_t reg_val)
+[v _reg_val `us ~T0 @X0 1 r1 ]
+"707
+[; ;drivers/vl53l0x.c: 707: {
+[f ]
+"709
+[; ;drivers/vl53l0x.c: 709:   return (uint16_t)((reg_val & 0x00FF) <<
+[e ) -> + -> -> << & -> _reg_val `ui -> -> 255 `i `ui -> -> >> & -> _reg_val `ui -> 65280 `ui -> 8 `i `us `ui `us `ui -> -> 1 `i `ui `us ]
+[e $UE 1597  ]
+"711
+[; ;drivers/vl53l0x.c: 711: }
+[e :UE 1597 ]
+}
+"721
+[; ;drivers/vl53l0x.c: 721: uint16_t VL53L0X_encodeTimeout(uint16_t timeout_mclks)
+[v _VL53L0X_encodeTimeout `(us ~T0 @X0 1 ef1`us ]
+"722
+[; ;drivers/vl53l0x.c: 722: {
+{
+[e :U _VL53L0X_encodeTimeout ]
+"721
+[; ;drivers/vl53l0x.c: 721: uint16_t VL53L0X_encodeTimeout(uint16_t timeout_mclks)
+[v _timeout_mclks `us ~T0 @X0 1 r1 ]
+"722
+[; ;drivers/vl53l0x.c: 722: {
+[f ]
+"725
+[; ;drivers/vl53l0x.c: 725:   uint32_t ls_byte = 0;
+[v _ls_byte `ul ~T0 @X0 1 a ]
+[e = _ls_byte -> -> -> 0 `i `l `ul ]
+"726
+[; ;drivers/vl53l0x.c: 726:   uint16_t ms_byte = 0;
+[v _ms_byte `us ~T0 @X0 1 a ]
+[e = _ms_byte -> -> 0 `i `us ]
+"728
+[; ;drivers/vl53l0x.c: 728:   if (timeout_mclks > 0)
+[e $ ! > -> _timeout_mclks `ui -> -> 0 `i `ui 1599  ]
+"729
+[; ;drivers/vl53l0x.c: 729:   {
+{
+"730
+[; ;drivers/vl53l0x.c: 730:     ls_byte = timeout_mclks - 1;
+[e = _ls_byte -> - -> _timeout_mclks `ui -> -> 1 `i `ui `ul ]
+"732
+[; ;drivers/vl53l0x.c: 732:     while ((ls_byte & 0xFFFFFF00) > 0)
+[e $U 1600  ]
+[e :U 1601 ]
+"733
+[; ;drivers/vl53l0x.c: 733:     {
+{
+"734
+[; ;drivers/vl53l0x.c: 734:       ls_byte >>= 1;
+[e =>> _ls_byte -> -> 1 `i `ul ]
+"735
+[; ;drivers/vl53l0x.c: 735:       ms_byte++;
+[e ++ _ms_byte -> -> 1 `i `us ]
+"736
+[; ;drivers/vl53l0x.c: 736:     }
+}
+[e :U 1600 ]
+"732
+[; ;drivers/vl53l0x.c: 732:     while ((ls_byte & 0xFFFFFF00) > 0)
+[e $ > & _ls_byte -> 4294967040 `ul -> -> -> 0 `i `l `ul 1601  ]
+[e :U 1602 ]
+"738
+[; ;drivers/vl53l0x.c: 738:     return (ms_byte << 8) | (ls_byte & 0xFF);
+[e ) -> | -> << -> _ms_byte `ui -> 8 `i `ul & _ls_byte -> -> -> 255 `i `l `ul `us ]
+[e $UE 1598  ]
+"739
+[; ;drivers/vl53l0x.c: 739:   }
+}
+[e $U 1603  ]
+"740
+[; ;drivers/vl53l0x.c: 740:   else { return 0; }
+[e :U 1599 ]
+{
+[e ) -> -> 0 `i `us ]
+[e $UE 1598  ]
+}
+[e :U 1603 ]
+"741
+[; ;drivers/vl53l0x.c: 741: }
+[e :UE 1598 ]
+}
+"754
+[; ;drivers/vl53l0x.c: 754: _Bool VL53L0X_setMeasurementTimingBudget(VL53L0XDEV *p53)
+[v _VL53L0X_setMeasurementTimingBudget `(a ~T0 @X0 1 ef1`*S1492 ]
+"755
+[; ;drivers/vl53l0x.c: 755: {
+{
+[e :U _VL53L0X_setMeasurementTimingBudget ]
+"754
+[; ;drivers/vl53l0x.c: 754: _Bool VL53L0X_setMeasurementTimingBudget(VL53L0XDEV *p53)
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+"755
+[; ;drivers/vl53l0x.c: 755: {
+[f ]
+"756
+[; ;drivers/vl53l0x.c: 756:     uint16_t const StartOverhead = 1320;
+[v _StartOverhead `Cus ~T0 @X0 1 a ]
+[e = _StartOverhead -> -> 1320 `i `us ]
+"757
+[; ;drivers/vl53l0x.c: 757:     uint16_t const EndOverhead = 960;
+[v _EndOverhead `Cus ~T0 @X0 1 a ]
+[e = _EndOverhead -> -> 960 `i `us ]
+"758
+[; ;drivers/vl53l0x.c: 758:     uint16_t const MsrcOverhead = 660;
+[v _MsrcOverhead `Cus ~T0 @X0 1 a ]
+[e = _MsrcOverhead -> -> 660 `i `us ]
+"759
+[; ;drivers/vl53l0x.c: 759:     uint16_t const TccOverhead = 590;
+[v _TccOverhead `Cus ~T0 @X0 1 a ]
+[e = _TccOverhead -> -> 590 `i `us ]
+"760
+[; ;drivers/vl53l0x.c: 760:     uint16_t const DssOverhead = 690;
+[v _DssOverhead `Cus ~T0 @X0 1 a ]
+[e = _DssOverhead -> -> 690 `i `us ]
+"761
+[; ;drivers/vl53l0x.c: 761:     uint16_t const PreRangeOverhead = 660;
+[v _PreRangeOverhead `Cus ~T0 @X0 1 a ]
+[e = _PreRangeOverhead -> -> 660 `i `us ]
+"762
+[; ;drivers/vl53l0x.c: 762:     uint16_t const FinalRangeOverhead = 550;
+[v _FinalRangeOverhead `Cus ~T0 @X0 1 a ]
+[e = _FinalRangeOverhead -> -> 550 `i `us ]
+"764
+[; ;drivers/vl53l0x.c: 764:     uint32_t const MinTimingBudget = 20000;
+[v _MinTimingBudget `Cul ~T0 @X0 1 a ]
+[e = _MinTimingBudget -> -> -> 20000 `i `l `ul ]
+"766
+[; ;drivers/vl53l0x.c: 766:     if (p53->measurement_timing_budget_us < MinTimingBudget) { return 0; }
+[e $ ! < . *U _p53 6 _MinTimingBudget 1605  ]
+{
+[e ) -> -> 0 `i `a ]
+[e $UE 1604  ]
+}
+[e :U 1605 ]
+"768
+[; ;drivers/vl53l0x.c: 768:     uint32_t used_budget_us = StartOverhead + EndOverhead;
+[v _used_budget_us `ul ~T0 @X0 1 a ]
+[e = _used_budget_us -> + -> _StartOverhead `ui -> _EndOverhead `ui `ul ]
+"770
+[; ;drivers/vl53l0x.c: 770:     VL53L0X_getSequenceStepEnables(p53);
+[e ( _VL53L0X_getSequenceStepEnables (1 _p53 ]
+"771
+[; ;drivers/vl53l0x.c: 771:     VL53L0X_getSequenceStepTimeouts(p53);
+[e ( _VL53L0X_getSequenceStepTimeouts (1 _p53 ]
+"773
+[; ;drivers/vl53l0x.c: 773:     if (p53->enables.tcc)
+[e $ ! != -> . . *U _p53 7 0 `i -> 0 `i 1606  ]
+"774
+[; ;drivers/vl53l0x.c: 774:     {
+{
+"775
+[; ;drivers/vl53l0x.c: 775:       used_budget_us += (p53->timeouts.msrc_dss_tcc_us + TccOverhead);
+[e =+ _used_budget_us + . . *U _p53 8 5 -> _TccOverhead `ul ]
+"776
+[; ;drivers/vl53l0x.c: 776:     }
+}
+[e :U 1606 ]
+"778
+[; ;drivers/vl53l0x.c: 778:     if (p53->enables.dss)
+[e $ ! != -> . . *U _p53 7 2 `i -> 0 `i 1607  ]
+"779
+[; ;drivers/vl53l0x.c: 779:     {
+{
+"780
+[; ;drivers/vl53l0x.c: 780:       used_budget_us += 2 * (p53->timeouts.msrc_dss_tcc_us + DssOverhead);
+[e =+ _used_budget_us * -> -> -> 2 `i `l `ul + . . *U _p53 8 5 -> _DssOverhead `ul ]
+"781
+[; ;drivers/vl53l0x.c: 781:     }
+}
+[e $U 1608  ]
+"782
+[; ;drivers/vl53l0x.c: 782:     else if (p53->enables.msrc)
+[e :U 1607 ]
+[e $ ! != -> . . *U _p53 7 1 `i -> 0 `i 1609  ]
+"783
+[; ;drivers/vl53l0x.c: 783:     {
+{
+"784
+[; ;drivers/vl53l0x.c: 784:       used_budget_us += (p53->timeouts.msrc_dss_tcc_us + MsrcOverhead);
+[e =+ _used_budget_us + . . *U _p53 8 5 -> _MsrcOverhead `ul ]
+"785
+[; ;drivers/vl53l0x.c: 785:     }
+}
+[e :U 1609 ]
+[e :U 1608 ]
+"787
+[; ;drivers/vl53l0x.c: 787:     if (p53->enables.pre_range)
+[e $ ! != -> . . *U _p53 7 3 `i -> 0 `i 1610  ]
+"788
+[; ;drivers/vl53l0x.c: 788:     {
+{
+"789
+[; ;drivers/vl53l0x.c: 789:       used_budget_us += (p53->timeouts.pre_range_us + PreRangeOverhead);
+[e =+ _used_budget_us + . . *U _p53 8 6 -> _PreRangeOverhead `ul ]
+"790
+[; ;drivers/vl53l0x.c: 790:     }
+}
+[e :U 1610 ]
+"792
+[; ;drivers/vl53l0x.c: 792:     if (p53->enables.final_range)
+[e $ ! != -> . . *U _p53 7 4 `i -> 0 `i 1611  ]
+"793
+[; ;drivers/vl53l0x.c: 793:     {
+{
+"794
+[; ;drivers/vl53l0x.c: 794:     used_budget_us += FinalRangeOverhead;
+[e =+ _used_budget_us -> _FinalRangeOverhead `ul ]
+"802
+[; ;drivers/vl53l0x.c: 802:     if (used_budget_us > p53->measurement_timing_budget_us)
+[e $ ! > _used_budget_us . *U _p53 6 1612  ]
+"803
+[; ;drivers/vl53l0x.c: 803:     {
+{
+"805
+[; ;drivers/vl53l0x.c: 805:       return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1604  ]
+"806
+[; ;drivers/vl53l0x.c: 806:     }
+}
+[e :U 1612 ]
+"808
+[; ;drivers/vl53l0x.c: 808:     uint32_t final_range_timeout_us = p53->measurement_timing_budget_us - used_budget_us;
+[v _final_range_timeout_us `ul ~T0 @X0 1 a ]
+[e = _final_range_timeout_us - . *U _p53 6 _used_budget_us ]
+"818
+[; ;drivers/vl53l0x.c: 818:     uint16_t final_range_timeout_mclks =
+[v _final_range_timeout_mclks `us ~T0 @X0 1 a ]
+[e = _final_range_timeout_mclks -> ( _VL53L0X_timeoutMicrosecondsToMclks (2 , _final_range_timeout_us -> . . *U _p53 8 1 `uc `us ]
+"822
+[; ;drivers/vl53l0x.c: 822:     if (p53->enables.pre_range)
+[e $ ! != -> . . *U _p53 7 3 `i -> 0 `i 1613  ]
+"823
+[; ;drivers/vl53l0x.c: 823:     {
+{
+"824
+[; ;drivers/vl53l0x.c: 824:         final_range_timeout_mclks += p53->timeouts.pre_range_mclks;
+[e =+ _final_range_timeout_mclks -> . . *U _p53 8 3 `us ]
+"825
+[; ;drivers/vl53l0x.c: 825:     }
+}
+[e :U 1613 ]
+"827
+[; ;drivers/vl53l0x.c: 827:     WriteRegister16(p53->address, 0x71,
+[e ( _WriteRegister16 (3 , , . *U _p53 0 -> -> 113 `i `uc ( _VL53L0X_encodeTimeout (1 _final_range_timeout_mclks ]
+"831
+[; ;drivers/vl53l0x.c: 831:     }
+}
+[e :U 1611 ]
+"833
+[; ;drivers/vl53l0x.c: 833:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1604  ]
+"834
+[; ;drivers/vl53l0x.c: 834: }
+[e :UE 1604 ]
+}
+"841
+[; ;drivers/vl53l0x.c: 841: _Bool VL53L0X_performSingleRefCalibration(VL53L0XDEV *p53, uint8_t vhv_init_byte) {
+[v _VL53L0X_performSingleRefCalibration `(a ~T0 @X0 1 ef2`*S1492`uc ]
+{
+[e :U _VL53L0X_performSingleRefCalibration ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[v _vhv_init_byte `uc ~T0 @X0 1 r2 ]
+[f ]
+"843
+[; ;drivers/vl53l0x.c: 843:     WriteRegister(p53->address, 0x00, 0x01 | vhv_init_byte);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> | -> 1 `i -> _vhv_init_byte `i `uc ]
+"845
+[; ;drivers/vl53l0x.c: 845:     msecdata timeoutData;
+[v _timeoutData `S1493 ~T0 @X0 1 a ]
+"846
+[; ;drivers/vl53l0x.c: 846:     start_msTimeout(&timeoutData, p53->io_timeout);
+[e ( _start_msTimeout (2 , &U _timeoutData . *U _p53 3 ]
+"847
+[; ;drivers/vl53l0x.c: 847:     while ((ReadRegister(p53->address, 0x13) & 0x07) == 0) {
+[e $U 1615  ]
+[e :U 1616 ]
+{
+"848
+[; ;drivers/vl53l0x.c: 848:         if (checkTimeoutExpired(&timeoutData)) { return 0; }
+[e $ ! != -> ( _checkTimeoutExpired (1 &U _timeoutData `i -> 0 `i 1618  ]
+{
+[e ) -> -> 0 `i `a ]
+[e $UE 1614  ]
+}
+[e :U 1618 ]
+"849
+[; ;drivers/vl53l0x.c: 849:     }
+}
+[e :U 1615 ]
+"847
+[; ;drivers/vl53l0x.c: 847:     while ((ReadRegister(p53->address, 0x13) & 0x07) == 0) {
+[e $ == & -> ( _ReadRegister (2 , . *U _p53 0 -> -> 19 `i `uc `i -> 7 `i -> 0 `i 1616  ]
+[e :U 1617 ]
+"851
+[; ;drivers/vl53l0x.c: 851:     WriteRegister(p53->address, 0x0B, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 11 `i `uc -> -> 1 `i `uc ]
+"852
+[; ;drivers/vl53l0x.c: 852:     WriteRegister(p53->address, 0x00, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 0 `i `uc ]
+"854
+[; ;drivers/vl53l0x.c: 854:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1614  ]
+"855
+[; ;drivers/vl53l0x.c: 855: }
+[e :UE 1614 ]
+}
+"858
+[; ;drivers/vl53l0x.c: 858: void VL53L0X_SetTimeout(VL53L0XDEV *p53, uint16_t timeout) {
+[v _VL53L0X_SetTimeout `(v ~T0 @X0 1 ef2`*S1492`us ]
+{
+[e :U _VL53L0X_SetTimeout ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[v _timeout `us ~T0 @X0 1 r2 ]
+[f ]
+"859
+[; ;drivers/vl53l0x.c: 859:     p53->io_timeout = timeout;
+[e = . *U _p53 3 _timeout ]
+"860
+[; ;drivers/vl53l0x.c: 860: }
+[e :UE 1619 ]
+}
+"863
+[; ;drivers/vl53l0x.c: 863: void VL53L0X_ClearStruct(VL53L0XDEV *p53) {
+[v _VL53L0X_ClearStruct `(v ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_ClearStruct ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"864
+[; ;drivers/vl53l0x.c: 864:     p53->did_timeout = 0;
+[e = . *U _p53 4 -> -> 0 `i `a ]
+"865
+[; ;drivers/vl53l0x.c: 865:     p53->io_timeout = 0;
+[e = . *U _p53 3 -> -> 0 `i `us ]
+"866
+[; ;drivers/vl53l0x.c: 866:     p53->measurement_timing_budget_us = 0;
+[e = . *U _p53 6 -> -> -> 0 `i `l `ul ]
+"867
+[; ;drivers/vl53l0x.c: 867:     p53->stopVariable = 0;
+[e = . *U _p53 1 -> -> 0 `i `uc ]
+"868
+[; ;drivers/vl53l0x.c: 868:     p53->timeout_start_ms = 0;
+[e = . *U _p53 5 -> -> 0 `i `us ]
+"869
+[; ;drivers/vl53l0x.c: 869: }
+[e :UE 1620 ]
+}
+"878
+[; ;drivers/vl53l0x.c: 878: uint16_t VL53L0X_SingleShotReading(VL53L0XDEV *p53) {
+[v _VL53L0X_SingleShotReading `(us ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_SingleShotReading ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"880
+[; ;drivers/vl53l0x.c: 880:     VL53L0X_ReadingHeader(p53);
+[e ( _VL53L0X_ReadingHeader (1 _p53 ]
+"881
+[; ;drivers/vl53l0x.c: 881:     WriteRegister(p53->address, 0x00, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 1 `i `uc ]
+"883
+[; ;drivers/vl53l0x.c: 883:     msecdata timeoutData;
+[v _timeoutData `S1493 ~T0 @X0 1 a ]
+"884
+[; ;drivers/vl53l0x.c: 884:     start_msTimeout(&timeoutData, p53->io_timeout);
+[e ( _start_msTimeout (2 , &U _timeoutData . *U _p53 3 ]
+"886
+[; ;drivers/vl53l0x.c: 886:     while (ReadRegister(p53->address, 0x00) & 0x01)
+[e $U 1622  ]
+[e :U 1623 ]
+"887
+[; ;drivers/vl53l0x.c: 887:     {
+{
+"888
+[; ;drivers/vl53l0x.c: 888:       if (checkTimeoutExpired(&timeoutData))
+[e $ ! != -> ( _checkTimeoutExpired (1 &U _timeoutData `i -> 0 `i 1625  ]
+"889
+[; ;drivers/vl53l0x.c: 889:       {
+{
+"890
+[; ;drivers/vl53l0x.c: 890:           p53->did_timeout = 1;
+[e = . *U _p53 4 -> -> 1 `i `a ]
+"891
+[; ;drivers/vl53l0x.c: 891:           return 65535;
+[e ) -> -> 65535 `l `us ]
+[e $UE 1621  ]
+"892
+[; ;drivers/vl53l0x.c: 892:       }
+}
+[e :U 1625 ]
+"893
+[; ;drivers/vl53l0x.c: 893:     }
+}
+[e :U 1622 ]
+"886
+[; ;drivers/vl53l0x.c: 886:     while (ReadRegister(p53->address, 0x00) & 0x01)
+[e $ != & -> ( _ReadRegister (2 , . *U _p53 0 -> -> 0 `i `uc `i -> 1 `i -> 0 `i 1623  ]
+[e :U 1624 ]
+"895
+[; ;drivers/vl53l0x.c: 895:     return VL53L0X_ReadRange(p53);
+[e ) ( _VL53L0X_ReadRange (1 _p53 ]
+[e $UE 1621  ]
+"897
+[; ;drivers/vl53l0x.c: 897: }
+[e :UE 1621 ]
+}
+"905
+[; ;drivers/vl53l0x.c: 905: void VL53L0X_ContinuousReading(VL53L0XDEV *p53, uint32_t period_ms) {
+[v _VL53L0X_ContinuousReading `(v ~T0 @X0 1 ef2`*S1492`ul ]
+{
+[e :U _VL53L0X_ContinuousReading ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[v _period_ms `ul ~T0 @X0 1 r2 ]
+[f ]
+"907
+[; ;drivers/vl53l0x.c: 907:     VL53L0X_ReadingHeader(p53);
+[e ( _VL53L0X_ReadingHeader (1 _p53 ]
+"909
+[; ;drivers/vl53l0x.c: 909:     if (period_ms != 0)
+[e $ ! != _period_ms -> -> -> 0 `i `l `ul 1627  ]
+"910
+[; ;drivers/vl53l0x.c: 910:     {
+{
+"911
+[; ;drivers/vl53l0x.c: 911:       VL53L0X_SetInterMeasurementPeriodMilliSeconds(p53, period_ms);
+[e ( _VL53L0X_SetInterMeasurementPeriodMilliSeconds (2 , _p53 _period_ms ]
+"912
+[; ;drivers/vl53l0x.c: 912:       WriteRegister(p53->address, 0x00, 0x04);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 4 `i `uc ]
+"913
+[; ;drivers/vl53l0x.c: 913:     }
+}
+[e $U 1628  ]
+"914
+[; ;drivers/vl53l0x.c: 914:     else
+[e :U 1627 ]
+"915
+[; ;drivers/vl53l0x.c: 915:     {
+{
+"916
+[; ;drivers/vl53l0x.c: 916:       WriteRegister(p53->address, 0x00, 0x02);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 2 `i `uc ]
+"917
+[; ;drivers/vl53l0x.c: 917:     }
+}
+[e :U 1628 ]
+"918
+[; ;drivers/vl53l0x.c: 918: }
+[e :UE 1626 ]
+}
+"924
+[; ;drivers/vl53l0x.c: 924: void VL53L0X_StopContinuous(VL53L0XDEV *p53) {
+[v _VL53L0X_StopContinuous `(v ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_StopContinuous ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"925
+[; ;drivers/vl53l0x.c: 925:   WriteRegister(p53->address, 0x00, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 1 `i `uc ]
+"927
+[; ;drivers/vl53l0x.c: 927:   WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"928
+[; ;drivers/vl53l0x.c: 928:   WriteRegister(p53->address, 0x00, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 0 `i `uc ]
+"929
+[; ;drivers/vl53l0x.c: 929:   WriteRegister(p53->address, 0x91, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 145 `i `uc -> -> 0 `i `uc ]
+"930
+[; ;drivers/vl53l0x.c: 930:   WriteRegister(p53->address, 0x00, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 1 `i `uc ]
+"931
+[; ;drivers/vl53l0x.c: 931:   WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"932
+[; ;drivers/vl53l0x.c: 932: }
+[e :UE 1629 ]
+}
+"939
+[; ;drivers/vl53l0x.c: 939: uint16_t VL53L0X_ReadRange(VL53L0XDEV *p53) {
+[v _VL53L0X_ReadRange `(us ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_ReadRange ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"941
+[; ;drivers/vl53l0x.c: 941:     msecdata timeoutData;
+[v _timeoutData `S1493 ~T0 @X0 1 a ]
+"942
+[; ;drivers/vl53l0x.c: 942:     start_msTimeout(&timeoutData, p53->io_timeout);
+[e ( _start_msTimeout (2 , &U _timeoutData . *U _p53 3 ]
+"944
+[; ;drivers/vl53l0x.c: 944:     while ((ReadRegister(p53->address, 0x13) & 0x07) == 0) {
+[e $U 1631  ]
+[e :U 1632 ]
+{
+"945
+[; ;drivers/vl53l0x.c: 945:         if (checkTimeoutExpired(&timeoutData)) {
+[e $ ! != -> ( _checkTimeoutExpired (1 &U _timeoutData `i -> 0 `i 1634  ]
+{
+"946
+[; ;drivers/vl53l0x.c: 946:             p53->did_timeout = 1;
+[e = . *U _p53 4 -> -> 1 `i `a ]
+"947
+[; ;drivers/vl53l0x.c: 947:             return 65535;
+[e ) -> -> 65535 `l `us ]
+[e $UE 1630  ]
+"948
+[; ;drivers/vl53l0x.c: 948:         }
+}
+[e :U 1634 ]
+"949
+[; ;drivers/vl53l0x.c: 949:     }
+}
+[e :U 1631 ]
+"944
+[; ;drivers/vl53l0x.c: 944:     while ((ReadRegister(p53->address, 0x13) & 0x07) == 0) {
+[e $ == & -> ( _ReadRegister (2 , . *U _p53 0 -> -> 19 `i `uc `i -> 7 `i -> 0 `i 1632  ]
+[e :U 1633 ]
+"953
+[; ;drivers/vl53l0x.c: 953:     uint16_t range = ReadRegister16(p53->address, 0x14 + 10);
+[v _range `us ~T0 @X0 1 a ]
+[e = _range ( _ReadRegister16 (2 , . *U _p53 0 -> + -> 20 `i -> 10 `i `uc ]
+"954
+[; ;drivers/vl53l0x.c: 954:     WriteRegister(p53->address, 0x0B, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 11 `i `uc -> -> 1 `i `uc ]
+"956
+[; ;drivers/vl53l0x.c: 956:     return range;
+[e ) _range ]
+[e $UE 1630  ]
+"957
+[; ;drivers/vl53l0x.c: 957: }
+[e :UE 1630 ]
+}
+"960
+[; ;drivers/vl53l0x.c: 960: _Bool VL53L0X_TimeoutOccurred(VL53L0XDEV *p53) {
+[v _VL53L0X_TimeoutOccurred `(a ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_TimeoutOccurred ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"961
+[; ;drivers/vl53l0x.c: 961:   _Bool tmp = p53->did_timeout;
+[v _tmp `a ~T0 @X0 1 a ]
+[e = _tmp . *U _p53 4 ]
+"962
+[; ;drivers/vl53l0x.c: 962:   p53->did_timeout = 0;
+[e = . *U _p53 4 -> -> 0 `i `a ]
+"963
+[; ;drivers/vl53l0x.c: 963:   return tmp;
+[e ) _tmp ]
+[e $UE 1635  ]
+"964
+[; ;drivers/vl53l0x.c: 964: }
+[e :UE 1635 ]
+}
+"977
+[; ;drivers/vl53l0x.c: 977: _Bool VL53L0X_SetVcselPulsePeriod(VL53L0XDEV *p53, vcselPeriodType type, uint8_t period_pclks) {
+[v _VL53L0X_SetVcselPulsePeriod `(a ~T0 @X0 1 ef3`*S1492`E10286`uc ]
+{
+[e :U _VL53L0X_SetVcselPulsePeriod ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[v _type `E10286 ~T0 @X0 1 r2 ]
+[v _period_pclks `uc ~T0 @X0 1 r3 ]
+[f ]
+"979
+[; ;drivers/vl53l0x.c: 979:   uint8_t vcsel_period_reg = (((period_pclks) >> 1) - 1);
+[v _vcsel_period_reg `uc ~T0 @X0 1 a ]
+[e = _vcsel_period_reg -> - >> -> _period_pclks `i -> 1 `i -> 1 `i `uc ]
+"981
+[; ;drivers/vl53l0x.c: 981:   VL53L0X_getSequenceStepEnables(p53);
+[e ( _VL53L0X_getSequenceStepEnables (1 _p53 ]
+"982
+[; ;drivers/vl53l0x.c: 982:   VL53L0X_getSequenceStepTimeouts(p53);
+[e ( _VL53L0X_getSequenceStepTimeouts (1 _p53 ]
+"997
+[; ;drivers/vl53l0x.c: 997:   if (type == VcselPeriodPreRange)
+[e $ ! == -> _type `ui -> . `E10286 0 `ui 1637  ]
+"998
+[; ;drivers/vl53l0x.c: 998:   {
+{
+"1000
+[; ;drivers/vl53l0x.c: 1000:     switch (period_pclks)
+[e $U 1639  ]
+"1001
+[; ;drivers/vl53l0x.c: 1001:     {
+{
+"1002
+[; ;drivers/vl53l0x.c: 1002:       case 12:
+[e :U 1640 ]
+"1003
+[; ;drivers/vl53l0x.c: 1003:         WriteRegister(p53->address, 0x57, 0x18);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 87 `i `uc -> -> 24 `i `uc ]
+"1004
+[; ;drivers/vl53l0x.c: 1004:         break;
+[e $U 1638  ]
+"1006
+[; ;drivers/vl53l0x.c: 1006:       case 14:
+[e :U 1641 ]
+"1007
+[; ;drivers/vl53l0x.c: 1007:         WriteRegister(p53->address, 0x57, 0x30);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 87 `i `uc -> -> 48 `i `uc ]
+"1008
+[; ;drivers/vl53l0x.c: 1008:         break;
+[e $U 1638  ]
+"1010
+[; ;drivers/vl53l0x.c: 1010:       case 16:
+[e :U 1642 ]
+"1011
+[; ;drivers/vl53l0x.c: 1011:         WriteRegister(p53->address, 0x57, 0x40);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 87 `i `uc -> -> 64 `i `uc ]
+"1012
+[; ;drivers/vl53l0x.c: 1012:         break;
+[e $U 1638  ]
+"1014
+[; ;drivers/vl53l0x.c: 1014:       case 18:
+[e :U 1643 ]
+"1015
+[; ;drivers/vl53l0x.c: 1015:         WriteRegister(p53->address, 0x57, 0x50);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 87 `i `uc -> -> 80 `i `uc ]
+"1016
+[; ;drivers/vl53l0x.c: 1016:         break;
+[e $U 1638  ]
+"1018
+[; ;drivers/vl53l0x.c: 1018:       default:
+[e :U 1644 ]
+"1020
+[; ;drivers/vl53l0x.c: 1020:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1636  ]
+"1021
+[; ;drivers/vl53l0x.c: 1021:     }
+}
+[e $U 1638  ]
+[e :U 1639 ]
+[e [\ -> _period_pclks `i , $ -> 12 `i 1640
+ , $ -> 14 `i 1641
+ , $ -> 16 `i 1642
+ , $ -> 18 `i 1643
+ 1644 ]
+[e :U 1638 ]
+"1022
+[; ;drivers/vl53l0x.c: 1022:     WriteRegister(p53->address, 0x56, 0x08);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 86 `i `uc -> -> 8 `i `uc ]
+"1025
+[; ;drivers/vl53l0x.c: 1025:     WriteRegister(p53->address, 0x50, vcsel_period_reg);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 80 `i `uc _vcsel_period_reg ]
+"1032
+[; ;drivers/vl53l0x.c: 1032:     uint16_t new_pre_range_timeout_mclks =
+[v _new_pre_range_timeout_mclks `us ~T0 @X0 1 a ]
+[e = _new_pre_range_timeout_mclks -> ( _VL53L0X_timeoutMicrosecondsToMclks (2 , . . *U _p53 8 6 _period_pclks `us ]
+"1035
+[; ;drivers/vl53l0x.c: 1035:     WriteRegister16(p53->address, 0x51,
+[e ( _WriteRegister16 (3 , , . *U _p53 0 -> -> 81 `i `uc ( _VL53L0X_encodeTimeout (1 _new_pre_range_timeout_mclks ]
+"1043
+[; ;drivers/vl53l0x.c: 1043:     uint16_t new_msrc_timeout_mclks =
+[v _new_msrc_timeout_mclks `us ~T0 @X0 1 a ]
+[e = _new_msrc_timeout_mclks -> ( _VL53L0X_timeoutMicrosecondsToMclks (2 , . . *U _p53 8 5 _period_pclks `us ]
+"1046
+[; ;drivers/vl53l0x.c: 1046:     WriteRegister(p53->address, 0x46,
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 70 `i `uc -> ? > -> _new_msrc_timeout_mclks `ui -> -> 256 `i `ui : -> -> 255 `i `ui - -> _new_msrc_timeout_mclks `ui -> -> 1 `i `ui `uc ]
+"1050
+[; ;drivers/vl53l0x.c: 1050:   }
+}
+[e $U 1645  ]
+"1051
+[; ;drivers/vl53l0x.c: 1051:   else if (type == VcselPeriodFinalRange)
+[e :U 1637 ]
+[e $ ! == -> _type `ui -> . `E10286 1 `ui 1646  ]
+"1052
+[; ;drivers/vl53l0x.c: 1052:   {
+{
+"1053
+[; ;drivers/vl53l0x.c: 1053:     switch (period_pclks)
+[e $U 1648  ]
+"1054
+[; ;drivers/vl53l0x.c: 1054:     {
+{
+"1055
+[; ;drivers/vl53l0x.c: 1055:       case 8:
+[e :U 1649 ]
+"1056
+[; ;drivers/vl53l0x.c: 1056:         WriteRegister(p53->address, 0x48, 0x10);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 72 `i `uc -> -> 16 `i `uc ]
+"1057
+[; ;drivers/vl53l0x.c: 1057:         WriteRegister(p53->address, 0x47, 0x08);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 71 `i `uc -> -> 8 `i `uc ]
+"1058
+[; ;drivers/vl53l0x.c: 1058:         WriteRegister(p53->address, 0x32, 0x02);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 50 `i `uc -> -> 2 `i `uc ]
+"1059
+[; ;drivers/vl53l0x.c: 1059:         WriteRegister(p53->address, 0x30, 0x0C);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 12 `i `uc ]
+"1060
+[; ;drivers/vl53l0x.c: 1060:         WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"1061
+[; ;drivers/vl53l0x.c: 1061:         WriteRegister(p53->address, 0x30, 0x30);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 48 `i `uc ]
+"1062
+[; ;drivers/vl53l0x.c: 1062:         WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"1063
+[; ;drivers/vl53l0x.c: 1063:         break;
+[e $U 1647  ]
+"1065
+[; ;drivers/vl53l0x.c: 1065:       case 10:
+[e :U 1650 ]
+"1066
+[; ;drivers/vl53l0x.c: 1066:         WriteRegister(p53->address, 0x48, 0x28);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 72 `i `uc -> -> 40 `i `uc ]
+"1067
+[; ;drivers/vl53l0x.c: 1067:         WriteRegister(p53->address, 0x47, 0x08);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 71 `i `uc -> -> 8 `i `uc ]
+"1068
+[; ;drivers/vl53l0x.c: 1068:         WriteRegister(p53->address, 0x32, 0x03);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 50 `i `uc -> -> 3 `i `uc ]
+"1069
+[; ;drivers/vl53l0x.c: 1069:         WriteRegister(p53->address, 0x30, 0x09);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 9 `i `uc ]
+"1070
+[; ;drivers/vl53l0x.c: 1070:         WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"1071
+[; ;drivers/vl53l0x.c: 1071:         WriteRegister(p53->address, 0x30, 0x20);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 32 `i `uc ]
+"1072
+[; ;drivers/vl53l0x.c: 1072:         WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"1073
+[; ;drivers/vl53l0x.c: 1073:         break;
+[e $U 1647  ]
+"1075
+[; ;drivers/vl53l0x.c: 1075:       case 12:
+[e :U 1651 ]
+"1076
+[; ;drivers/vl53l0x.c: 1076:         WriteRegister(p53->address, 0x48, 0x38);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 72 `i `uc -> -> 56 `i `uc ]
+"1077
+[; ;drivers/vl53l0x.c: 1077:         WriteRegister(p53->address, 0x47, 0x08);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 71 `i `uc -> -> 8 `i `uc ]
+"1078
+[; ;drivers/vl53l0x.c: 1078:         WriteRegister(p53->address, 0x32, 0x03);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 50 `i `uc -> -> 3 `i `uc ]
+"1079
+[; ;drivers/vl53l0x.c: 1079:         WriteRegister(p53->address, 0x30, 0x08);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 8 `i `uc ]
+"1080
+[; ;drivers/vl53l0x.c: 1080:         WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"1081
+[; ;drivers/vl53l0x.c: 1081:         WriteRegister(p53->address, 0x30, 0x20);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 32 `i `uc ]
+"1082
+[; ;drivers/vl53l0x.c: 1082:         WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"1083
+[; ;drivers/vl53l0x.c: 1083:         break;
+[e $U 1647  ]
+"1085
+[; ;drivers/vl53l0x.c: 1085:       case 14:
+[e :U 1652 ]
+"1086
+[; ;drivers/vl53l0x.c: 1086:         WriteRegister(p53->address, 0x48, 0x48);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 72 `i `uc -> -> 72 `i `uc ]
+"1087
+[; ;drivers/vl53l0x.c: 1087:         WriteRegister(p53->address, 0x47, 0x08);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 71 `i `uc -> -> 8 `i `uc ]
+"1088
+[; ;drivers/vl53l0x.c: 1088:         WriteRegister(p53->address, 0x32, 0x03);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 50 `i `uc -> -> 3 `i `uc ]
+"1089
+[; ;drivers/vl53l0x.c: 1089:         WriteRegister(p53->address, 0x30, 0x07);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 7 `i `uc ]
+"1090
+[; ;drivers/vl53l0x.c: 1090:         WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"1091
+[; ;drivers/vl53l0x.c: 1091:         WriteRegister(p53->address, 0x30, 0x20);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 48 `i `uc -> -> 32 `i `uc ]
+"1092
+[; ;drivers/vl53l0x.c: 1092:         WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"1093
+[; ;drivers/vl53l0x.c: 1093:         break;
+[e $U 1647  ]
+"1095
+[; ;drivers/vl53l0x.c: 1095:       default:
+[e :U 1653 ]
+"1097
+[; ;drivers/vl53l0x.c: 1097:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1636  ]
+"1098
+[; ;drivers/vl53l0x.c: 1098:     }
+}
+[e $U 1647  ]
+[e :U 1648 ]
+[e [\ -> _period_pclks `i , $ -> 8 `i 1649
+ , $ -> 10 `i 1650
+ , $ -> 12 `i 1651
+ , $ -> 14 `i 1652
+ 1653 ]
+[e :U 1647 ]
+"1101
+[; ;drivers/vl53l0x.c: 1101:     WriteRegister(p53->address, 0x70, vcsel_period_reg);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 112 `i `uc _vcsel_period_reg ]
+"1113
+[; ;drivers/vl53l0x.c: 1113:     uint16_t new_final_range_timeout_mclks =
+[v _new_final_range_timeout_mclks `us ~T0 @X0 1 a ]
+[e = _new_final_range_timeout_mclks -> ( _VL53L0X_timeoutMicrosecondsToMclks (2 , . . *U _p53 8 7 _period_pclks `us ]
+"1116
+[; ;drivers/vl53l0x.c: 1116:     if (p53->enables.pre_range)
+[e $ ! != -> . . *U _p53 7 3 `i -> 0 `i 1654  ]
+"1117
+[; ;drivers/vl53l0x.c: 1117:     {
+{
+"1118
+[; ;drivers/vl53l0x.c: 1118:       new_final_range_timeout_mclks += p53->timeouts.pre_range_mclks;
+[e =+ _new_final_range_timeout_mclks -> . . *U _p53 8 3 `us ]
+"1119
+[; ;drivers/vl53l0x.c: 1119:     }
+}
+[e :U 1654 ]
+"1121
+[; ;drivers/vl53l0x.c: 1121:     WriteRegister16(p53->address, 0x71,
+[e ( _WriteRegister16 (3 , , . *U _p53 0 -> -> 113 `i `uc ( _VL53L0X_encodeTimeout (1 _new_final_range_timeout_mclks ]
+"1125
+[; ;drivers/vl53l0x.c: 1125:   }
+}
+[e $U 1655  ]
+"1126
+[; ;drivers/vl53l0x.c: 1126:   else
+[e :U 1646 ]
+"1127
+[; ;drivers/vl53l0x.c: 1127:   {
+{
+"1129
+[; ;drivers/vl53l0x.c: 1129:     return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 1636  ]
+"1130
+[; ;drivers/vl53l0x.c: 1130:   }
+}
+[e :U 1655 ]
+[e :U 1645 ]
+"1134
+[; ;drivers/vl53l0x.c: 1134:   VL53L0X_setMeasurementTimingBudget(p53);
+[e ( _VL53L0X_setMeasurementTimingBudget (1 _p53 ]
+"1139
+[; ;drivers/vl53l0x.c: 1139:   uint8_t sequence_config = ReadRegister(p53->address, 0x01);
+[v _sequence_config `uc ~T0 @X0 1 a ]
+[e = _sequence_config ( _ReadRegister (2 , . *U _p53 0 -> -> 1 `i `uc ]
+"1140
+[; ;drivers/vl53l0x.c: 1140:   WriteRegister(p53->address, 0x01, 0x02);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc -> -> 2 `i `uc ]
+"1141
+[; ;drivers/vl53l0x.c: 1141:   VL53L0X_performSingleRefCalibration(p53, 0x0);
+[e ( _VL53L0X_performSingleRefCalibration (2 , _p53 -> -> 0 `i `uc ]
+"1142
+[; ;drivers/vl53l0x.c: 1142:   WriteRegister(p53->address, 0x01, sequence_config);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 1 `i `uc _sequence_config ]
+"1146
+[; ;drivers/vl53l0x.c: 1146:   return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 1636  ]
+"1147
+[; ;drivers/vl53l0x.c: 1147: }
+[e :UE 1636 ]
+}
+"1153
+[; ;drivers/vl53l0x.c: 1153: void VL53L0X_SetInterMeasurementPeriodMilliSeconds(VL53L0XDEV *p53, uint32_t period_ms) {
+[v _VL53L0X_SetInterMeasurementPeriodMilliSeconds `(v ~T0 @X0 1 ef2`*S1492`ul ]
+{
+[e :U _VL53L0X_SetInterMeasurementPeriodMilliSeconds ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[v _period_ms `ul ~T0 @X0 1 r2 ]
+[f ]
+"1155
+[; ;drivers/vl53l0x.c: 1155:     uint16_t osc_calibrate_val = ReadRegister16(p53->address, 0xF8);
+[v _osc_calibrate_val `us ~T0 @X0 1 a ]
+[e = _osc_calibrate_val ( _ReadRegister16 (2 , . *U _p53 0 -> -> 248 `i `uc ]
+"1156
+[; ;drivers/vl53l0x.c: 1156:     if (osc_calibrate_val != 0)
+[e $ ! != -> _osc_calibrate_val `ui -> -> 0 `i `ui 1657  ]
+"1157
+[; ;drivers/vl53l0x.c: 1157:     {
+{
+"1158
+[; ;drivers/vl53l0x.c: 1158:       period_ms *= osc_calibrate_val;
+[e =* _period_ms -> _osc_calibrate_val `ul ]
+"1159
+[; ;drivers/vl53l0x.c: 1159:     }
+}
+[e :U 1657 ]
+"1160
+[; ;drivers/vl53l0x.c: 1160:     WriteRegister32(p53->address, 0x04, period_ms);
+[e ( _WriteRegister32 (3 , , . *U _p53 0 -> -> 4 `i `uc _period_ms ]
+"1162
+[; ;drivers/vl53l0x.c: 1162: }
+[e :UE 1656 ]
+}
+"1168
+[; ;drivers/vl53l0x.c: 1168: _Bool VL53L0X_ReadingHeader(VL53L0XDEV *p53) {
+[v _VL53L0X_ReadingHeader `(a ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_ReadingHeader ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"1169
+[; ;drivers/vl53l0x.c: 1169:     WriteRegister(p53->address, 0x80, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 1 `i `uc ]
+"1170
+[; ;drivers/vl53l0x.c: 1170:     WriteRegister(p53->address, 0xFF, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 1 `i `uc ]
+"1171
+[; ;drivers/vl53l0x.c: 1171:     WriteRegister(p53->address, 0x00, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 0 `i `uc ]
+"1172
+[; ;drivers/vl53l0x.c: 1172:     WriteRegister(p53->address, 0x91, p53->stopVariable);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 145 `i `uc . *U _p53 1 ]
+"1173
+[; ;drivers/vl53l0x.c: 1173:     WriteRegister(p53->address, 0x00, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 0 `i `uc -> -> 1 `i `uc ]
+"1174
+[; ;drivers/vl53l0x.c: 1174:     WriteRegister(p53->address, 0xFF, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 255 `i `uc -> -> 0 `i `uc ]
+"1175
+[; ;drivers/vl53l0x.c: 1175:     WriteRegister(p53->address, 0x80, 0x00);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 128 `i `uc -> -> 0 `i `uc ]
+"1176
+[; ;drivers/vl53l0x.c: 1176: }
+[e :UE 1658 ]
+}
+"1178
+[; ;drivers/vl53l0x.c: 1178: void LASER0_SetLow(void)
+[v _LASER0_SetLow `(v ~T0 @X0 1 ef ]
+"1179
+[; ;drivers/vl53l0x.c: 1179: {
+{
+[e :U _LASER0_SetLow ]
+[f ]
+"1180
+[; ;drivers/vl53l0x.c: 1180:     LATBbits.LATB5 = 0;
+[e = . . _LATBbits 0 5 -> -> 0 `i `uc ]
+"1181
+[; ;drivers/vl53l0x.c: 1181: }
+[e :UE 1659 ]
+}
+"1183
+[; ;drivers/vl53l0x.c: 1183: void LASER1_SetLow(void)
+[v _LASER1_SetLow `(v ~T0 @X0 1 ef ]
+"1184
+[; ;drivers/vl53l0x.c: 1184: {
+{
+[e :U _LASER1_SetLow ]
+[f ]
+"1185
+[; ;drivers/vl53l0x.c: 1185:     LATBbits.LATB3 = 0;
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+"1186
+[; ;drivers/vl53l0x.c: 1186: }
+[e :UE 1660 ]
+}
+"1188
+[; ;drivers/vl53l0x.c: 1188: void LASER2_SetLow(void)
+[v _LASER2_SetLow `(v ~T0 @X0 1 ef ]
+"1189
+[; ;drivers/vl53l0x.c: 1189: {
+{
+[e :U _LASER2_SetLow ]
+[f ]
+"1190
+[; ;drivers/vl53l0x.c: 1190:     LATCbits.LATC5 = 0;
+[e = . . _LATCbits 0 5 -> -> 0 `i `uc ]
+"1191
+[; ;drivers/vl53l0x.c: 1191: }
+[e :UE 1661 ]
+}
+"1193
+[; ;drivers/vl53l0x.c: 1193: void LASER0_SetHigh(void)
+[v _LASER0_SetHigh `(v ~T0 @X0 1 ef ]
+"1194
+[; ;drivers/vl53l0x.c: 1194: {
+{
+[e :U _LASER0_SetHigh ]
+[f ]
+"1195
+[; ;drivers/vl53l0x.c: 1195:     LATBbits.LATB5 = 1;
+[e = . . _LATBbits 0 5 -> -> 1 `i `uc ]
+"1196
+[; ;drivers/vl53l0x.c: 1196: }
+[e :UE 1662 ]
+}
+"1198
+[; ;drivers/vl53l0x.c: 1198: void LASER1_SetHigh(void)
+[v _LASER1_SetHigh `(v ~T0 @X0 1 ef ]
+"1199
+[; ;drivers/vl53l0x.c: 1199: {
+{
+[e :U _LASER1_SetHigh ]
+[f ]
+"1200
+[; ;drivers/vl53l0x.c: 1200:     LATBbits.LATB3 = 1;
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
+"1201
+[; ;drivers/vl53l0x.c: 1201: }
+[e :UE 1663 ]
+}
+"1203
+[; ;drivers/vl53l0x.c: 1203: void LASER2_SetHigh(void)
+[v _LASER2_SetHigh `(v ~T0 @X0 1 ef ]
+"1204
+[; ;drivers/vl53l0x.c: 1204: {
+{
+[e :U _LASER2_SetHigh ]
+[f ]
+"1205
+[; ;drivers/vl53l0x.c: 1205:     LATCbits.LATC5 = 1;
+[e = . . _LATCbits 0 5 -> -> 1 `i `uc ]
+"1206
+[; ;drivers/vl53l0x.c: 1206: }
+[e :UE 1664 ]
+}
+"1211
+[; ;drivers/vl53l0x.c: 1211: void VL53L0X_InitDevices(void) {
+[v _VL53L0X_InitDevices `(v ~T0 @X0 1 ef ]
+{
+[e :U _VL53L0X_InitDevices ]
+[f ]
+"1215
+[; ;drivers/vl53l0x.c: 1215:     _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1216
+[; ;drivers/vl53l0x.c: 1216:     LASER0_SetLow();
+[e ( _LASER0_SetLow ..  ]
+"1217
+[; ;drivers/vl53l0x.c: 1217:     LASER1_SetLow();
+[e ( _LASER1_SetLow ..  ]
+"1218
+[; ;drivers/vl53l0x.c: 1218:     LASER2_SetLow();
+[e ( _LASER2_SetLow ..  ]
+"1221
+[; ;drivers/vl53l0x.c: 1221:     for (uint8_t i=0; i<3; i++) {
+{
+[v _i `uc ~T0 @X0 1 a ]
+[e = _i -> -> 0 `i `uc ]
+[e $ < -> _i `i -> 3 `i 1666  ]
+[e $U 1667  ]
+[e :U 1666 ]
+{
+"1222
+[; ;drivers/vl53l0x.c: 1222:         vl53l0xDev[i].address = laserAddresses[i];
+[e = . *U + &U _vl53l0xDev * -> _i `ux -> -> # *U &U _vl53l0xDev `ui `ux 0 *U + &U _laserAddresses * -> _i `ux -> -> # *U &U _laserAddresses `ui `ux ]
+"1223
+[; ;drivers/vl53l0x.c: 1223:         vl53l0xDev[i].ioHighLevel = 1;
+[e = . *U + &U _vl53l0xDev * -> _i `ux -> -> # *U &U _vl53l0xDev `ui `ux 2 -> -> 1 `i `a ]
+"1224
+[; ;drivers/vl53l0x.c: 1224:     }
+}
+[e ++ _i -> -> 1 `i `uc ]
+[e $ < -> _i `i -> 3 `i 1666  ]
+[e :U 1667 ]
+}
+"1227
+[; ;drivers/vl53l0x.c: 1227:     LASER2_SetHigh();
+[e ( _LASER2_SetHigh ..  ]
+"1228
+[; ;drivers/vl53l0x.c: 1228:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1229
+[; ;drivers/vl53l0x.c: 1229:     VL53L0X_SetAddress(vl53l0xDev[2].address);
+[e ( _VL53L0X_SetAddress (1 . *U + &U _vl53l0xDev * -> -> -> 2 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux 0 ]
+"1230
+[; ;drivers/vl53l0x.c: 1230:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1231
+[; ;drivers/vl53l0x.c: 1231:     VL53L0X_Init(&vl53l0xDev[2]);
+[e ( _VL53L0X_Init (1 &U *U + &U _vl53l0xDev * -> -> -> 2 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux ]
+"1232
+[; ;drivers/vl53l0x.c: 1232:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1233
+[; ;drivers/vl53l0x.c: 1233:     VL53L0X_SetTimeout(&vl53l0xDev[2], 50);
+[e ( _VL53L0X_SetTimeout (2 , &U *U + &U _vl53l0xDev * -> -> -> 2 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux -> -> 50 `i `us ]
+"1237
+[; ;drivers/vl53l0x.c: 1237:     _delay((unsigned long)((2000)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1240
+[; ;drivers/vl53l0x.c: 1240:     LASER1_SetHigh();
+[e ( _LASER1_SetHigh ..  ]
+"1241
+[; ;drivers/vl53l0x.c: 1241:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1242
+[; ;drivers/vl53l0x.c: 1242:     VL53L0X_SetAddress(vl53l0xDev[1].address);
+[e ( _VL53L0X_SetAddress (1 . *U + &U _vl53l0xDev * -> -> -> 1 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux 0 ]
+"1243
+[; ;drivers/vl53l0x.c: 1243:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1244
+[; ;drivers/vl53l0x.c: 1244:     VL53L0X_Init(&vl53l0xDev[1]);
+[e ( _VL53L0X_Init (1 &U *U + &U _vl53l0xDev * -> -> -> 1 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux ]
+"1245
+[; ;drivers/vl53l0x.c: 1245:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1246
+[; ;drivers/vl53l0x.c: 1246:     VL53L0X_SetTimeout(&vl53l0xDev[1], 50);
+[e ( _VL53L0X_SetTimeout (2 , &U *U + &U _vl53l0xDev * -> -> -> 1 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux -> -> 50 `i `us ]
+"1250
+[; ;drivers/vl53l0x.c: 1250:     _delay((unsigned long)((2000)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1253
+[; ;drivers/vl53l0x.c: 1253:     LASER0_SetHigh();
+[e ( _LASER0_SetHigh ..  ]
+"1254
+[; ;drivers/vl53l0x.c: 1254:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1255
+[; ;drivers/vl53l0x.c: 1255:     VL53L0X_Init(&vl53l0xDev[0]);
+[e ( _VL53L0X_Init (1 &U *U + &U _vl53l0xDev * -> -> -> 0 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux ]
+"1256
+[; ;drivers/vl53l0x.c: 1256:     _delay((unsigned long)((100)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1257
+[; ;drivers/vl53l0x.c: 1257:     VL53L0X_SetTimeout(&vl53l0xDev[0], 50);
+[e ( _VL53L0X_SetTimeout (2 , &U *U + &U _vl53l0xDev * -> -> -> 0 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux -> -> 50 `i `us ]
+"1261
+[; ;drivers/vl53l0x.c: 1261:     _delay((unsigned long)((2000)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"1297
+[; ;drivers/vl53l0x.c: 1297:     VL53L0X_ContinuousReading(&vl53l0xDev[0], 0);
+[e ( _VL53L0X_ContinuousReading (2 , &U *U + &U _vl53l0xDev * -> -> -> 0 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux -> -> -> 0 `i `l `ul ]
+"1298
+[; ;drivers/vl53l0x.c: 1298:     VL53L0X_ContinuousReading(&vl53l0xDev[1], 0);
+[e ( _VL53L0X_ContinuousReading (2 , &U *U + &U _vl53l0xDev * -> -> -> 1 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux -> -> -> 0 `i `l `ul ]
+"1299
+[; ;drivers/vl53l0x.c: 1299:     VL53L0X_ContinuousReading(&vl53l0xDev[2], 0);
+[e ( _VL53L0X_ContinuousReading (2 , &U *U + &U _vl53l0xDev * -> -> -> 2 `i `ui `ux -> -> # *U &U _vl53l0xDev `ui `ux -> -> -> 0 `i `l `ul ]
+"1301
+[; ;drivers/vl53l0x.c: 1301: }
+[e :UE 1665 ]
+}
+"1308
+[; ;drivers/vl53l0x.c: 1308: void start_msTimeout(msecdata *data, uint16_t val) {
+[v _start_msTimeout `(v ~T0 @X0 1 ef2`*S1493`us ]
+{
+[e :U _start_msTimeout ]
+[v _data `*S1493 ~T0 @X0 1 r1 ]
+[v _val `us ~T0 @X0 1 r2 ]
+[f ]
+"1309
+[; ;drivers/vl53l0x.c: 1309:     data->timeout = val;
+[e = . *U _data 1 _val ]
+"1310
+[; ;drivers/vl53l0x.c: 1310:     data->msecStart = millisec;
+[e = . *U _data 0 _millisec ]
+"1311
+[; ;drivers/vl53l0x.c: 1311: }
+[e :UE 1669 ]
+}
+"1318
+[; ;drivers/vl53l0x.c: 1318: _Bool checkTimeoutExpired(msecdata *data) {
+[v _checkTimeoutExpired `(a ~T0 @X0 1 ef1`*S1493 ]
+{
+[e :U _checkTimeoutExpired ]
+[v _data `*S1493 ~T0 @X0 1 r1 ]
+[f ]
+"1320
+[; ;drivers/vl53l0x.c: 1320:     if (data->timeout == 0) return 0;
+[e $ ! == -> . *U _data 1 `ui -> -> 0 `i `ui 1671  ]
+[e ) -> -> 0 `i `a ]
+[e $UE 1670  ]
+[e :U 1671 ]
+"1322
+[; ;drivers/vl53l0x.c: 1322:     if (millisec < data->msecStart) {
+[e $ ! < -> _millisec `ui -> . *U _data 0 `ui 1672  ]
+{
+"1323
+[; ;drivers/vl53l0x.c: 1323:         uint16_t gap = 0xFFFF - data->msecStart;
+[v _gap `us ~T0 @X0 1 a ]
+[e = _gap -> - -> 65535 `ui -> . *U _data 0 `ui `us ]
+"1324
+[; ;drivers/vl53l0x.c: 1324:         return ((millisec + gap - data->msecStart) > data->timeout);
+[e ) -> -> > - + -> _millisec `ui -> _gap `ui -> . *U _data 0 `ui -> . *U _data 1 `ui `i `a ]
+[e $UE 1670  ]
+"1325
+[; ;drivers/vl53l0x.c: 1325:     }
+}
+[e :U 1672 ]
+"1327
+[; ;drivers/vl53l0x.c: 1327:     return ((millisec - data->msecStart) > data->timeout);
+[e ) -> -> > - -> _millisec `ui -> . *U _data 0 `ui -> . *U _data 1 `ui `i `a ]
+[e $UE 1670  ]
+"1328
+[; ;drivers/vl53l0x.c: 1328: }
+[e :UE 1670 ]
+}
+"1331
+[; ;drivers/vl53l0x.c: 1331: uint16_t VL53L0X_Read_Distance(uint8_t Num_laser)
+[v _VL53L0X_Read_Distance `(us ~T0 @X0 1 ef1`uc ]
+"1332
+[; ;drivers/vl53l0x.c: 1332: {
+{
+[e :U _VL53L0X_Read_Distance ]
+"1331
+[; ;drivers/vl53l0x.c: 1331: uint16_t VL53L0X_Read_Distance(uint8_t Num_laser)
+[v _Num_laser `uc ~T0 @X0 1 r1 ]
+"1332
+[; ;drivers/vl53l0x.c: 1332: {
+[f ]
+"1333
+[; ;drivers/vl53l0x.c: 1333: uint16_t tmp_Dist;
+[v _tmp_Dist `us ~T0 @X0 1 a ]
+"1336
+[; ;drivers/vl53l0x.c: 1336:         tmp_Dist = VL53L0X_ReadRange(&vl53l0xDev[Num_laser]);
+[e = _tmp_Dist ( _VL53L0X_ReadRange (1 &U *U + &U _vl53l0xDev * -> _Num_laser `ux -> -> # *U &U _vl53l0xDev `ui `ux ]
+"1342
+[; ;drivers/vl53l0x.c: 1342:         return(tmp_Dist);
+[e ) _tmp_Dist ]
+[e $UE 1673  ]
+"1343
+[; ;drivers/vl53l0x.c: 1343: }
+[e :UE 1673 ]
+}
+"1345
+[; ;drivers/vl53l0x.c: 1345: uint16_t VL53L0X_ReadRange_No_Wait(VL53L0XDEV *p53) {
+[v _VL53L0X_ReadRange_No_Wait `(us ~T0 @X0 1 ef1`*S1492 ]
+{
+[e :U _VL53L0X_ReadRange_No_Wait ]
+[v _p53 `*S1492 ~T0 @X0 1 r1 ]
+[f ]
+"1347
+[; ;drivers/vl53l0x.c: 1347:     msecdata timeoutData;
+[v _timeoutData `S1493 ~T0 @X0 1 a ]
+"1350
+[; ;drivers/vl53l0x.c: 1350:     if ((ReadRegister(p53->address, 0x13) & 0x07) == 0) {
+[e $ ! == & -> ( _ReadRegister (2 , . *U _p53 0 -> -> 19 `i `uc `i -> 7 `i -> 0 `i 1675  ]
+{
+"1351
+[; ;drivers/vl53l0x.c: 1351:         if (checkTimeoutExpired(&timeoutData)) {
+[e $ ! != -> ( _checkTimeoutExpired (1 &U _timeoutData `i -> 0 `i 1676  ]
+{
+"1352
+[; ;drivers/vl53l0x.c: 1352:             p53->did_timeout = 1;
+[e = . *U _p53 4 -> -> 1 `i `a ]
+"1353
+[; ;drivers/vl53l0x.c: 1353:             return 65535;
+[e ) -> -> 65535 `l `us ]
+[e $UE 1674  ]
+"1354
+[; ;drivers/vl53l0x.c: 1354:         }
+}
+[e :U 1676 ]
+"1355
+[; ;drivers/vl53l0x.c: 1355:     }
+}
+[e :U 1675 ]
+"1359
+[; ;drivers/vl53l0x.c: 1359:     uint16_t range = ReadRegister16(p53->address, 0x14 + 10);
+[v _range `us ~T0 @X0 1 a ]
+[e = _range ( _ReadRegister16 (2 , . *U _p53 0 -> + -> 20 `i -> 10 `i `uc ]
+"1360
+[; ;drivers/vl53l0x.c: 1360:     WriteRegister(p53->address, 0x0B, 0x01);
+[e ( _WriteRegister (3 , , . *U _p53 0 -> -> 11 `i `uc -> -> 1 `i `uc ]
+"1362
+[; ;drivers/vl53l0x.c: 1362:     return range;
+[e ) _range ]
+[e $UE 1674  ]
+"1363
+[; ;drivers/vl53l0x.c: 1363: }
+[e :UE 1674 ]
+}
+"1367
+[; ;drivers/vl53l0x.c: 1367: uint16_t VL53L0X_Read_Distance_No_Wait(uint8_t Num_laser)
+[v _VL53L0X_Read_Distance_No_Wait `(us ~T0 @X0 1 ef1`uc ]
+"1368
+[; ;drivers/vl53l0x.c: 1368: {
+{
+[e :U _VL53L0X_Read_Distance_No_Wait ]
+"1367
+[; ;drivers/vl53l0x.c: 1367: uint16_t VL53L0X_Read_Distance_No_Wait(uint8_t Num_laser)
+[v _Num_laser `uc ~T0 @X0 1 r1 ]
+"1368
+[; ;drivers/vl53l0x.c: 1368: {
+[f ]
+"1369
+[; ;drivers/vl53l0x.c: 1369: uint16_t tmp_Dist;
+[v _tmp_Dist `us ~T0 @X0 1 a ]
+"1372
+[; ;drivers/vl53l0x.c: 1372:         tmp_Dist = VL53L0X_ReadRange_No_Wait(&vl53l0xDev[Num_laser]);
+[e = _tmp_Dist ( _VL53L0X_ReadRange_No_Wait (1 &U *U + &U _vl53l0xDev * -> _Num_laser `ux -> -> # *U &U _vl53l0xDev `ui `ux ]
+"1378
+[; ;drivers/vl53l0x.c: 1378:         return(tmp_Dist);
+[e ) _tmp_Dist ]
+[e $UE 1677  ]
+"1379
+[; ;drivers/vl53l0x.c: 1379: }
+[e :UE 1677 ]
+}
